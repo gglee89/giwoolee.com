@@ -11,17 +11,21 @@ const Contact = () => {
             <Row>
               <p className="social" style={{ width: '100%' }}>
                 <a
-                  href="facebook.com/giwoo.lee.16"
+                  href="https://www.facebook.com/giwoo.lee.16"
                   title=""
                   className="facebook"
                 >
                   <i className="fa fa-facebook" />
                 </a>
-                <a href="twitter.com/giwoolee" title="" className="twitter">
+                <a
+                  href="https://www.twitter.com/giwoolee"
+                  title=""
+                  className="twitter"
+                >
                   <i className="fa fa-twitter" />
                 </a>
                 <a
-                  href="instagram.com/gustavogiwoolee"
+                  href="https://www.instagram.com/gustavogiwoolee"
                   title=""
                   className="instagram"
                 >
