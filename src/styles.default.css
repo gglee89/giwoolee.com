@@ -71,7 +71,9 @@ section {
 }
 
 .box {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 200px;
 }
 
 nav.navbar {
@@ -180,8 +182,7 @@ p.social a {
     margin: 0 10px 0 0;
     color: #fff;
     display: inline-block;
-    width: 38px;
-    height: 38px;
+    width: 150px;
     border-radius: 19px;
     line-height: 38px;
     font-size: 15px;
@@ -189,6 +190,11 @@ p.social a {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     vertical-align: bottom;
+    transform: scale(1);
+}
+
+p.social a:hover {
+  transform: scale(1.1);
 }
 
 p.social a i {
@@ -197,7 +203,7 @@ p.social a i {
 }
 
 p.social a.facebook {
-    background-color: #ccc;
+    background-color: #3b5998;
 }
 
 p.social a.gplus {
@@ -205,11 +211,11 @@ p.social a.gplus {
 }
 
 p.social a.twitter {
-    background-color: #aaa;
+    background-color: #1da1f2;
 }
 
 p.social a.instagram {
-    background-color: #999;
+    background-color: #c32aa3;
 }
 
 p.social a.email {

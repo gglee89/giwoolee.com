@@ -10,19 +10,28 @@ const Contact = () => {
             <h2 className="heading">Contact</h2>
             <Row>
               <p className="social" style={{ width: '100%' }}>
-                <a href="#" title="" className="facebook">
+                <a
+                  href="facebook.com/giwoo.lee.16"
+                  title=""
+                  className="facebook"
+                >
                   <i className="fa fa-facebook" />
                 </a>
-                <a href="#" title="" className="twitter">
+                <a href="twitter.com/giwoolee" title="" className="twitter">
                   <i className="fa fa-twitter" />
                 </a>
-                <a href="#" title="" className="gplus">
-                  <i className="fa fa-google-plus" />
-                </a>
-                <a href="#" title="" className="instagram">
+                <a
+                  href="instagram.com/gustavogiwoolee"
+                  title=""
+                  className="instagram"
+                >
                   <i className="fa fa-instagram" />
                 </a>
-                <a href="#" title="" className="email">
+                <a
+                  href="mailto: gglee@go.olemiss.edu"
+                  title=""
+                  className="email"
+                >
                   <i className="fa fa-envelope" />
                 </a>
               </p>

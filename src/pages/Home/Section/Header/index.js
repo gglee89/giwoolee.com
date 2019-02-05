@@ -90,32 +90,27 @@ class Header extends Component {
             </button>
             <div id="navbarSupportedContent" className={navbarCollapse}>
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a href="#intro" className="nav-link link-scroll active">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => this.toggleNavbar()}>
                   <a href="#about" className="nav-link link-scroll">
-                    About{' '}
+                    About
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a href="#services" className="nav-link link-scroll">
-                    Services
+                <li className="nav-item" onClick={() => this.toggleNavbar()}>
+                  <a href="#area-of-interest" className="nav-link link-scroll">
+                    Area of Interest
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a href="#portfolio" className="nav-link link-scroll">
-                    Portfolio
+                <li className="nav-item" onClick={() => this.toggleNavbar()}>
+                  <a href="#projects" className="nav-link link-scroll">
+                    Projects
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a href="#text" className="nav-link link-scroll">
-                    Text
+                <li className="nav-item" onClick={() => this.toggleNavbar()}>
+                  <a href="#mission" className="nav-link link-scroll">
+                    Mission
                   </a>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => this.toggleNavbar()}>
                   <a href="#contact" className="nav-link link-scroll">
                     Contact
                   </a>

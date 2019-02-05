@@ -1,3 +1,23 @@
+.about-text {
+    color: #00ff00;
+    background-color: #000;
+    padding: 5px;
+}
+
+.about-text .link {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+.about-text code {
+    color: #fff;
+    display: block;
+}
+
+.about-text span {
+    color: #DF5286;
+}
+
 .skill {
     margin-bottom: 20px;
 }
@@ -48,4 +68,19 @@
 .company-logoes {
     align-items: center;
     display: flex;
+}
+
+.img-load {
+    opacity: 1;
+    animation: fade-in 300ms ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

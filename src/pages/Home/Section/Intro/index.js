@@ -14,7 +14,7 @@ const Intro = () => {
               <img src={logo} className="logo" alt="logo" />
               <p className="italic">{`Hi, hello, nice to meet you!`}</p>
               <h1 className="text">
-                Welcome to <code>src/GiwooLee.js</code>
+                Welcome to <code>portfolio/GiwooLee.js</code>
               </h1>
               <p className="italic">{`Check out my past and current projects.`}</p>
             </Col>

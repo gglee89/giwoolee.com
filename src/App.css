@@ -2,3 +2,49 @@
     height: 100%;
     text-align: center;
 }
+
+.show {
+    display: block;
+}
+
+.modal-inner {
+    margin: 1.75rem auto;
+    max-width: 500px;
+    position: relative;
+    width: auto;
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-wrapper .heading {
+    margin-bottom: 0;
+}
+
+.modal-primary-logo {
+    max-height: 80px;
+}
+
+.wrapper {
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.modal-image {
+    max-height: 200px;
+    max-width: 300px;
+}
+
+.text-content {
+    margin-top: 15px;
+    text-align: left;
+}
