@@ -12,11 +12,11 @@ const Intro = () => {
           <Row>
             <Col lg="8" md="12" mx="auto" className="column">
               <img src={logo} className="logo" alt="logo" />
-              <p className="italic">Hi, hello, nice to meet you!</p>
+              <p className="italic">{`Hi, hello, nice to meet you!`}</p>
               <h1 className="text">
-                Welcome to <code>src/GiwooLee.js</code>.
+                Welcome to <code>src/GiwooLee.js</code>
               </h1>
-              <p className="italic">Check out my past and current projects.</p>
+              <p className="italic">{`Check out my past and current projects.`}</p>
             </Col>
           </Row>
         </Container>

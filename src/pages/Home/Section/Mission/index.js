@@ -3,7 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 
 const Mission = () => {
   return (
-    <section className="section-inverse">
+    <section id="mission" className="section-inverse">
       <Container>
         <Row>
           <Col lg={12}>

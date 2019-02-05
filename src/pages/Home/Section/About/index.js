@@ -1,40 +1,153 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import './about.css';
+import classNames from 'classnames';
+
+// Images
+import reactLogo from '../../../../assets/img/react-js-logo-min.png';
+import pythonLogo from '../../../../assets/img/python-logo-generic.svg';
+import pytorchLogo from '../../../../assets/img/pytorch-logo-min.png';
+import rLogo from '../../../../assets/img/r-logo.svg';
+import mongoDBLogo from '../../../../assets/img/mongodb-logo-min.png';
+import awsLogo from '../../../../assets/img/aws-logo-min.png';
+import gcpLogo from '../../../../assets/img/gcp-logo-min.png';
+import personalPicture from '../../../../assets/img/personal-picture-bew.jpg';
+
+const SKill = ({ title, percentage, description, type }) => {
+  let progressClass = classNames({
+    'progress-bar': true,
+    'bg-success': type === 1,
+    'bg-info': type === 2,
+    'bg-warning': type === 3,
+    'progress-bar-striped': true,
+    'progress-bar-animated': true,
+  });
+
+  return (
+    <Col lg={6} className="skill">
+      <div className="skill-container">
+        <div className="skill-title">{title}</div>
+        {/* <div className="skill-percentage">
+          <div className="progress">
+            <div
+              className={progressClass}
+              role="progressbar"
+              aria-valuenow={percentage}
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style={{ width: `${percentage}%` }}
+            >
+              {percentage}%
+            </div>
+          </div>
+        </div> */}
+      </div>
+      <div className="skill-description">
+        <div class="icon">
+          <i className="fa fa-plus-circle" />
+        </div>
+        <div className="skill-description-text">{description}</div>
+      </div>
+    </Col>
+  );
+};
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <Container>
         <Row>
           <Col lg={6}>
-            <h2 className="heading">About Me</h2>
-            <p className="lead">This can be an about section.</p>
+            <h2 className="heading">About</h2>
+            <p className="lead">Currently...</p>
             <p>
-              Impossible considered invitation him men instrument saw celebrated
-              unpleasant. Put rest and must set kind next many near nay. He
-              exquisite continued explained middleton am. Voice hours young
-              woody has she think equal. Estate moment he at on wonder at season
-              little. Six garden result summer set family esteem nay estate. End
-              admiration mrs unreserved discovered comparison especially
-              invitation.{' '}
+              A Machine Learning & Web Development Enthusiast. A PhD candidate
+              in Computer Science at the University of Mississippi under{' '}
+              <a className="link" href="https://olemiss.edu/people/dwilkins">
+                Professor Dr.Wilkins.
+              </a>
             </p>
+            <p className="lead">So far</p>
             <p>
-              Delightful unreserved impossible few estimating men favourable see
-              entreaties. She propriety immediate was improving. He or entrance
-              humoured likewise moderate. Much nor game son say feel. Fat make
-              met can must form into gate. Me we offending prevailed discovery.{' '}
+              5+ years advancing in the IT industry. Shaped products as a Data
+              Engineer with BI, with Mainframes (batch processing), and
+              Web/Mobile development. Experienced in developing internal web
+              platforms for the entertainment and financial industries and also
+              with B2C customer facing applications. Actively contributed on
+              UI/UX, software specification, and project management in parallel
+              with web development.
             </p>
           </Col>
           <Col lg={5}>
             <p>
               <img
-                src="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/img/japan-mountains.jpg"
+                src={personalPicture}
                 alt=""
                 className="img-fluid rounded-circle"
               />
             </p>
           </Col>
         </Row>
+        {/* <Row>
+          <Col lg={12} style={{ textAlign: 'left' }}>
+            <p className="lead">Main Stacks</p>
+            <div className="company-logoes">
+              <img src={reactLogo} className="lead-image" />
+              <img src={pythonLogo} className="lead-image" />
+              <img src={pytorchLogo} className="lead-image" />
+              <img src={rLogo} className="lead-image" />
+              <img src={mongoDBLogo} className="lead-image" />
+              <img src={awsLogo} className="lead-image" />
+              <img src={gcpLogo} className="lead-image" />
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={12} style={{ textAlign: 'left' }}>
+            <p className="lead">Main Skills</p>
+
+            <p className="lead-sub">ML</p>
+            <Row className="skill-section">
+              <SKill
+                title="Python"
+                percentage={60}
+                type={1}
+                description="1+ year of professional experience with Flask/Django."
+              />
+              <SKill
+                title="Numpy"
+                percentage={60}
+                type={1}
+                description="1+ years with academic and personal projects."
+              />
+              <SKill
+                title="Pytorch"
+                percentage={50}
+                type={1}
+                description='1+ years with academic and personal projects plus awarded the "Facebook PyTorch scholarship."'
+              />
+            </Row>
+
+            <p className="lead-sub">Backend</p>
+            <Row className="skill-section">
+              <SKill
+                title="MongoDB"
+                percentage={75}
+                type={2}
+                description="2+ years wo"
+              />
+              <SKill title="PostgreSQL" percentage={75} type={2} />
+              <SKill title="Firebase" percentage={75} type={2} />
+            </Row>
+
+            <p className="lead-sub">Frontend</p>
+            <Row className="skill-section">
+              <SKill title="Javascript" percentage={75} type={3} />
+              <SKill title="ReactJS" percentage={85} type={3} />
+              <SKill title="Redux" percentage={95} type={3} />
+            </Row>
+          </Col>
+        </Row> */}
       </Container>
     </section>
   );

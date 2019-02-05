@@ -1,13 +1,19 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 
-const Portfolio = () => {
+// Styles
+import './projects.css';
+
+// Images
+import sapHanaHDBCSI from '../../../../assets/img/sap-labs-hdbcsi.jpeg';
+
+const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <Container>
         <Row>
           <Col lg={12}>
-            <h2 className="heading">Portfolio</h2>
+            <h2 className="heading">Projects</h2>
             <p>
               Put your portfolio or gallery images here for example. Able an
               hope of body. Any nay shyness article matters own removal nothing
@@ -18,7 +24,7 @@ const Portfolio = () => {
           </Col>
         </Row>
         <Row>
-          <Col md={4}>
+          <Col md={4} className="box-wrapper">
             <div className="box">
               <a
                 href="img/portfolio-1.jpg"
@@ -26,15 +32,11 @@ const Portfolio = () => {
                 data-title="Some footer information"
                 className="has-border"
               >
-                <img
-                  src="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/img/portfolio-1.jpg"
-                  alt="image"
-                  className="img-fluid"
-                />
+                <img src={sapHanaHDBCSI} alt="image" className="img-fluid" />
               </a>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={4} className="box-wrapper">
             <div className="box">
               <a
                 href="img/portfolio-2.jpg"
@@ -50,7 +52,7 @@ const Portfolio = () => {
               </a>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={4} className="box-wrapper">
             <div className="box">
               <a
                 href="img/portfolio-3.jpg"
@@ -72,4 +74,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

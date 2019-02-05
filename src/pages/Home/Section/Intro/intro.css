@@ -11,7 +11,12 @@
 }
 
 .link {
-    color: #61dafb;
+    color: #0026ff;
+}
+
+.link:hover {
+    color: #0026ff;
+    text-decoration: underline;
 }
 
 .logo {
