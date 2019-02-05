@@ -1636,8 +1636,9 @@ select.form-control-lg:not([size]):not([multiple]) {
 }
 
 code {
+    background-color: #000;
     font-size: 87.5%;
-    color: #e83e8c;
+    color: #00ff00;
 }
 
 .nav-link {
