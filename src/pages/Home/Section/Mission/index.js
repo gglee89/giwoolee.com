@@ -44,13 +44,13 @@ const Mission = () => {
                   from my favorite book: The Alchemist. The most famous quote to
                   reference is: "When you want something; all the universe
                   conspire in helping you to achieve it." And thus, one's prime
-                  goal (as referring to my own) is to speak up as to be listen
+                  goal (as referring to my own) is to speak up as to be listened
                   and to be acknowledged.
                 </p>
                 <p>
                   Lastly, in a more technical note, is to be part of the Machine
-                  Learning movement. Helping others with the state-of-the-art
-                  tools that can bring intelligent solutions to unforseen
+                  Learning movement. Helping others with state-of-the-art tools
+                  that can bring intelligent solutions to unforseen
                   circumstances.
                 </p>
               </Col>
