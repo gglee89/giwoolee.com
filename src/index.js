@@ -5,13 +5,18 @@ import './styles.default.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// Router
+import { BrowserRouter, Route } from 'react-router-dom';
+
 // Store Setup
 import { Provider } from 'react-redux';
 import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Route match path="/" component={App} />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );
