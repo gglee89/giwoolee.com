@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "486aaaaf06d1c7b82a7838765c3ca102",
-    "url": "/static/media/habits-select-min.486aaaaf.jpeg"
+    "revision": "aa878ca080d6cabc9321ac485d528a9c",
+    "url": "/static/media/dashboard-min.aa878ca0.jpeg"
   },
   {
-    "revision": "a70e6ff4c2f4dd511596",
-    "url": "/static/css/main.eef3fa97.chunk.css"
+    "revision": "7e09544579217b0283bc",
+    "url": "/static/css/main.f2b2cf02.chunk.css"
   },
   {
-    "revision": "834c160f90573ac71a68",
-    "url": "/static/js/1.834c160f.chunk.js"
+    "revision": "c1a022a2b0f8b842d74e",
+    "url": "/static/js/1.c1a022a2.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -18,6 +18,10 @@ self.__precacheManifest = [
   {
     "revision": "233e3fabab9db71c0e282af1f9d9a723",
     "url": "/static/media/sap-labs-hdbcsi.233e3fab.jpeg"
+  },
+  {
+    "revision": "e6aa58f1afc1b43e78a120fe4596a2d9",
+    "url": "/static/media/proof-avocado-logo.e6aa58f1.jpg"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
@@ -44,12 +48,12 @@ self.__precacheManifest = [
     "url": "/static/media/home-min.7906b11d.jpeg"
   },
   {
-    "revision": "a70e6ff4c2f4dd511596",
-    "url": "/static/js/main.a70e6ff4.chunk.js"
+    "revision": "486aaaaf06d1c7b82a7838765c3ca102",
+    "url": "/static/media/habits-select-min.486aaaaf.jpeg"
   },
   {
-    "revision": "aa878ca080d6cabc9321ac485d528a9c",
-    "url": "/static/media/dashboard-min.aa878ca0.jpeg"
+    "revision": "7e09544579217b0283bc",
+    "url": "/static/js/main.7e095445.chunk.js"
   },
   {
     "revision": "f60ca5cb506676ee977c35f67b9d2f64",
@@ -62,6 +66,22 @@ self.__precacheManifest = [
   {
     "revision": "85f68e590ae71ced8b4dcaff478f1146",
     "url": "/static/media/sccoaching-logo.85f68e59.jpg"
+  },
+  {
+    "revision": "5d6a1ea6a709c2d2002a414f854222ec",
+    "url": "/static/media/proof-institutions-screen.5d6a1ea6.png"
+  },
+  {
+    "revision": "69195f6e98e468494f99afde7778d51e",
+    "url": "/static/media/proof-main-screen.69195f6e.png"
+  },
+  {
+    "revision": "a3b6f607fe60ee3a16b4b7b8dc32ecca",
+    "url": "/static/media/proof-main-screen-2.a3b6f607.jpg"
+  },
+  {
+    "revision": "5c37688dac520eb586e360c26784971a",
+    "url": "/static/media/proof-multiple-charts.5c37688d.png"
   },
   {
     "revision": "baee195b7f2a76da71802361638ede17",
@@ -84,7 +104,7 @@ self.__precacheManifest = [
     "url": "/static/media/aws-logo-min.129427db.png"
   },
   {
-    "revision": "d96f9a31f53a2f1ad403f9001700591e",
+    "revision": "11311aae2695292b4d461646ca0fef95",
     "url": "/index.html"
   }
 ];
