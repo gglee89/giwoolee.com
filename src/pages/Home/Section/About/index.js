@@ -104,6 +104,7 @@ class About extends Component {
                 applications. Actively contributed on UI/UX, software
                 specification, and project management in parallel with web
                 development.
+                <span className="blink-cursor" />
               </p>
             </Col>
             <Col lg={5}>

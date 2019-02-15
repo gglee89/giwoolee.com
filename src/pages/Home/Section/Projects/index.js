@@ -25,6 +25,13 @@ import rockyAppCategory from '../../../../assets/img/rocky/category-select-min.j
 import mgApp from '../../../../assets/img/sccoaching/marshall-goldsmith-logo.jpg';
 import sccoachingLogo from '../../../../assets/img/sccoaching/sccoaching-logo.jpg';
 
+// Proof Suite
+import proofLogo from '../../../../assets/img/proofsuite/proof-avocado-logo.jpg';
+import proofInstitutionsScreen from '../../../../assets/img/proofsuite/proof-institutions-screen.png';
+import proofMainScreen from '../../../../assets/img/proofsuite/proof-main-screen.png';
+import proofMainScreen2 from '../../../../assets/img/proofsuite/proof-main-screen-2.jpg';
+import proofMultipleCharts from '../../../../assets/img/proofsuite/proof-multiple-charts.png';
+
 const Projects = props => {
   const { openModal } = props;
 
@@ -110,6 +117,33 @@ const Projects = props => {
               />
             </div>
             <div>Marshall Goldsmith SCCoaching</div>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4} className="box-wrapper">
+            <div className="box">
+              <img
+                src={proofLogo}
+                alt="image"
+                className="img-fluid"
+                onClick={() =>
+                  openModal(
+                    'SAP Hana',
+                    proofLogo,
+                    [
+                      proofInstitutionsScreen,
+                      proofMainScreen,
+                      proofMainScreen2,
+                      proofMultipleCharts,
+                    ],
+                    'HDBCSI (Hana DB Crash Similarity Inspector)',
+                    'jQuery, OpenUI5, Python, XSJS, HanaDB',
+                    "In charge of implementing QA (Quality Assurance)'s new task optimizer with SAP's UI5 (http://openui5.org/). Intuitive UI/UX added to smooth interactibility, made possible for the synergy between System tester and Developers to flourish."
+                  )
+                }
+              />
+            </div>
+            <div>SAP Labs Korea</div>
           </Col>
         </Row>
       </Container>

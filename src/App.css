@@ -7,11 +7,34 @@
     display: block;
 }
 
+.modal-dialog {
+    margin: 0;
+    max-width: inherit;
+    height: 100%;
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height: 100%;
+}
+
 .modal-inner {
     margin: 1.75rem auto;
     max-width: 500px;
     position: relative;
     width: auto;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+.modal-image {
+    max-height: 300px;
+    margin-right: 20px;
 }
 
 .title-wrapper {
@@ -24,7 +47,7 @@
 }
 
 .modal-primary-logo {
-    max-height: 80px;
+    max-height: 50px;
 }
 
 .wrapper {
@@ -37,11 +60,6 @@
     text-align: left;
     text-transform: uppercase;
     letter-spacing: .2rem;
-}
-
-.modal-image {
-    max-height: 200px;
-    max-width: 300px;
 }
 
 .text-content {
