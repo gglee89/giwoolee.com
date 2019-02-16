@@ -49,7 +49,6 @@ const ContentSection = ({ title, content }) => {
       <div className="content-renderer-section-title">{title}</div>
       {contentAllIds &&
         contentAllIds.map(contentId => {
-          console.log('content[contentId]}.type', content[contentId].type);
           return (
             <div key={contentId} className="content-renderer-form">
               {content[contentId].type === 'array' ? (

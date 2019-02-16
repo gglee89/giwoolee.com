@@ -49,4 +49,28 @@ export default {
       city: { content: 'Seoul', type: 'field' },
     },
   },
+  HDBCSI: {
+    basics: {
+      company: { content: 'SAP Labs Korea', type: 'field' },
+      name: { content: 'HDBCSI', type: 'field' },
+      alias: { content: 'Hana DB Crash Similarity Inspector', type: 'field' },
+      keywords: {
+        content: ['Quality Assurance', 'HanaDB', 'OpenUI5'],
+        type: 'array',
+      },
+      role: { content: 'Front End Engineer (On Site)', type: 'field' },
+      year: { content: '2015/Sep - 2016/Feb', type: 'field' },
+    },
+    description: {
+      'What was done': {
+        content:
+          "In charge of implementing QA (Quality Assurance)'s new task optimizer with SAP's UI5 (http://openui5.org/). Intuitive UI/UX added to smooth interactibility, made possible for the synergy between System tester and Developers to flourish.",
+        type: 'text',
+      },
+    },
+    aboutCompany: {
+      country: { content: 'South Korea', type: 'field' },
+      city: { content: 'Seoul', type: 'field' },
+    },
+  },
 };
