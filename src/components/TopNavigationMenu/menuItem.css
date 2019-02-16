@@ -1,6 +1,11 @@
 .menu-item {
+    font-size: 12px;
     margin: 2px 0px 0px 0px;
     padding: 5px 10px 0px;
+}
+
+.menu-item img {
+    height: 40px;
 }
 
 .menu-item .active {

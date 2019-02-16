@@ -1,0 +1,15 @@
+.top-menu-container {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray);
+    color: var(--dark-gray);
+    display: flex;
+    font-size: 10px;
+}
+
+.top-menu-container div {
+    padding: 2px 5px;
+}
+
+.top-menu-container div:nth-child(1) {
+    border-right: 1px solid var(--gray);
+}

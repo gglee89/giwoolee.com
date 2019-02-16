@@ -1,0 +1,7 @@
+.renderer-container {
+    background-color: var(--blue);
+    border: 1px solid var(--gray);
+    height: 100%;
+    flex: 3;
+    margin-left: 15px;
+}

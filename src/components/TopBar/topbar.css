@@ -1,6 +1,5 @@
 .topbar-container {
-    background-color: #DDD;
-    border-bottom: solid 1px #CCC;
+    background-color: var(--gray);
     display: flex;
     flex: 1;
     flex-direction: row;

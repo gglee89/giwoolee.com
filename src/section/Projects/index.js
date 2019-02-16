@@ -8,6 +8,8 @@ import './projects.css';
 // Components
 import TopBar from '../../components/TopBar';
 import TopNavigationMenu from '../../components/TopNavigationMenu';
+import SideMenu from '../../components/SideMenu';
+import ContentRenderer from '../../components/ContentRenderer';
 
 const Projects = props => {
   return (
@@ -15,6 +17,10 @@ const Projects = props => {
       <Container className="project-container">
         <TopBar title="Projects" />
         <TopNavigationMenu />
+        <div className="project-body">
+          <SideMenu />
+          <ContentRenderer />
+        </div>
       </Container>
     </section>
   );
