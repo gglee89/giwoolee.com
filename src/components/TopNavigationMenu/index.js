@@ -12,7 +12,7 @@ const TopNavigationMenu = ({ menuItems, ...rest }) => {
         {menuItems &&
           menuItems.length > 0 &&
           menuItems.map(({ icon, title }) => {
-            return <MenuItem icon={icon} title={title} {...rest} />;
+            return <MenuItem key={title} icon={icon} title={title} {...rest} />;
           })}
       </div>
     </div>

@@ -13,8 +13,6 @@ import projectsList from '../../../data/projects';
 const Projects = ({ selectProject, projectName }) => {
   const projectsListAllIds = Object.keys(projectsList);
 
-  console.log('projectsListAllIds', projectsListAllIds);
-
   return (
     <div className="project-body">
       <SideMenu

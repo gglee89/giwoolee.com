@@ -15,4 +15,5 @@
 .preferences-body {
     background-color: var(--light-gray);
     height: 500px;
+    padding: 20px 25px;
 }

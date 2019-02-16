@@ -10,7 +10,11 @@ import TopBar from '../../components/TopBar';
 import TopNavigationMenu from '../../components/TopNavigationMenu';
 
 // Components (Menu Content Items)
+import General from './General';
 import Projects from './Projects';
+import Interests from './Interests';
+import Mission from './Mission';
+import Contact from './Contact';
 
 // Actions
 import * as projectsActions from '../../actions/projects';
@@ -38,7 +42,12 @@ const menuItems = [
   { icon: 'sushi', title: MENU_ITEMS.CONTACT },
 ];
 
-const Preferences = ({ selectMenu, selectedMenu }) => {
+const Preferences = ({
+  selectMenu,
+  selectedMenu,
+  selectProject,
+  projectName,
+}) => {
   return (
     <section id="preferences">
       <Container className="preferences-container">
@@ -49,7 +58,13 @@ const Preferences = ({ selectMenu, selectedMenu }) => {
           selectedMenu={selectedMenu}
         />
         <div className="preferences-body">
-          {selectedMenu === MENU_ITEMS.PROJECTS && <Projects />}
+          {selectedMenu === MENU_ITEMS.GENERAL && <General />}
+          {selectedMenu === MENU_ITEMS.PROJECTS && (
+            <Projects selectProject={selectProject} projectName={projectName} />
+          )}
+          {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
+          {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
+          {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
         </div>
       </Container>
     </section>
