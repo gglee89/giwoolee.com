@@ -3,34 +3,34 @@ import { connect } from 'react-redux';
 import { Container, Col, Row } from 'react-bootstrap';
 
 // Actions
-import * as modalActions from '../../../../actions/modal';
+import * as modalActions from '../../actions/modal';
 
 // Styles
 import './projects.css';
 
 // Images
 // SAP
-import sapHanaHDBCSI from '../../../../assets/img/sap-labs-hdbcsi.jpeg';
-import sapHanaLogo from '../../../../assets/img/sap-hana-logo.png';
+import sapHanaHDBCSI from '../../assets/img/sap-labs-hdbcsi.jpeg';
+import sapHanaLogo from '../../assets/img/sap-hana-logo.png';
 
 // Rocky
-import rockyApp from '../../../../assets/img/rocky/rocky-app-min.png';
-import rockyLogo from '../../../../assets/img/rocky/rocky-logo-2-min.png';
-import rockyAppHome from '../../../../assets/img/rocky/home-min.jpeg';
-import rockyAppHabits from '../../../../assets/img/rocky/habits-select-min.jpeg';
-import rockyAppDashboard from '../../../../assets/img/rocky/dashboard-min.jpeg';
-import rockyAppCategory from '../../../../assets/img/rocky/category-select-min.jpeg';
+import rockyApp from '../../assets/img/rocky/rocky-app-min.png';
+import rockyLogo from '../../assets/img/rocky/rocky-logo-2-min.png';
+import rockyAppHome from '../../assets/img/rocky/home-min.jpeg';
+import rockyAppHabits from '../../assets/img/rocky/habits-select-min.jpeg';
+import rockyAppDashboard from '../../assets/img/rocky/dashboard-min.jpeg';
+import rockyAppCategory from '../../assets/img/rocky/category-select-min.jpeg';
 
 // Sccoaching
-import mgApp from '../../../../assets/img/sccoaching/marshall-goldsmith-logo.jpg';
-import sccoachingLogo from '../../../../assets/img/sccoaching/sccoaching-logo.jpg';
+import mgApp from '../../assets/img/sccoaching/marshall-goldsmith-logo.jpg';
+import sccoachingLogo from '../../assets/img/sccoaching/sccoaching-logo.jpg';
 
 // Proof Suite
-import proofLogo from '../../../../assets/img/proofsuite/proof-avocado-logo.jpg';
-import proofInstitutionsScreen from '../../../../assets/img/proofsuite/proof-institutions-screen.png';
-import proofMainScreen from '../../../../assets/img/proofsuite/proof-main-screen.png';
-import proofMainScreen2 from '../../../../assets/img/proofsuite/proof-main-screen-2.jpg';
-import proofMultipleCharts from '../../../../assets/img/proofsuite/proof-multiple-charts.png';
+import proofLogo from '../../assets/img/proofsuite/proof-avocado-logo.jpg';
+import proofInstitutionsScreen from '../../assets/img/proofsuite/proof-institutions-screen.png';
+import proofMainScreen from '../../assets/img/proofsuite/proof-main-screen.png';
+import proofMainScreen2 from '../../assets/img/proofsuite/proof-main-screen-2.jpg';
+import proofMultipleCharts from '../../assets/img/proofsuite/proof-multiple-charts.png';
 
 const Projects = props => {
   const { openModal } = props;

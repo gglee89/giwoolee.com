@@ -1,9 +1,10 @@
 .bg-container {
-    background-image: url("../../../../assets/img/ein-steig-min.jpg");
+    background-image: url("../../assets/img/ein-steig-min.jpg");
 }
 
 .column {
     margin: 0 auto;
+    text-align: center;
 }
 
 .text {

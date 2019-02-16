@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import classNames from 'classnames';
 
-import logo from '../../../../assets/img/giwoo-lee-logo.png';
+import logo from '../../assets/img/giwoo-lee-logo.png';
 
 class Header extends Component {
   constructor(props) {

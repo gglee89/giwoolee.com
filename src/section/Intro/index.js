@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Container, Col, Row } from 'react-bootstrap';
+import '../shared.css';
 import './intro.css';
 
-const Intro = () => {
+const Intro = ({ text }) => {
   return (
     <section className="intro bg-container">
       <div className="overlay" />
@@ -14,7 +15,7 @@ const Intro = () => {
               <img src={logo} className="logo" alt="logo" />
               <p className="italic">{`Hi, hello, nice to meet you!`}</p>
               <h1 className="text">
-                Welcome to <code>portfolio/GiwooLee.js</code>
+                Welcome to <code>{text}</code>
               </h1>
               <p className="italic">{`Check out my past and current projects.`}</p>
             </Col>

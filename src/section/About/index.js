@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import '../shared.css';
 import './about.css';
 import classNames from 'classnames';
 
 // Images
-import reactLogo from '../../../../assets/img/react-js-logo-min.png';
-import pythonLogo from '../../../../assets/img/python-logo-generic.svg';
-import pytorchLogo from '../../../../assets/img/pytorch-logo-min.png';
-import rLogo from '../../../../assets/img/r-logo.svg';
-import mongoDBLogo from '../../../../assets/img/mongodb-logo-min.png';
-import awsLogo from '../../../../assets/img/aws-logo-min.png';
-import gcpLogo from '../../../../assets/img/gcp-logo-min.png';
-import personalPicture from '../../../../assets/img/personal-picture-bew.jpg';
-import personalPicture2 from '../../../../assets/img/personal-picture-bew-2.jpg';
+import reactLogo from '../../assets/img/react-js-logo-min.png';
+import pythonLogo from '../../assets/img/python-logo-generic.svg';
+import pytorchLogo from '../../assets/img/pytorch-logo-min.png';
+import rLogo from '../../assets/img/r-logo.svg';
+import mongoDBLogo from '../../assets/img/mongodb-logo-min.png';
+import awsLogo from '../../assets/img/aws-logo-min.png';
+import gcpLogo from '../../assets/img/gcp-logo-min.png';
+import personalPicture from '../../assets/img/personal-picture-bew.jpg';
+import personalPicture2 from '../../assets/img/personal-picture-bew-2.jpg';
 
 const SKill = ({ title, percentage, description, type }) => {
   let progressClass = classNames({
