@@ -41,25 +41,36 @@ const ContentRendererFormKeywords = ({ label, keywords }) => {
   );
 };
 
-const ContentSection = ({ title, content, isDescription }) => {
-  const { name, alias, keywords, role, year } = content;
+const ContentSection = ({ title, content }) => {
+  let contentAllIds = Object.keys(content);
 
   return (
     <div className="content-renderer-section">
       <div className="content-renderer-section-title">{title}</div>
-      {isDescription ? (
-        <div className="content-renderer-form">
-          <ContentRendererFormTextArea label="What was done" field={content} />
-        </div>
-      ) : (
-        <div className="content-renderer-form">
-          <ContentRendererFormField label="Name" field={name} />
-          <ContentRendererFormField label="Alias" field={alias} />
-          <ContentRendererFormKeywords label="Keywords" keywords={keywords} />
-          <ContentRendererFormField label="Year" field={year} />
-          <ContentRendererFormField label="Role" field={role} />
-        </div>
-      )}
+      {contentAllIds &&
+        contentAllIds.map(contentId => {
+          console.log('content[contentId]}.type', content[contentId].type);
+          return (
+            <div key={contentId} className="content-renderer-form">
+              {content[contentId].type === 'array' ? (
+                <ContentRendererFormKeywords
+                  label={contentId}
+                  keywords={content[contentId].content}
+                />
+              ) : content[contentId].type === 'field' ? (
+                <ContentRendererFormField
+                  label={contentId}
+                  field={content[contentId].content}
+                />
+              ) : (
+                <ContentRendererFormTextArea
+                  label={contentId}
+                  field={content[contentId].content}
+                />
+              )}
+            </div>
+          );
+        })}
     </div>
   );
 };

@@ -5,8 +5,6 @@ import './screenshots.css';
 import screenshotImages from './screenshotImages';
 
 const Screenshots = ({ projectName, selectImage, selectedImage }) => {
-  console.log('selectedImage', selectedImage);
-
   let processedSelectedImage =
     screenshotImages[projectName] &&
     screenshotImages[projectName].length > 0 &&

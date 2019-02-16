@@ -37,7 +37,7 @@ class ContentRenderer extends PureComponent {
 
   render() {
     const {
-      project: { basics, description },
+      project: { basics, description, aboutCompany },
     } = this.props;
 
     const { rendererContext, renderedImage } = this.state;
@@ -63,13 +63,15 @@ class ContentRenderer extends PureComponent {
         ) : rendererContext === RENDERER_CONTEXT.SCREENSHOTS ? (
           <React.Fragment>
             <Screenshots
-              projectName={basics.name}
+              projectName={basics.name.content}
               selectImage={this.updateRenderedImage}
               selectedImage={renderedImage}
             />
           </React.Fragment>
         ) : (
-          <React.Fragment />
+          <React.Fragment>
+            <ContentSection title="About the Company" content={aboutCompany} />
+          </React.Fragment>
         )}
       </div>
     );
