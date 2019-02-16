@@ -12,4 +12,5 @@
 
 .top-menu-container div:nth-child(1) {
     border-right: 1px solid var(--gray);
+    width: 40px;
 }

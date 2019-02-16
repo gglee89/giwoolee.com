@@ -5,6 +5,14 @@
 }
 
 .menu-item img {
+    transition: transform 300ms ease-in-out;
+}
+
+.menu-item:hover img {
+    transform: rotate(360deg);
+}
+
+.menu-item img {
     height: 40px;
 }
 
