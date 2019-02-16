@@ -15,5 +15,6 @@
 .preferences-body {
     background-color: var(--light-gray);
     height: 500px;
+    overflow-y: scroll;
     padding: 20px 25px;
 }

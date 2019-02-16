@@ -79,11 +79,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #000;
+    background: var(--white);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
     background: #888;
 }
 
