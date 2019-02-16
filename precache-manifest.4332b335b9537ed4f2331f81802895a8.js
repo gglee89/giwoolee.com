@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/dashboard-min.aa878ca0.jpeg"
   },
   {
-    "revision": "7e09544579217b0283bc",
+    "revision": "ad49a3e24caf0ff545f6",
     "url": "/static/css/main.f2b2cf02.chunk.css"
   },
   {
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/static/media/habits-select-min.486aaaaf.jpeg"
   },
   {
-    "revision": "7e09544579217b0283bc",
-    "url": "/static/js/main.7e095445.chunk.js"
+    "revision": "ad49a3e24caf0ff545f6",
+    "url": "/static/js/main.ad49a3e2.chunk.js"
   },
   {
     "revision": "f60ca5cb506676ee977c35f67b9d2f64",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/static/media/aws-logo-min.129427db.png"
   },
   {
-    "revision": "11311aae2695292b4d461646ca0fef95",
+    "revision": "1c2ade6dccdb040de08b05f30fa56cb3",
     "url": "/index.html"
   }
 ];
