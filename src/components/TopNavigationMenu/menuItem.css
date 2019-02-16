@@ -9,6 +9,10 @@
     transition: transform 300ms ease-in-out;
 }
 
+.menu-item.active {
+    background-color: var(--dark-gray);
+}
+
 .menu-item:hover img {
     transform: rotate(360deg);
 }
