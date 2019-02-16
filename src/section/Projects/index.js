@@ -19,7 +19,7 @@ const Projects = props => {
         <TopNavigationMenu />
         <div className="project-body">
           <SideMenu />
-          <ContentRenderer />
+          <ContentRenderer projectName="RockyRobots" />
         </div>
       </Container>
     </section>
