@@ -3,14 +3,20 @@ import React from 'react';
 // Components
 import MenuItem from './MenuItem';
 
-const Menu = () => {
+const Menu = ({ onItemSelect, menuItems }) => {
   return (
     <div className="menu">
-      <MenuItem name="Rocky App" />
-      <MenuItem name="Avocado" />
-      <MenuItem name="Marshall Goldsmith" />
-      <MenuItem name="K-POP" />
-      <MenuItem name="HDBCSI" />
+      {menuItems &&
+        menuItems.length > 0 &&
+        menuItems.map(menuItem => {
+          return (
+            <MenuItem
+              key={menuItem}
+              name={menuItem}
+              onItemSelect={onItemSelect}
+            />
+          );
+        })}
     </div>
   );
 };

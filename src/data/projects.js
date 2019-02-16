@@ -15,4 +15,20 @@ export default {
       city: 'Munich',
     },
   },
+  Avocado: {
+    basics: {
+      company: 'Proof Suite Inc.',
+      name: 'Avocado',
+      alias: 'Avocado',
+      keywords: ['Blockchain', 'Crypto', 'OTC'],
+      role: 'Software Engineer (Remote)',
+      year: '2018 - Today',
+    },
+    description:
+      'Crafted advanced crypto finance platform to allow Trade, Analysis, Online Chat.',
+    aboutCompany: {
+      country: 'South Korea',
+      city: 'Seoul',
+    },
+  },
 };
