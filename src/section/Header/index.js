@@ -76,7 +76,7 @@ class Header extends Component {
                 style={{ width: '150px', padding: '10px 0' }}
               />
             </a>
-            <button
+            {/* <button
               type="button"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"
@@ -116,7 +116,7 @@ class Header extends Component {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </Container>
         </nav>
       </header>

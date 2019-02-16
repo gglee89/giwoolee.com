@@ -1,7 +1,7 @@
 import { MENU_SELECT } from '../actions/menu';
 
 const initialState = {
-  selectedMenu: 'Mission',
+  selectedMenu: 'General',
 };
 
 const reducer = (state = initialState, action) => {
