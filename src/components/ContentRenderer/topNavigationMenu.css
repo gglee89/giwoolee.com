@@ -4,9 +4,11 @@
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    margin-top: -10px;
+    margin-top: -5px;
     margin-left: 5px;
     margin-right: 5px;
+    position: absolute;
+    top: -10px;
 }
 
 .content-renderer-top-navigation-container-item {
@@ -15,7 +17,7 @@
     padding: 2px 10px;
 }
 
-.content-renderer-top-navigation-container-item .active {
+.content-renderer-top-navigation-container-item.active {
     background-color: var(--blue);
 }
 
