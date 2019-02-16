@@ -1,0 +1,10 @@
+.menu-item {
+    margin: 2px 0px 0px 0px;
+    padding: 5px 10px 0px;
+}
+
+.menu-item .active {
+    background-color: #b3b3b3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

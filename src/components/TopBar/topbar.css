@@ -1,0 +1,36 @@
+.topbar-container {
+    background-color: #DDD;
+    border-bottom: solid 1px #CCC;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 25px;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.left-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-menu div {
+    border-radius: 58%;
+    font-size: 8px;
+    font-weight: bold;
+    height: 15px;
+    margin-left: 10px;
+    padding: 0 5px;
+    width: 15px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.right-menu {
+    width: 50px;
+}
