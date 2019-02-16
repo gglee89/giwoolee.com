@@ -1,7 +1,8 @@
 .renderer-container {
-    background-color: var(--blue);
+    background-color: var(--light-gray);
     border: 1px solid var(--gray);
     height: 100%;
+    font-size: 12px;
     flex: 3;
     margin-left: 5px;
 }
