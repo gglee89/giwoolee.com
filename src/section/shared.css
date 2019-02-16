@@ -3,7 +3,7 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    background-color: #00ff00;
+    background-color: var(--main-color);
     flex: 1;
     height: 20px;
     margin-left: 5px;

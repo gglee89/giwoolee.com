@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import './App.css';
+import './Theme.css';
 import { Row, Col } from 'react-bootstrap';
 
 // Actions
