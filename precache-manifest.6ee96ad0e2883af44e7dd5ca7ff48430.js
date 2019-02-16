@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "486aaaaf06d1c7b82a7838765c3ca102",
-    "url": "/static/media/habits-select-min.486aaaaf.jpeg"
+    "revision": "7906b11db00022ad02c3afe402e13ed2",
+    "url": "/static/media/home-min.7906b11d.jpeg"
   },
   {
-    "revision": "c21bebf2dfb4e2e78951",
-    "url": "/static/css/main.38880b05.chunk.css"
+    "revision": "653134f7011df2e36d34",
+    "url": "/static/css/main.67c20b8b.chunk.css"
   },
   {
-    "revision": "0ae7103bc592767d3f7d",
-    "url": "/static/js/1.0ae7103b.chunk.js"
+    "revision": "bc41833498a7edcaf978",
+    "url": "/static/js/1.bc418334.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -18,14 +18,6 @@ self.__precacheManifest = [
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "/static/media/logo.5d5d9eef.svg"
-  },
-  {
-    "revision": "9da255e5be19544d5f5f9f81c67c1025",
-    "url": "/static/media/personal-picture-bew.9da255e5.jpg"
-  },
-  {
-    "revision": "957cb04dce67829f9193a254906a3e4a",
-    "url": "/static/media/personal-picture-bew-2.957cb04d.jpg"
   },
   {
     "revision": "3b9d86ace5fc0f534400e2ba66c4e17d",
@@ -48,12 +40,16 @@ self.__precacheManifest = [
     "url": "/static/media/sushi.bc0d1d5f.svg"
   },
   {
-    "revision": "7906b11db00022ad02c3afe402e13ed2",
-    "url": "/static/media/home-min.7906b11d.jpeg"
+    "revision": "09a3a4dce2329a14004a0e45f39c23f9",
+    "url": "/static/media/043-view.09a3a4dc.svg"
   },
   {
-    "revision": "c21bebf2dfb4e2e78951",
-    "url": "/static/js/main.c21bebf2.chunk.js"
+    "revision": "653134f7011df2e36d34",
+    "url": "/static/js/main.653134f7.chunk.js"
+  },
+  {
+    "revision": "486aaaaf06d1c7b82a7838765c3ca102",
+    "url": "/static/media/habits-select-min.486aaaaf.jpeg"
   },
   {
     "revision": "aa878ca080d6cabc9321ac485d528a9c",
@@ -88,23 +84,7 @@ self.__precacheManifest = [
     "url": "/static/media/ein-steig-min.baee195b.jpg"
   },
   {
-    "revision": "7d9fccaffda0db8340fe3e803fee9c83",
-    "url": "/static/media/python-logo-generic.7d9fccaf.svg"
-  },
-  {
-    "revision": "0d57c2c2f2b9e19e1a221b6c7ef0dedb",
-    "url": "/static/media/r-logo.0d57c2c2.svg"
-  },
-  {
-    "revision": "3d21515644d693cf54cee0c51d4989d5",
-    "url": "/static/media/mongodb-logo-min.3d215156.png"
-  },
-  {
-    "revision": "129427db6161457ffe4f210ae68b5248",
-    "url": "/static/media/aws-logo-min.129427db.png"
-  },
-  {
-    "revision": "c39ef1b4876e85a9eface1e9ed07a5f2",
+    "revision": "5f665c9f26023620d6b1a9d179dc89b4",
     "url": "/index.html"
   }
 ];
