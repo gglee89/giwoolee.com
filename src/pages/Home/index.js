@@ -5,7 +5,7 @@ import Intro from '../../section/Intro';
 import Header from '../../section/Header';
 import About from '../../section/About';
 import AreaOfInterest from '../../section/AreaOfInterest';
-import Projects from '../../section/Projects';
+import Preferences from '../../section/Preferences';
 import Mission from '../../section/Mission';
 import Contact from '../../section/Contact';
 import Footer from '../../section/Footer';
@@ -18,7 +18,7 @@ class Home extends PureComponent {
         <Header />
         <About />
         <AreaOfInterest />
-        <Projects />
+        <Preferences />
         <Mission />
         <Contact />
         <Footer />

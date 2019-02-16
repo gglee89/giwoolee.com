@@ -47,6 +47,11 @@ export default {
     aboutCompany: {
       country: { content: 'South Korea', type: 'field' },
       city: { content: 'Seoul', type: 'field' },
+      statement: {
+        content:
+          'Proof Suite delivers institutional and retail platforms to meet the demands of the next generation of international finance. Proof offers Avocado and AMP. Avocado delivers the highest grade in blockchain data analytics, OTC trade capabilities, social networking, and in-depth market research reports to financial institutions.',
+        type: 'field',
+      },
     },
   },
   HDBCSI: {
@@ -71,6 +76,11 @@ export default {
     aboutCompany: {
       country: { content: 'South Korea', type: 'field' },
       city: { content: 'Seoul', type: 'field' },
+      statement: {
+        content:
+          'SAP SE is a German-based European multinational software corporation that makes enterprise software to manage business operations and customer relations. SAP is headquartered in Walldorf, Baden-Württemberg, Germany with regional offices in 180 countries.',
+        field: 'text',
+      },
     },
   },
 };
