@@ -17,7 +17,10 @@ import ContentRenderer from '../../components/ContentRenderer';
 // Actions
 import * as projectsActions from '../../actions/projects';
 
-const Projects = ({ selectProject }) => {
+// Selectors
+import * as projectSelectors from '../../reducers/projects';
+
+const Projects = ({ selectProject, projectName }) => {
   const projectsListAllIds = Object.keys(projectsList);
 
   return (
@@ -28,20 +31,27 @@ const Projects = ({ selectProject }) => {
         <div className="project-body">
           <SideMenu
             onItemSelect={selectProject}
+            currentItem={projectName}
             menuItems={projectsListAllIds}
           />
-          <ContentRenderer projectName="RockyRobots" />
+          <ContentRenderer />
         </div>
       </Container>
     </section>
   );
 };
 
+function mapStateToProps(state) {
+  return {
+    projectName: projectSelectors.getProjectName(state),
+  };
+}
+
 const actionCreators = {
   selectProject: projectsActions.selectProject,
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   actionCreators
 )(Projects);

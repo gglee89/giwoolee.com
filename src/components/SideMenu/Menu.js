@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import MenuItem from './MenuItem';
 
-const Menu = ({ onItemSelect, menuItems }) => {
+const Menu = ({ onItemSelect, currentItem, menuItems }) => {
   return (
     <div className="menu">
       {menuItems &&
@@ -12,6 +12,7 @@ const Menu = ({ onItemSelect, menuItems }) => {
           return (
             <MenuItem
               key={menuItem}
+              isActive={menuItem === currentItem}
               name={menuItem}
               onItemSelect={onItemSelect}
             />

@@ -22,7 +22,8 @@ const ContentRenderer = ({ project }) => {
   );
 };
 
-function mapStateToProps(state, { projectName }) {
+function mapStateToProps(state) {
+  let projectName = projectsSelectors.getProjectName(state);
   return {
     project: projectsSelectors.getProject(state, projectName),
   };

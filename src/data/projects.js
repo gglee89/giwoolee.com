@@ -1,5 +1,5 @@
 export default {
-  RockyRobots: {
+  'Rocky Robots': {
     basics: {
       company: 'Rocky Robots Inc.',
       name: 'Rocky App',
@@ -21,8 +21,8 @@ export default {
       name: 'Avocado',
       alias: 'Avocado',
       keywords: ['Blockchain', 'Crypto', 'OTC'],
-      role: 'Software Engineer (Remote)',
-      year: '2018 - Today',
+      role: 'Front End Engineer (On Site)',
+      year: '2018/Feb - 2018/July',
     },
     description:
       'Crafted advanced crypto finance platform to allow Trade, Analysis, Online Chat.',

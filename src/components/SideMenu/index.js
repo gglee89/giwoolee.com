@@ -6,11 +6,15 @@ import './sideMenu.css';
 import TopMenu from './TopMenu';
 import Menu from './Menu';
 
-const SideMenu = ({ onItemSelect, menuItems }) => {
+const SideMenu = ({ onItemSelect, currentItem, menuItems }) => {
   return (
     <div className="side-menu-container">
       <TopMenu />
-      <Menu onItemSelect={onItemSelect} menuItems={menuItems} />
+      <Menu
+        onItemSelect={onItemSelect}
+        currentItem={currentItem}
+        menuItems={menuItems}
+      />
     </div>
   );
 };

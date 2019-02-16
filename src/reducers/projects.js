@@ -3,17 +3,17 @@ import { PROJECTS_SELECT } from '../actions/projects';
 
 const initialState = {
   ...PROJECTS,
-  projectName: 'RockyRobots',
+  projectName: 'Rocky Robots',
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case PROJECTS_SELECT:
-      let projectName = action.payload.replace(/ +/g, ''); // Remove spaces between words
+      // let projectName = action.payload.replace(/ +/g, ''); // Remove spaces between words
 
       return {
         ...state,
-        projectName,
+        projectName: action.payload,
       };
     default:
       return state;
@@ -28,6 +28,10 @@ export function getProject(state, projectName) {
   const projects = select(state);
 
   return projects[projectName];
+}
+
+export function getProjectName(state) {
+  return select(state).projectName;
 }
 
 export default reducer;
