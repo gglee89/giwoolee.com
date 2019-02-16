@@ -4,7 +4,7 @@ import React from 'react';
 import './interests.css';
 
 // Components
-import InterestSection from './InterestSection';
+import Section from '../../../components/Section';
 
 const data = {
   'Machine Learning': {
@@ -65,11 +65,7 @@ const Interests = () => {
         dataAllIds.length > 0 &&
         dataAllIds.map(dataId => {
           return (
-            <InterestSection
-              key={dataId}
-              title={dataId}
-              topics={data[dataId].topics}
-            />
+            <Section key={dataId} title={dataId} topics={data[dataId].topics} />
           );
         })}
     </div>
