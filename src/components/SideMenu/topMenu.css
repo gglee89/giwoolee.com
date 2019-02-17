@@ -3,7 +3,7 @@
     border-bottom: 1px solid var(--gray);
     color: var(--dark-gray);
     display: flex;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .top-menu-container div {
@@ -12,5 +12,5 @@
 
 .top-menu-container div:nth-child(1) {
     border-right: 1px solid var(--gray);
-    width: 40px;
+    width: 50px;
 }

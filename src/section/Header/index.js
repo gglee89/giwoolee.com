@@ -33,7 +33,7 @@ class Header extends Component {
           : document.body.scrollTop,
       };
 
-      if (scroll.y > this.navElem.current.offsetTop) {
+      /* if (scroll.y > this.navElem.current.offsetTop) {
         this.setState({
           isSticky: true,
         });
@@ -41,7 +41,7 @@ class Header extends Component {
         this.setState({
           isSticky: false,
         });
-      }
+      } */
     });
   }
 
@@ -76,47 +76,6 @@ class Header extends Component {
                 style={{ width: '150px', padding: '10px 0' }}
               />
             </a>
-            {/* <button
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              className="navbar-toggler navbar-toggler-right collapsed"
-              onClick={() => this.toggleNavbar()}
-            >
-              <i className="fa fa-bars" />
-            </button>
-            <div id="navbarSupportedContent" className={navbarCollapse}>
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item" onClick={() => this.toggleNavbar()}>
-                  <a href="#about" className="nav-link link-scroll">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item" onClick={() => this.toggleNavbar()}>
-                  <a href="#area-of-interest" className="nav-link link-scroll">
-                    Area of Interest
-                  </a>
-                </li>
-                <li className="nav-item" onClick={() => this.toggleNavbar()}>
-                  <a href="#projects" className="nav-link link-scroll">
-                    Projects
-                  </a>
-                </li>
-                <li className="nav-item" onClick={() => this.toggleNavbar()}>
-                  <a href="#mission" className="nav-link link-scroll">
-                    Mission
-                  </a>
-                </li>
-                <li className="nav-item" onClick={() => this.toggleNavbar()}>
-                  <a href="#contact" className="nav-link link-scroll">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div> */}
           </Container>
         </nav>
       </header>

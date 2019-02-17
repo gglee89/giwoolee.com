@@ -2,7 +2,7 @@
     display: flex;
     color: var(--dark-gray);
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .side-menu-item:hover {
@@ -19,5 +19,5 @@
 
 .side-menu-item div:nth-child(1) {
     /* border-right: 1px solid var(--gray); */
-    width: 40px;
+    width: 50px;
 }

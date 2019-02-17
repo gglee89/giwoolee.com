@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 
 // Styles
 import './section.css';
@@ -12,12 +13,17 @@ const SectionItem = ({ name, level }) => {
   );
 };
 
-const Section = ({ title, topics }) => {
+const Section = ({ title, topics, isDisabled }) => {
+  let updateButtonClasses = classnames({
+    'section-update-button': true,
+    disabled: isDisabled,
+  });
+
   return (
     <div className="section-container">
       <div className="section-header">
         <div className="section-title">{title}</div>
-        <div className="section-update-button">
+        <div className={updateButtonClasses}>
           <div>UPDATE ALL</div>
           <div>+</div>
         </div>
@@ -31,6 +37,10 @@ const Section = ({ title, topics }) => {
       </div>
     </div>
   );
+};
+
+Section.defaultProps = {
+  isDisabled: true,
 };
 
 export default Section;

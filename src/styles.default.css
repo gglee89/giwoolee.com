@@ -24,7 +24,7 @@ body {
 
 section {
   overflow-x: hidden;
-    padding: 150px 0;
+  padding: 20px 0;
 }
 
 @media (max-width: 767.98px) {

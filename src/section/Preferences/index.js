@@ -15,6 +15,7 @@ import Projects from './Projects';
 import Interests from './Interests';
 import Mission from './Mission';
 import Contact from './Contact';
+import Attribution from './Attribution';
 
 // Actions
 import * as projectsActions from '../../actions/projects';
@@ -31,6 +32,7 @@ const MENU_ITEMS = {
   INTERESTS: 'Interests',
   MISSION: 'Mission',
   CONTACT: 'Contact',
+  ATTRIBUTION: 'Attribution',
 };
 
 // Data
@@ -40,6 +42,7 @@ const menuItems = [
   { icon: 'melon', title: MENU_ITEMS.INTERESTS },
   { icon: 'pieceOfCake', title: MENU_ITEMS.MISSION },
   { icon: 'sushi', title: MENU_ITEMS.CONTACT },
+  { icon: 'pizza', title: MENU_ITEMS.ATTRIBUTION },
 ];
 
 const Preferences = ({
@@ -65,6 +68,7 @@ const Preferences = ({
           {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
           {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
           {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
+          {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
         </div>
       </Container>
     </section>

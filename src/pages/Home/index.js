@@ -10,10 +10,8 @@ class Home extends PureComponent {
   render() {
     return (
       <React.Fragment>
-        <Intro text="portfolio/giwoolee.js" />
         <Header />
         <Preferences />
-        <Footer />
       </React.Fragment>
     );
   }
