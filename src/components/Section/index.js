@@ -32,7 +32,7 @@ const Section = ({ title, topics, isDisabled }) => {
         {topics &&
           topics.length > 0 &&
           topics.map(({ name, level }) => {
-            return <SectionItem name={name} level={level} />;
+            return <SectionItem key={name} name={name} level={level} />;
           })}
       </div>
     </div>

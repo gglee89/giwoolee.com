@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import './screenshots.css';
-import screenshotImages from './screenshotImages';
+import screenshotImages from '../../shared/screenshots';
 
 const Screenshots = ({ projectName, selectImage, selectedImage }) => {
   let processedSelectedImage =

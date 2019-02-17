@@ -78,7 +78,7 @@ class Mission extends PureComponent {
             onClick={() => this.selectFontSize(FONT_SIZES.EXTRA_LARGE)}
             className={missionExtraLarge}
           >
-            Go check your eyes <img src={icons.view} alt="eyes" />
+            A <img src={icons.view} alt="eyes" />
           </div>
         </div>
         <div className="mission-item">

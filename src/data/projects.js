@@ -83,4 +83,71 @@ export default {
       },
     },
   },
+  Makestar: {
+    basics: {
+      company: {
+        content: 'Makestar Global K-POP Crowdfunding Platform',
+        type: 'field',
+      },
+      name: { content: 'Makestar K-POP', type: 'field' },
+      alias: { content: 'Makestar (K-POP)', type: 'field' },
+      keywords: {
+        content: ['K-POP', 'Crowdfunding', 'OpenUI5'],
+        type: 'array',
+      },
+      role: { content: 'Front End Engineer (Contractor)', type: 'field' },
+      year: { content: '2016/May - 2016/October', type: 'field' },
+    },
+    description: {
+      'What was done': {
+        content:
+          'Worked closely with Graphic & UI designer to convert design mockups into interactive Front End. ',
+        type: 'text',
+      },
+    },
+    aboutCompany: {
+      country: { content: 'South Korea', type: 'field' },
+      city: { content: 'Seoul', type: 'field' },
+      statement: {
+        content:
+          'Makestar is a Global K-POP Crowdfunding Platform. Connecting global fans with K-POP artists in the process of producing their content.',
+        field: 'text',
+      },
+    },
+  },
+  'Marshall Goldsmith': {
+    basics: {
+      company: {
+        content: 'Makestar Global K-POP Crowdfunding Platform',
+        type: 'field',
+      },
+      name: { content: 'Marshall Goldsmith', type: 'field' },
+      alias: {
+        content: 'Leadership Grwoth Progress Review (LGPR)',
+        type: 'field',
+      },
+      keywords: {
+        content: ['Leadership Development', 'Measurable'],
+        type: 'array',
+      },
+      role: { content: 'Front End Engineer (Contractor)', type: 'field' },
+      year: { content: '2016/May - 2016/October', type: 'field' },
+    },
+    description: {
+      'What was done': {
+        content:
+          'Led development of executive coaching platform to assess leadership growth.',
+        type: 'text',
+      },
+    },
+    aboutCompany: {
+      country: { content: 'South Korea', type: 'field' },
+      city: { content: 'Seoul', type: 'field' },
+      statement: {
+        content:
+          'Marshall Goldsmith Stakeholder Centered Coaching is the largest executive coach network in the world.  Headed by luminaries in executive coaching and leadership thinking, our Executive Team is at the forefront of measurably growing leadership effectiveness around the world.',
+        field: 'text',
+      },
+    },
+  },
 };

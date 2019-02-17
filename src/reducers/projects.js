@@ -9,8 +9,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case PROJECTS_SELECT:
-      // let projectName = action.payload.replace(/ +/g, ''); // Remove spaces between words
-
       return {
         ...state,
         projectName: action.payload,
