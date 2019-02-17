@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Container } from 'react-bootstrap';
+import Fullscreen from 'react-full-screen';
 
 // Styles
 import './preferences.css';
@@ -45,35 +46,54 @@ const menuItems = [
   { icon: 'pizza', title: MENU_ITEMS.ATTRIBUTION },
 ];
 
-const Preferences = ({
-  selectMenu,
-  selectedMenu,
-  selectProject,
-  projectName,
-}) => {
-  return (
-    <section id="preferences">
-      <Container className="preferences-container">
-        <TopBar title="Preferences" />
-        <TopNavigationMenu
-          menuItems={menuItems}
-          selectMenu={selectMenu}
-          selectedMenu={selectedMenu}
-        />
-        <div className="preferences-body">
-          {selectedMenu === MENU_ITEMS.GENERAL && <General />}
-          {selectedMenu === MENU_ITEMS.PROJECTS && (
-            <Projects selectProject={selectProject} projectName={projectName} />
-          )}
-          {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
-          {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
-          {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
-          {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
-        </div>
-      </Container>
-    </section>
-  );
-};
+class Preferences extends PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isFullScreen: false,
+    };
+  }
+
+  toggleFullScreen = () => {
+    this.setState(prevState => ({
+      isFullScreen: prevState.isFullScreen ? false : true,
+    }));
+  };
+
+  render() {
+    const { selectMenu, selectedMenu, selectProject, projectName } = this.props;
+
+    return (
+      <Fullscreen
+        enabled={this.state.isFullScreen}
+        onChange={isFullScreen => this.setState({ isFullScreen })}
+      >
+        <Container className="preferences-container">
+          <TopBar title="About Me" requestFullScreen={this.toggleFullScreen} />
+          <TopNavigationMenu
+            menuItems={menuItems}
+            selectMenu={selectMenu}
+            selectedMenu={selectedMenu}
+          />
+          <div className="preferences-body">
+            {selectedMenu === MENU_ITEMS.GENERAL && <General />}
+            {selectedMenu === MENU_ITEMS.PROJECTS && (
+              <Projects
+                selectProject={selectProject}
+                projectName={projectName}
+              />
+            )}
+            {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
+            {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
+            {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
+            {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
+          </div>
+        </Container>
+      </Fullscreen>
+    );
+  }
+}
 
 function mapStateToProps(state) {
   return {

@@ -1,12 +1,20 @@
-import cookie from '../assets/icons/freepik/cookie.svg';
-import iceCream from '../assets/icons/freepik/ice-cream.svg';
-import melon from '../assets/icons/freepik/melon.svg';
-import pieceOfCake from '../assets/icons/freepik/piece-of-cake.svg';
-import sushi from '../assets/icons/freepik/sushi.svg';
-import pizza from '../assets/icons/freepik/pizza.svg';
+import cookie from '../assets/icons/flaticon/cookie.svg';
+import iceCream from '../assets/icons/flaticon/ice-cream.svg';
+import melon from '../assets/icons/flaticon/melon.svg';
+import pieceOfCake from '../assets/icons/flaticon/piece-of-cake.svg';
+import sushi from '../assets/icons/flaticon/sushi.svg';
+import pizza from '../assets/icons/flaticon/pizza.svg';
+import illustration from '../assets/icons/flaticon/029-illustration.svg';
+import like from '../assets/icons/flaticon/046-like.svg';
+import camera from '../assets/icons/flaticon/033-camera.svg';
+import contacts from '../assets/icons/flaticon/027-contacts.svg';
+import home from '../assets/icons/flaticon/012-home.svg';
+import twitter from '../assets/icons/flaticon/040-twitter.svg';
+import email from '../assets/icons/flaticon/044-email.svg';
+import download from '../assets/icons/flaticon/011-download.svg';
 
 // graphic-design
-import view from '../assets/icons/freepik/043-view.svg';
+import view from '../assets/icons/flaticon/043-view.svg';
 
 export default {
   cookie,
@@ -16,4 +24,12 @@ export default {
   sushi,
   view,
   pizza,
+  illustration,
+  like,
+  camera,
+  contacts,
+  home,
+  twitter,
+  email,
+  download,
 };

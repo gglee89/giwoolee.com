@@ -4,11 +4,35 @@ import classnames from 'classnames';
 // Styles
 import './section.css';
 
-const SectionItem = ({ name, level }) => {
-  return (
-    <div className="section-topic">
-      <div>{name}</div>
-      <div className="section-topic-item">{level}</div>
+// Icons
+import icons from '../../shared/icons';
+
+const SectionItem = ({ name, level, link, mail, icon, seniority }) => {
+  return link || mail ? (
+    <a
+      href={link ? link : mail ? `mailto: ${mail}` : '#'}
+      rel="noopener noreferrer"
+      target="_blank"
+      className="section-item-container"
+    >
+      {icon && (
+        <img src={icons[icon]} alt={name} className="section-item-icon" />
+      )}
+      <div className="section-topic">
+        <div>{name}</div>
+        <div className="section-topic-item">{level}</div>
+      </div>
+    </a>
+  ) : (
+    <div className="section-item-container">
+      {icon && (
+        <img src={icons[icon]} alt={name} className="section-item-icon" />
+      )}
+      <div className="section-topic">
+        <div>{name}</div>
+        <div className="section-topic-item">{level}</div>
+        {seniority && <div className="section-topic-item">{seniority}</div>}
+      </div>
     </div>
   );
 };
@@ -31,8 +55,8 @@ const Section = ({ title, topics, isDisabled }) => {
       <div className="section-body">
         {topics &&
           topics.length > 0 &&
-          topics.map(({ name, level }) => {
-            return <SectionItem key={name} name={name} level={level} />;
+          topics.map((props, key) => {
+            return <SectionItem key={key} {...props} />;
           })}
       </div>
     </div>

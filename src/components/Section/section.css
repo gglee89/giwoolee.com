@@ -29,7 +29,45 @@
     text-align: left;
 }
 
-.section-topic-item {}
+.section-topic-item {
+    text-decoration: none;
+}
+
+.section-item-container {
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.section-item-container:hover {
+    background-color: var(--gray);
+    text-decoration: none;
+}
+
+.section-item-container:hover img {
+    animation: bump 500ms infinite forwards;
+}
+
+@keyframes bump {
+    0% {
+        margin-top: 5px;
+    }
+
+    50% {
+        margin-top: 1px;
+    }
+
+    100% {
+        margin-top: 5px;
+    }
+}
+
+.section-item-container img {
+    height: 50px;
+    margin-top: 5px;
+    padding: 5px;
+}
 
 .section-update-button {
     background-color: var(--dark-gray);
