@@ -1,0 +1,55 @@
+.notfound-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.notfound-container div {
+    align-items: center;
+    display: flex;
+    height: 40px;
+}
+
+.notfound-image {
+    height: 150px;
+}
+
+.notfound-image-small {
+    animation: bump 500ms infinite forwards;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.rotate {
+    animation: rotate 6s infinite forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(400deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(400deg);
+    }
+}
+
+.notfound-container div {
+    margin: 10px 0;
+}
+
+.notfound-text {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px 0;
+}
+
+.notfound-button {
+    font-weight: bold;
+}
