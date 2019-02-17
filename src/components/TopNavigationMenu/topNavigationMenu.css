@@ -4,6 +4,12 @@
     border-bottom: solid 1px #CCC;
 }
 
+@media screen and (max-width: 687px) {
+    .top-navigation-container {
+        padding: 0;
+    }
+}
+
 .navigation-menu {
     align-items: flex-end;
     display: flex;

@@ -28,6 +28,13 @@
     transition: all 500ms ease-in-out;
 }
 
+@media screen and (max-width: 687px) {
+    .preferences-container {
+        height: 100%;
+        margin-top: 0px;
+    }
+}
+
 .preferences-body {
     background-color: var(--light-gray);
     height: 500px;

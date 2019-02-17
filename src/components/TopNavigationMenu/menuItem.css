@@ -5,6 +5,12 @@
     cursor: default;
 }
 
+@media screen and (max-width: 687px) {
+    .menu-item {
+        padding: 5px 9px 0px;
+    }
+}
+
 .menu-item img {
     transition: transform 300ms ease-in-out;
 }
@@ -19,6 +25,12 @@
 
 .menu-item img {
     height: 40px;
+}
+
+@media screen and (max-width: 400px) {
+    .menu-item img {
+        height: 30px;
+    }
 }
 
 .menu-item .active {

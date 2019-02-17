@@ -16,6 +16,12 @@
     flex-direction: row;
 }
 
+@media screen and (max-width: 687px) {
+    .left-menu {
+        opacity: 0;
+    }
+}
+
 .left-menu div {
     border-radius: 58%;
     font-size: 8px;
