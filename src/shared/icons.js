@@ -1,3 +1,4 @@
+import apple from '../assets/icons/flaticon/apple.svg';
 import cookie from '../assets/icons/flaticon/cookie.svg';
 import iceCream from '../assets/icons/flaticon/ice-cream.svg';
 import melon from '../assets/icons/flaticon/melon.svg';
@@ -12,11 +13,13 @@ import home from '../assets/icons/flaticon/012-home.svg';
 import twitter from '../assets/icons/flaticon/040-twitter.svg';
 import email from '../assets/icons/flaticon/044-email.svg';
 import download from '../assets/icons/flaticon/011-download.svg';
+import notebook from '../assets/icons/flaticon/034-notebook.svg';
 
 // graphic-design
 import view from '../assets/icons/flaticon/043-view.svg';
 
 export default {
+  apple,
   cookie,
   iceCream,
   melon,
@@ -32,4 +35,5 @@ export default {
   twitter,
   email,
   download,
+  notebook,
 };

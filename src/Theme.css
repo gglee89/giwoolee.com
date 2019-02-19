@@ -2,6 +2,7 @@
     --main-color: #00ff00;
     --blue: #58c4e2;
     --black: #000;
+    --black-transparent: rgba(0,0,0,0.5);
     --white: #fff;
     --gray: #DDD;
     --light-gray: #ededed;

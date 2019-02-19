@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import classNames from 'classnames';
+import moment from 'moment';
 
-import logo from '../../assets/img/giwoo-lee-logo.png';
+// Assets
+import icons from '../../shared/icons';
+
+// Styles
+import './header.css';
 
 class Header extends Component {
   constructor(props) {
@@ -64,18 +69,17 @@ class Header extends Component {
       show: this.state.isNavbarShow,
     });
 
+    let currentTime = moment().format('ddd LT');
+
     return (
       <header ref={this.navElem} className="header">
         <nav className={navClasses}>
           <Container>
-            <a href="#intro" className="navbar-brand link-scroll">
-              <img
-                src={logo}
-                alt=""
-                className="img-logo img-fluid"
-                style={{ width: '150px', padding: '10px 0' }}
-              />
+            <a href="/" className="header-left">
+              <img className="brand-logo" src={icons['apple']} alt="apple" />
+              <div>Gustavo Lee</div>
             </a>
+            <div className="header-right">{currentTime}</div>
           </Container>
         </nav>
       </header>

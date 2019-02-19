@@ -2,11 +2,11 @@ import React from 'react';
 
 import './topbar.css';
 
-const TopBar = ({ title, requestFullScreen }) => {
+const TopBar = ({ title, closeFinder, requestFullScreen }) => {
   return (
     <div className="topbar-container">
       <div className="left-menu">
-        <div className="apple-red">
+        <div className="apple-red" onClick={() => closeFinder()}>
           <span>X</span>
         </div>
         <div className="apple-gray" />

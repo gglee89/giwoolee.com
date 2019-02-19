@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import './App.css';
 import './Theme.css';
-import { Row, Col } from 'react-bootstrap';
+
+// Images
+import backgrounds from './shared/backgrounds';
 
 // Actions
 import * as modalActions from './actions/modal';
@@ -16,7 +18,7 @@ import Home from './pages/Home';
 
 class App extends Component {
   render() {
-    const { closeModal, isModalOpen, modalContent } = this.props;
+    const { isModalOpen, modalContent } = this.props;
 
     let modalClasses = classNames({
       modal: true,
@@ -34,7 +36,14 @@ class App extends Component {
     } = modalContent;
 
     return (
-      <div className="App">
+      <div
+        className="App"
+        style={{
+          background: `url(${backgrounds['bgPalmTree']})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <Home />
       </div>
     );

@@ -2,6 +2,10 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import Fullscreen from 'react-full-screen';
+import classnames from 'classnames';
+
+// Assets
+import icons from '../../shared/icons';
 
 // Styles
 import './preferences.css';
@@ -50,9 +54,22 @@ class Preferences extends PureComponent {
   constructor(props) {
     super(props);
 
+    this.iconRef = React.createRef();
+    this.count = 0;
+
     this.state = {
       isFullScreen: false,
+      isFinderOpen: true,
+      isIconSelected: false,
     };
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickIcon);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickIcon);
   }
 
   toggleFullScreen = () => {
@@ -61,16 +78,65 @@ class Preferences extends PureComponent {
     }));
   };
 
+  handleDoubleClick = () => {
+    console.log('handleDoubleClick event');
+    this.setState({
+      isIconSelected: true,
+    });
+
+    this.count++;
+
+    setTimeout(() => {
+      this.count = 0;
+    }, 1000);
+
+    // Only executes if user does double click
+    if (this.count === 2) {
+      this.setState({
+        isFinderOpen: true,
+      });
+    }
+  };
+
+  handleClickIcon = event => {
+    if (this.iconRef && !this.iconRef.current.contains(event.target)) {
+      this.setState({
+        ...this.state,
+        isIconSelected: false,
+      });
+      this.count = 0;
+    }
+  };
+
+  handleCloseFinder = () => {
+    this.setState({ isFinderOpen: false, isFullScreen: false });
+  };
+
   render() {
     const { selectMenu, selectedMenu, selectProject, projectName } = this.props;
+    const { isFinderOpen, isIconSelected } = this.state;
+
+    let preferencesContainerClasses = classnames({
+      'preferences-container': true,
+      'is-open': isFinderOpen,
+    });
+
+    let desktopIconClasses = classnames({
+      'desktop-icon': true,
+      'is-selected': isIconSelected,
+    });
 
     return (
       <Fullscreen
         enabled={this.state.isFullScreen}
         onChange={isFullScreen => this.setState({ isFullScreen })}
       >
-        <Container className="preferences-container">
-          <TopBar title="About Me" requestFullScreen={this.toggleFullScreen} />
+        <Container className={preferencesContainerClasses}>
+          <TopBar
+            title="About Me"
+            closeFinder={() => this.handleCloseFinder()}
+            requestFullScreen={this.toggleFullScreen}
+          />
           <TopNavigationMenu
             menuItems={menuItems}
             selectMenu={selectMenu}
@@ -90,6 +156,14 @@ class Preferences extends PureComponent {
             {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
           </div>
         </Container>
+        <div
+          ref={this.iconRef}
+          onClick={() => this.handleDoubleClick()}
+          className={desktopIconClasses}
+        >
+          <img src={icons['notebook']} alt="notebook" />
+          <div>About Me</div>
+        </div>
       </Fullscreen>
     );
   }
