@@ -1,19 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
-    "url": "/static/media/011-download.b48bc876.svg"
+    "revision": "66d1afe44a922a383130b20a6c642791",
+    "url": "/static/media/044-email.66d1afe4.svg"
   },
   {
-    "revision": "f4ccffe154a6cabad078",
-    "url": "/static/css/main.20e100df.chunk.css"
+    "revision": "6f9bffa5d0ed57b82ceb",
+    "url": "/static/css/main.be002aae.chunk.css"
   },
   {
-    "revision": "336a9b2d8b58ead003c7",
-    "url": "/static/js/1.336a9b2d.chunk.js"
+    "revision": "42e4100635ac2c239ca4",
+    "url": "/static/js/1.42e41006.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
+  },
+  {
+    "revision": "318f80a14ff9b7c88e588745ebf95471",
+    "url": "/static/media/bg.318f80a1.jpg"
+  },
+  {
+    "revision": "817fd63ce62b42f139815425a31d1afb",
+    "url": "/static/media/apple.817fd63c.svg"
   },
   {
     "revision": "3b9d86ace5fc0f534400e2ba66c4e17d",
@@ -64,12 +72,16 @@ self.__precacheManifest = [
     "url": "/static/media/040-twitter.d59408e0.svg"
   },
   {
-    "revision": "66d1afe44a922a383130b20a6c642791",
-    "url": "/static/media/044-email.66d1afe4.svg"
+    "revision": "6f9bffa5d0ed57b82ceb",
+    "url": "/static/js/main.6f9bffa5.chunk.js"
   },
   {
-    "revision": "f4ccffe154a6cabad078",
-    "url": "/static/js/main.f4ccffe1.chunk.js"
+    "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
+    "url": "/static/media/011-download.b48bc876.svg"
+  },
+  {
+    "revision": "adc9663d7e48d5df17963624b5814a42",
+    "url": "/static/media/034-notebook.adc9663d.svg"
   },
   {
     "revision": "09a3a4dce2329a14004a0e45f39c23f9",
@@ -132,7 +144,7 @@ self.__precacheManifest = [
     "url": "/static/media/marshall-goldsmith-2-min.c7b566fb.jpeg"
   },
   {
-    "revision": "7968253cd2841f50f7c863882044d338",
+    "revision": "d69fe31b8fc7b98d9592f66b0bb55cf4",
     "url": "/index.html"
   }
 ];
