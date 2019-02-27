@@ -21,9 +21,38 @@
 }
 
 .header-right {
+    align-items: center;
     color: var(--black);
+    display: flex;
+    flex-direction: row;
     font-weight: bold;
     font-size: 14px;
+}
+
+.header-right div {
+    margin-left: 20px;
+}
+
+.header-right-item {
+    border-right: 1px solid var(--black);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: all 500ms ease-in-out;
+}
+
+.header-right-item:hover {
+    text-decoration: none;
+}
+
+.header-right-item img {
+    height: 20px;
+}
+
+.header-right-item div {
+    margin-left: 7px;
 }
 
 nav.navbar {

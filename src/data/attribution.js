@@ -24,9 +24,33 @@ export default {
   Images: {
     topics: [
       {
-        name: 'Freepik - Created by ydlabs',
+        name: 'Background photo - Created by ydlabs',
         link: 'https://freepik.com/free-photos-vectors/background',
         level: 'https://freepik.com',
+        icon: 'download',
+      },
+      {
+        name: 'Background photo - Created by Danmir12',
+        link: 'https://www.freepik.com/danmir12',
+        level: 'https://www.freepik.com/danmir12',
+        icon: 'download',
+      },
+      {
+        name: 'Background photo - Created by Starline',
+        link: 'https://www.freepik.com/starline',
+        level: 'https://www.freepik.com/starline',
+        icon: 'download',
+      },
+      {
+        name: 'Background photo - Created by Lifeforstock',
+        link: 'https://www.freepik.com/lifeforstock',
+        level: 'https://www.freepik.com/lifeforstock',
+        icon: 'download',
+      },
+      {
+        name: 'Background photo - Created by Photoangel',
+        link: 'https://www.freepik.com/photoangel',
+        level: 'https://www.freepik.com/photoangel',
         icon: 'download',
       },
     ],

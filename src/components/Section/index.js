@@ -8,7 +8,6 @@ import './section.css';
 import icons from '../../shared/icons';
 
 const SectionItem = ({ name, level, link, mail, icon, iconUrl, seniority }) => {
-  console.log('iconUrl', iconUrl);
   return link || mail ? (
     <a
       href={link ? link : mail ? `mailto: ${mail}` : '#'}

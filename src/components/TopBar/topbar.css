@@ -1,5 +1,7 @@
 .topbar-container {
     background-color: var(--gray);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
     display: flex;
     flex-direction: row;
     height: 25px;

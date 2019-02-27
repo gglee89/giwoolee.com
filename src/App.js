@@ -26,7 +26,6 @@ class App extends PureComponent {
   };
 
   render() {
-    console.log('');
     return (
       <div
         className="App"

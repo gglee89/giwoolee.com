@@ -79,7 +79,6 @@ class Preferences extends PureComponent {
   };
 
   handleDoubleClick = () => {
-    console.log('handleDoubleClick event');
     this.setState({
       isIconSelected: true,
     });

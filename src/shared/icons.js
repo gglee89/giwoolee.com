@@ -14,6 +14,7 @@ import twitter from '../assets/icons/flaticon/040-twitter.svg';
 import email from '../assets/icons/flaticon/044-email.svg';
 import download from '../assets/icons/flaticon/011-download.svg';
 import notebook from '../assets/icons/flaticon/034-notebook.svg';
+import github from '../assets/icons/github/GitHub-Mark-120px-plus.png';
 
 // graphic-design
 import view from '../assets/icons/flaticon/043-view.svg';
@@ -36,4 +37,5 @@ export default {
   email,
   download,
   notebook,
+  github,
 };

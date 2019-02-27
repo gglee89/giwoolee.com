@@ -63,23 +63,28 @@ class Header extends Component {
       sticky: this.state.isSticky,
     });
 
-    let navbarCollapse = classNames({
-      collapse: true,
-      'navbar-collapse': true,
-      show: this.state.isNavbarShow,
-    });
-
     let currentTime = moment().format('ddd LT');
 
     return (
       <header ref={this.navElem} className="header">
         <nav className={navClasses}>
           <Container>
-            <a href="/" className="header-left">
+            <div className="header-left">
               <img className="brand-logo" src={icons['apple']} alt="apple" />
               <div>Gustavo Lee</div>
-            </a>
-            <div className="header-right">{currentTime}</div>
+            </div>
+            <div className="header-right">
+              <a
+                href="https://github.com/gglee89/gglee89.github.io"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="header-right-item"
+              >
+                <img src={icons['github']} alt="github" />
+                <div>GitHub</div>
+              </a>
+              <div>{currentTime}</div>
+            </div>
           </Container>
         </nav>
       </header>
