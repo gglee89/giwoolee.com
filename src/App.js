@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import classNames from 'classnames';
 import './App.css';
 import './Theme.css';
 
@@ -16,39 +15,20 @@ import * as modalSelectors from './reducers/modal';
 // Pages
 import Home from './pages/Home';
 
-class App extends Component {
-  render() {
-    const { isModalOpen, modalContent } = this.props;
-
-    let modalClasses = classNames({
-      modal: true,
-      fade: true,
-      show: isModalOpen,
-    });
-
-    const {
-      title,
-      primaryLogo,
-      images,
-      projectName,
-      technologyStack,
-      textContent,
-    } = modalContent;
-
-    return (
-      <div
-        className="App"
-        style={{
-          background: `url(${backgrounds['bgPalmTree']})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <Home />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div
+      className="App"
+      style={{
+        background: `url(${backgrounds['bgPalmTree']})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <Home />
+    </div>
+  );
+};
 
 function mapStateToProps(state) {
   return {
