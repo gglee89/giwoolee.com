@@ -1,47 +1,43 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { PureComponent } from 'react';
 import './App.css';
 import './Theme.css';
 
 // Images
 import backgrounds from './shared/backgrounds';
 
-// Actions
-import * as modalActions from './actions/modal';
-
-// Selectors
-import * as modalSelectors from './reducers/modal';
-
 // Pages
 import Home from './pages/Home';
 
-const App = () => {
-  return (
-    <div
-      className="App"
-      style={{
-        background: `url(${backgrounds['bgPalmTree']})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <Home />
-    </div>
-  );
-};
-
-function mapStateToProps(state) {
-  return {
-    isModalOpen: modalSelectors.isOpen(state),
-    modalContent: modalSelectors.getContent(state),
+class App extends PureComponent {
+  state = {
+    bg: 'bg1',
   };
+
+  componentDidMount() {
+    setInterval(this.setBg, 10000);
+  }
+
+  setBg = () => {
+    let bgNumber = (Math.random() * 6).toFixed(0);
+
+    this.setState(prevState => ({
+      bg: `bg${bgNumber}`,
+    }));
+  };
+
+  render() {
+    console.log('');
+    return (
+      <div
+        className="App"
+        style={{
+          backgroundImage: `url(${backgrounds[this.state.bg]})`,
+        }}
+      >
+        <Home />
+      </div>
+    );
+  }
 }
 
-const actionCreators = {
-  closeModal: modalActions.closeModal,
-};
-
-export default connect(
-  mapStateToProps,
-  actionCreators
-)(App);
+export default App;

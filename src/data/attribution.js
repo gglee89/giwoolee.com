@@ -21,4 +21,25 @@ export default {
       },
     ],
   },
+  Images: {
+    topics: [
+      {
+        name: 'Freepik - Created by ydlabs',
+        link: 'https://freepik.com/free-photos-vectors/background',
+        level: 'https://freepik.com',
+        icon: 'download',
+      },
+    ],
+  },
+  Stack: {
+    topics: [
+      {
+        name: 'ReactJS',
+        link: 'https://reactjs.org',
+        level: 'https://reactjs.org',
+        iconUrl:
+          'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/full/react.png',
+      },
+    ],
+  },
 };

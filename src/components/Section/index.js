@@ -7,7 +7,8 @@ import './section.css';
 // Icons
 import icons from '../../shared/icons';
 
-const SectionItem = ({ name, level, link, mail, icon, seniority }) => {
+const SectionItem = ({ name, level, link, mail, icon, iconUrl, seniority }) => {
+  console.log('iconUrl', iconUrl);
   return link || mail ? (
     <a
       href={link ? link : mail ? `mailto: ${mail}` : '#'}
@@ -15,8 +16,12 @@ const SectionItem = ({ name, level, link, mail, icon, seniority }) => {
       target="_blank"
       className="section-item-container"
     >
-      {icon && (
-        <img src={icons[icon]} alt={name} className="section-item-icon" />
+      {(icon || iconUrl) && (
+        <img
+          src={icon ? icons[icon] : iconUrl ? iconUrl : ''}
+          alt={name}
+          className="section-item-icon"
+        />
       )}
       <div className="section-topic">
         <div>{name}</div>
@@ -25,8 +30,12 @@ const SectionItem = ({ name, level, link, mail, icon, seniority }) => {
     </a>
   ) : (
     <div className="section-item-container">
-      {icon && (
-        <img src={icons[icon]} alt={name} className="section-item-icon" />
+      {(icon || iconUrl) && (
+        <img
+          src={icon ? icons[icon] : iconUrl ? iconUrl : ''}
+          alt={name}
+          className="section-item-icon"
+        />
       )}
       <div className="section-topic">
         <div>{name}</div>

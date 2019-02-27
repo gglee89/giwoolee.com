@@ -10,24 +10,6 @@ import Section from '../../../components/Section';
 // Selectors
 import * as attributionSelectors from '../../../reducers/attribution';
 
-// Data
-const data = {
-  Icons: {
-    topics: [
-      {
-        name: 'Freepik - Cute Food',
-        level: 'https://www.flaticon.com/packs/cute-food-3',
-        seniority: '',
-      },
-      {
-        name: 'Freepik - Graphic Design',
-        level: 'https://www.flaticon.com/packs/graphic-design-84',
-        seniority: '',
-      },
-    ],
-  },
-};
-
 const Attribution = ({ attributions }) => {
   let dataAllIds = Object.keys(attributions);
 
