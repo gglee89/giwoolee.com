@@ -2,14 +2,36 @@
   Resume Size Ratio: 595/842 = 0.705
 */
 .resume {
+    background-color: var(--white);
+    -webkit-box-shadow: 4px 4px 35px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 35px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 35px 0px rgba(0, 0, 0, 0.75);
     color: var(--black);
     display: flex;
-    height: 842px;
     flex-direction: column;
-    font-size: var(--theme-font-size);
     margin: 0 auto;
     overflow: hidden;
-    width: 595px;
+    padding: 15px;
+}
+
+.resume.mission-font-size-small {
+    height: var(--resume-height);
+    width: var(--resume-width);
+}
+
+.resume.mission-font-size-medium {
+    height: calc(var(--resume-height) * 1.2);
+    width: calc(var(--resume-width) * 1.2);
+}
+
+.resume.mission-font-size-large {
+    height: calc(var(--resume-height) * 1.4);
+    width: calc(var(--resume-width) * 1.4);
+}
+
+.resume.mission-font-size-extra-large {
+    height: calc(var(--resume-height) * 1.8);
+    width: 100%;
 }
 
 .resume > div {

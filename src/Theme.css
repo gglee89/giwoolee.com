@@ -15,5 +15,15 @@
     --orange: #FFA500;
     --green: #0F0;
     --theme-font-size: 14px;
-    --resume-ratio: 0.705;
+    --resume-font-size: 14px;
+    --resume-font-size-small: 9px;
+    --resume-font-size-text: 10px;
+    --resume-font-size-subheading: 12px;
+    --resume-font-size-heading: 16px;
+    --resume-scale-1: 1.1;
+    --resume-scale-2: 1.2;
+    --resume-scale-3: 1.3;
+    --resume-scale-4: 1.4;
+    --resume-width: 595px;
+    --resume-height: 842px;
 }

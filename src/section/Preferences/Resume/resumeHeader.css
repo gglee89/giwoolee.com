@@ -5,6 +5,7 @@
 }
 
 .ResumeHeader__profile {
+    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,24 +14,74 @@
 
 .ResumeHeader__profile--name {
     color: var(--blue);
-    font-size: 20px;
+    font-size: var(--resume-font-size-heading);
     font-weight: bold;
+}
+
+.mission-font-size-medium .ResumeHeader__profile--name {
+    font-size: calc(var(--resume-font-size-heading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeHeader__profile--name {
+    font-size: calc(var(--resume-font-size-heading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeHeader__profile--name {
+    font-size: calc(var(--resume-font-size-heading) * var(--resume-scale-4));
 }
 
 .ResumeHeader__profile--role {
     color: var(--red);
-    font-size: 15px;
+    font-size: var(--resume-font-size-subheading);
+}
+
+.mission-font-size-medium .ResumeHeader__profile--role {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeHeader__profile--role {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeHeader__profile--role {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-4));
 }
 
 .ResumeHeader__profile--summary {
     color: var(--black);
-    font-size: 12px;
+    font-size: var(--resume-font-size-text);
     margin-top: 10px;
+}
+
+.mission-font-size-medium .ResumeHeader__profile--summary {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeHeader__profile--summary {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeHeader__profile--summary {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-4));
 }
 
 .ResumeHeader__contact {
     align-items: flex-end;
     display: flex;
+    flex: 2;
     flex-direction: column;
+    font-size: var(--resume-font-size-small);
     justify-content: space-between;
+}
+
+.mission-font-size-medium .ResumeHeader__contact {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeHeader__contact {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeHeader__contact {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-4));
 }

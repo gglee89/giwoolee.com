@@ -19,7 +19,13 @@ const ResumeHeader = () => {
           libero.
         </div>
       </div>
-      <div className="ResumeHeader__contact">gglee89@gmail.com</div>
+      <div className="ResumeHeader__contact">
+        <div>gglee89@gmail.com</div>
+        <div>(407) 450-8519</div>
+        <div>Orlando, FL</div>
+        <div>giwoolee.com</div>
+        <div>linkedin.com/in/leegiwoo</div>
+      </div>
     </div>
   );
 };
