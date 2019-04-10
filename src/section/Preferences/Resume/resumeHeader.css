@@ -1,0 +1,36 @@
+.ResumeHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ResumeHeader__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.ResumeHeader__profile--name {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ResumeHeader__profile--role {
+    color: var(--red);
+    font-size: 15px;
+}
+
+.ResumeHeader__profile--summary {
+    color: var(--black);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.ResumeHeader__contact {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

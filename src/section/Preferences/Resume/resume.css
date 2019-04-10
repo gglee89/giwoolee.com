@@ -1,0 +1,18 @@
+/*
+  Resume Size Ratio: 595/842 = 0.705
+*/
+.resume {
+    color: var(--black);
+    display: flex;
+    height: 842px;
+    flex-direction: column;
+    font-size: var(--theme-font-size);
+    margin: 0 auto;
+    overflow: hidden;
+    width: 595px;
+}
+
+.resume > div {
+    border-bottom: 1px solid var(--red);
+    padding: 15px;
+}

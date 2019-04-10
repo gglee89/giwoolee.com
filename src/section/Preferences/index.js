@@ -21,6 +21,7 @@ import Interests from './Interests';
 import Mission from './Mission';
 import Contact from './Contact';
 import Attribution from './Attribution';
+import Resume from './Resume';
 
 // Actions
 import * as projectsActions from '../../actions/projects';
@@ -38,6 +39,7 @@ const MENU_ITEMS = {
   MISSION: 'Mission',
   CONTACT: 'Contact',
   ATTRIBUTION: 'Attribution',
+  RESUME: 'Resume',
 };
 
 // Data
@@ -48,6 +50,7 @@ const menuItems = [
   { icon: 'pieceOfCake', title: MENU_ITEMS.MISSION },
   { icon: 'sushi', title: MENU_ITEMS.CONTACT },
   { icon: 'pizza', title: MENU_ITEMS.ATTRIBUTION },
+  { icon: 'illustration', title: MENU_ITEMS.RESUME },
 ];
 
 class Preferences extends PureComponent {
@@ -153,6 +156,7 @@ class Preferences extends PureComponent {
             {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
             {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
             {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
+            {selectedMenu === MENU_ITEMS.RESUME && <Resume />}
           </div>
         </Container>
         <div
