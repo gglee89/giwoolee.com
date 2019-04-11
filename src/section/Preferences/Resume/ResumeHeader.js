@@ -1,43 +1,49 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import classnames from 'classnames';
 
 // Styles
 import './resumeHeader.css';
 
-// Assets
+// Selectors
+import * as resumeSelectors from '../../../reducers/resume';
 
-const ResumeHeader = ({ color }) => {
+const ResumeHeader = ({ color, header }) => {
   const headerClasses = classnames({
     ResumeHeader: true,
     'dark-theme': color === 'white',
   });
 
+  const { profile, contact } = header;
+
   return (
     <div className={headerClasses}>
       <div className="ResumeHeader__profile">
         <div className="ResumeHeader__profile--name" style={{ color }}>
-          Giwoo Gustavo Lee
+          {profile.name}
         </div>
         <div className="ResumeHeader__profile--role" style={{ color }}>
-          Software Engineer (Web & Machine Learning)
+          {profile.role}
         </div>
         <div className="ResumeHeader__profile--summary" style={{ color }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam
-          sem, euismod in nisi non, euismod eleifend libero. Cras in augue
-          laoreet, tempor diam at, varius nisl. Donec ut ante in nisi
-          sollicitudin aliquet in sit amet nulla. Pellentesque vitae orci
-          libero.
+          {profile.summary}
         </div>
       </div>
       <div className="ResumeHeader__contact" style={{ color }}>
-        <div>gglee89@gmail.com</div>
-        <div>(407) 450-8519</div>
-        <div>Orlando, FL</div>
-        <div>giwoolee.com</div>
-        <div>linkedin.com/in/leegiwoo</div>
+        <div>{contact.email}</div>
+        <div>{contact.phone}</div>
+        <div>{contact.location}</div>
+        <div>{contact.website}</div>
+        <div>{contact.social}</div>
       </div>
     </div>
   );
 };
 
-export default ResumeHeader;
+const mapStateToProps = state => {
+  return {
+    header: resumeSelectors.getHeader(state),
+  };
+};
+
+export default connect(mapStateToProps)(ResumeHeader);

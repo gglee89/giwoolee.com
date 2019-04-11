@@ -7,6 +7,7 @@ import interests from './interests';
 import menu from './menu';
 import modal from './modal';
 import projects from './projects';
+import resume from './resume';
 
 export default combineReducers({
   attribution,
@@ -15,4 +16,5 @@ export default combineReducers({
   menu,
   modal,
   projects,
+  resume,
 });

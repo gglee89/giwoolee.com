@@ -209,6 +209,10 @@
     padding: 2px 5px;
 }
 
+.ResumeBody__skills--item:last-child {
+    margin-bottom: 0px;
+}
+
 .ResumeBody__technical {
     margin-bottom: 10px;
     line-height: 1.07;
