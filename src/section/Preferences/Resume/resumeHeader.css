@@ -1,21 +1,35 @@
 .ResumeHeader {
-    border-bottom: 2px solid var(--red);
+    background-color: var(--dark-gray);
+    border-bottom: 2px solid var(--gray);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 30px 10px 30px;
+    padding: 30px 30px 20px 30px;
 }
 
 .mission-font-size-medium .ResumeHeader {
-    padding: 25px 30px 15px 35px;
+    padding: 35px 30px 15px 35px;
 }
 
 .mission-font-size-large .ResumeHeader {
-    padding: 30px 30px 20px 40px;
+    padding: 40px 30px 20px 40px;
 }
 
 .mission-font-size-extra-large .ResumeHeader {
-    padding: 40px 30px 30px 60px;
+    padding: 50px 30px 30px 60px;
+}
+
+.ResumeHeader__bg {
+    background-color: var(--light-gray);
+    background-size: cover;
+    background-position: bottom;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    transition: all 2s linear;
 }
 
 .ResumeHeader__profile {
@@ -24,12 +38,14 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
+    z-index: 1;
 }
 
 .ResumeHeader__profile--name {
-    color: var(--blue);
     font-size: var(--resume-font-size-heading);
     font-weight: bold;
+    line-height: 1.1;
+    transition: color 1s linear;
 }
 
 .mission-font-size-medium .ResumeHeader__profile--name {
@@ -45,8 +61,9 @@
 }
 
 .ResumeHeader__profile--role {
-    color: var(--red);
+    color: var(--white);
     font-size: var(--resume-font-size-subheading);
+    transition: color 1s linear;
 }
 
 .mission-font-size-medium .ResumeHeader__profile--role {
@@ -62,9 +79,10 @@
 }
 
 .ResumeHeader__profile--summary {
-    color: var(--black);
     font-size: var(--resume-font-size-text);
     margin-top: 10px;
+    opacity: 0.85;
+    transition: color 1s linear;
 }
 
 .mission-font-size-medium .ResumeHeader__profile--summary {
@@ -86,6 +104,9 @@
     flex-direction: column;
     font-size: var(--resume-font-size-small);
     justify-content: space-between;
+    opacity: .65;
+    z-index: 1;
+    transition: color 1s linear;
 }
 
 .mission-font-size-medium .ResumeHeader__contact {

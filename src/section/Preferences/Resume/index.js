@@ -6,6 +6,7 @@ import './resume.css';
 
 // Assets
 import icons from '../../../shared/icons';
+import backgrounds from '../../../shared/backgrounds';
 
 // Content
 import ResumeHeader from './ResumeHeader';
@@ -67,8 +68,34 @@ const Resizer = ({ font, setFont }) => {
   );
 };
 
+const ThemeSwitcher = ({ changeTheme, opacity }) => {
+  const isDarkTheme = opacity > 0.5 ? 'Dark Theme' : 'Light Theme';
+  return (
+    <div className="ThemeSwitcher">
+      <div className="custom-control custom-switch">
+        <input
+          onChange={() => changeTheme()}
+          type="checkbox"
+          className="custom-control-input"
+          id="customSwitch1"
+        />
+        <label className="custom-control-label" htmlFor="customSwitch1">
+          {isDarkTheme}
+        </label>
+      </div>
+    </div>
+  );
+};
+
+const THEME_OPACITY = {
+  LIGHT: 0.2,
+  DARK: 1,
+};
+
 const Resume = () => {
   const [font, setFont] = useState({ size: FONT_SIZES.SMALL });
+  const [background, setBackground] = useState(null);
+  const [opacity, setOpacity] = useState(THEME_OPACITY.LIGHT);
 
   let missionContainerClass = classnames({
     resume: true,
@@ -79,13 +106,40 @@ const Resume = () => {
     'mission-font-size-extra-large': font.size === FONT_SIZES.EXTRA_LARGE,
   });
 
+  const changeTheme = () => {
+    setOpacity(
+      opacity === THEME_OPACITY.LIGHT ? THEME_OPACITY.DARK : THEME_OPACITY.LIGHT
+    );
+  };
+
+  const setBg = () => {
+    const options = [backgrounds.bg3, backgrounds.bg4];
+
+    let number = Math.random().toFixed(0);
+
+    setBackground(options[number]);
+  };
+
+  if (!background) {
+    setBg();
+  }
+
+  const color = opacity > THEME_OPACITY.LIGHT ? 'white' : 'black';
+
   return (
     <React.Fragment>
-      <Resizer font={font} setFont={setFont} />
+      <div className="Resume__header">
+        <Resizer font={font} setFont={setFont} />
+        <ThemeSwitcher changeTheme={changeTheme} opacity={opacity} />
+      </div>
       <div className={missionContainerClass}>
-        <ResumeHeader />
-        <ResumeBody />
-        <ResumeFooter />
+        <div
+          className="Resume__bg"
+          style={{ backgroundImage: `url(${background})`, opacity }}
+        />
+        <ResumeHeader color={color} background={background} />
+        <ResumeBody color={color} />
+        <ResumeFooter color={color} />
       </div>
     </React.Fragment>
   );

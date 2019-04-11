@@ -3,7 +3,7 @@ import React from 'react';
 // Styles
 import './resumeBody.css';
 
-const ResumeExperience = () => {
+const ResumeExperience = ({ color }) => {
   return (
     <div className="ResumeBody__experience-box">
       <div className="ResumeBody__experience-box--title">
@@ -35,15 +35,16 @@ const ResumeExperience = () => {
   );
 };
 
-const ResumeBody = () => {
+const ResumeBody = ({ color }) => {
   return (
-    <div className="ResumeBody">
+    <div className="ResumeBody" style={{ color }}>
       <div className="ResumeBody__50">
         <div className="ResumeBody__content--title">WORK EXPERIENCE</div>
         <ResumeExperience />
         <ResumeExperience />
         <ResumeExperience />
         <ResumeExperience />
+        <div className="ResumeBody__content--title">CERTIFICATES/LICENSES</div>
       </div>
       <div className="ResumeBody__50">
         <div className="ResumeBody__content--title">SKILLS</div>
