@@ -2,8 +2,20 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 10px 30px 10px 30px;
     text-align: left;
+}
+
+.mission-font-size-medium .ResumeBody {
+    padding: 15px 30px 15px 35px;
+}
+
+.mission-font-size-large .ResumeBody {
+    padding: 20px 30px 20px 40px;
+}
+
+.mission-font-size-extra-large .ResumeBody {
+    padding: 30px 30px 25px 60px;
 }
 
 .ResumeBody__50 {
@@ -17,14 +29,42 @@
 
 .ResumeBody__content--title {
     font-weight: bold;
-    font-size: var(--resume-font-size-subheading);
+    font-size: var(--resume-font-size-title);
     margin-bottom: 5px;
+}
+
+.mission-font-size-medium .ResumeBody__content--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__content--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__content--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-4));
 }
 
 .ResumeBody__experience-box {
     display: flex;
     flex-direction: column;
+    line-height: 1.1;
+    margin-bottom: var(--resume-margin);
+}
+
+.mission-font-size-medium .ResumeBody__experience-box {
+    line-height: 1.1;
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box {
     line-height: 1.2;
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box {
+    line-height: 1.5;
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-4));
 }
 
 .ResumeBody__experience-box--title {
@@ -32,16 +72,85 @@
     font-size: var(--resume-font-size-subheading);
 }
 
+.mission-font-size-medium .ResumeBody__experience-box--title {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--title {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--title {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-4));
+}
+
 .ResumeBody__experience-box--company {
     font-size: var(--resume-font-size-subheading);
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--company {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--company {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--company {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-4));
 }
 
 .ResumeBody__experience-box--date {
     color: var(--red);
     font-size: var(--resume-font-size-small);
     font-style: italic;
+    margin: 5px 0px;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-4));
 }
 
 .ResumeBody__experience-box--achievements {
     font-size: var(--resume-font-size-text);
+    padding-inline-start: 0px;
+}
+
+.ResumeBody__experience-box--achievements li {
+    list-style: none;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.ResumeBody__experience-box--achievements li span {
+    margin-left: 15px;
+}
+
+.ResumeBody__experience-box--achievements li::before {
+    color: var(--red);
+    content: "\2022";
+    font-size: 2em;
+    line-height: 0.2em;
+    position: absolute;
+    top: 8px;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--achievements {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--achievements {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--achievements {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-4));
 }

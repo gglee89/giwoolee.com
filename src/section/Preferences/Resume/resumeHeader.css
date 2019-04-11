@@ -1,9 +1,21 @@
 .ResumeHeader {
-    border-bottom: 1px solid var(--red);
+    border-bottom: 2px solid var(--red);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 30px 15px;
+    padding: 20px 30px 10px 30px;
+}
+
+.mission-font-size-medium .ResumeHeader {
+    padding: 25px 30px 15px 35px;
+}
+
+.mission-font-size-large .ResumeHeader {
+    padding: 30px 30px 20px 40px;
+}
+
+.mission-font-size-extra-large .ResumeHeader {
+    padding: 40px 30px 30px 60px;
 }
 
 .ResumeHeader__profile {

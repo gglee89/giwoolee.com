@@ -13,16 +13,22 @@ const ResumeExperience = () => {
       <div className="ResumeBody__experience-box--date">11/2014 - Present</div>
       <ul className="ResumeBody__experience-box--achievements">
         <li>
-          Praesent egestas elit est, eget convallis sem placerat quis. Ut eu
-          velit erat.
+          <span>
+            Praesent egestas elit est, eget convallis sem placerat quis. Ut eu
+            velit erat.
+          </span>
         </li>
         <li>
-          Praesent egestas elit est, eget convallis sem placerat quis. Ut eu
-          velit erat.
+          <span>
+            Praesent egestas elit est, eget convallis sem placerat quis. Ut eu
+            velit erat.
+          </span>
         </li>
         <li>
-          Praesent egestas elit est, eget convallis sem placerat quis. Ut eu
-          velit erat.
+          <span>
+            Praesent egestas elit est, eget convallis sem placerat quis. Ut eu
+            velit erat.
+          </span>
         </li>
       </ul>
     </div>
