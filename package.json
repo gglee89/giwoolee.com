@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "jspdf": "^1.5.3",
     "moment": "^2.24.0",
     "ramda": "^0.26.1",
     "react": "^16.8.0-alpha.0",

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+import { Provider } from 'react-redux';
+import { renderToString } from 'react-dom/server';
 import classnames from 'classnames';
+import jsPDF from 'jspdf';
+import store from '../../../store';
 
 // Styles
 import './resume.css';
@@ -68,6 +72,26 @@ const Resizer = ({ font, setFont }) => {
   );
 };
 
+const Downloader = () => {
+  return (
+    <div className="Downloader" onClick={() => print()}>
+      <img src={icons.download} alt="download" style={{ height: 20 }} />
+      <div>Download</div>
+    </div>
+  );
+};
+
+const print = () => {
+  const string = renderToString(
+    <Provider store={store}>
+      <Resume />
+    </Provider>
+  );
+  const pdf = new jsPDF('p', 'mm', 'a4');
+  pdf.fromHTML(string);
+  pdf.save('pdf');
+};
+
 const ThemeSwitcher = ({ changeTheme, opacity }) => {
   const isDarkTheme = opacity > 0.5 ? 'Dark Theme' : 'Light Theme';
   return (
@@ -130,6 +154,7 @@ const Resume = () => {
     <React.Fragment>
       <div className="Resume__header">
         <Resizer font={font} setFont={setFont} />
+        <Downloader />
         <ThemeSwitcher changeTheme={changeTheme} opacity={opacity} />
       </div>
       <div className={missionContainerClass}>

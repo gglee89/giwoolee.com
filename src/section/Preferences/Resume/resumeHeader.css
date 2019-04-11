@@ -1,5 +1,5 @@
 .ResumeHeader {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     border-bottom: 2px solid var(--gray);
     display: flex;
     flex-direction: row;
@@ -47,6 +47,7 @@
 }
 
 .ResumeHeader__profile--name {
+    color: var(--dark-blue);
     font-size: var(--resume-font-size-heading);
     font-weight: bold;
     line-height: 1.1;
@@ -124,4 +125,17 @@
 
 .mission-font-size-extra-large .ResumeHeader__contact {
     font-size: calc(var(--resume-font-size-small) * var(--resume-scale-4));
+}
+
+.ResumeHeader__contact div {
+    display: flex;
+    align-items: center;
+}
+
+.ResumeHeader__contact a {
+    color: var(--dark-blue);
+}
+
+.ResumeHeader__contact img {
+    margin-left: 10px;
 }

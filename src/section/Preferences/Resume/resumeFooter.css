@@ -10,6 +10,18 @@
     width: 100%;
 }
 
+.mission-font-size-medium .ResumeFooter {
+    padding: 2px 20px 2px 30px;
+}
+
+.mission-font-size-large .ResumeFooter {
+    padding: 2px 25px 2px 40px;
+}
+
+.mission-font-size-extra-large .ResumeFooter {
+    padding: 2px 25px 2px 60px;
+}
+
 .ResumeFooter__50 {
     flex: 1;
     text-align: left;

@@ -17,21 +17,25 @@
 
 .resume.mission-font-size-small {
     height: var(--resume-height);
-    width: var(--resume-width);
+    max-width: var(--resume-width);
+    width: 100%;
 }
 
 .resume.mission-font-size-medium {
     height: calc(var(--resume-height) * 1.2);
-    width: calc(var(--resume-width) * 1.2);
+    max-width: calc(var(--resume-width) * 1.2);
+    width: 100%;
 }
 
 .resume.mission-font-size-large {
     height: calc(var(--resume-height) * 1.4);
-    width: calc(var(--resume-width) * 1.4);
+    max-width: calc(var(--resume-width) * 1.4);
+    width: 100%;
 }
 
 .resume.mission-font-size-extra-large {
     height: calc(var(--resume-height) * 1.8);
+    max-width: calc(var(--resume-width) * 1.8);
     width: 100%;
 }
 
@@ -53,4 +57,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.Downloader {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.Downloader:hover {
+    background-color: var(--gray);
 }
