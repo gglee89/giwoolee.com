@@ -1,27 +1,27 @@
 .ResumeHeader {
+    background-color: var(--gray);
+    border-bottom: 2px solid var(--gray);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 30px 20px 30px;
-    background-color: var(--dark-gray);
-    border-bottom: 2px solid var(--gray);
+    padding: 30px 20px 15px 30px;
+}
+
+.mission-font-size-medium .ResumeHeader {
+    padding: 35px 20px 15px 35px;
+}
+
+.mission-font-size-large .ResumeHeader {
+    padding: 40px 25px 20px 40px;
+}
+
+.mission-font-size-extra-large .ResumeHeader {
+    padding: 50px 30px 30px 60px;
 }
 
 .ResumeHeader.dark-theme {
     background: none;
     z-index: 0;
-}
-
-.mission-font-size-medium .ResumeHeader {
-    padding: 35px 30px 15px 35px;
-}
-
-.mission-font-size-large .ResumeHeader {
-    padding: 40px 30px 20px 40px;
-}
-
-.mission-font-size-extra-large .ResumeHeader {
-    padding: 50px 30px 30px 60px;
 }
 
 .ResumeHeader__bg {

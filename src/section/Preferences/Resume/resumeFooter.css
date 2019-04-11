@@ -5,7 +5,7 @@
     flex-direction: row;
     font-size: var(--resume-font-size-text);
     justify-content: space-between;
-    padding: 2px 30px;
+    padding: 2px 20px 2px 30px;
     position: absolute;
     width: 100%;
 }
