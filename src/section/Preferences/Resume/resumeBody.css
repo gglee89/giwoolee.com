@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 20px 30px 10px 30px;
     text-align: left;
+    transition: color 1s linear;
 }
 
 .mission-font-size-medium .ResumeBody {
@@ -49,7 +50,7 @@
 .ResumeBody__experience-box {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.07;
     margin-bottom: var(--resume-margin);
 }
 
@@ -185,4 +186,12 @@
 .mission-font-size-extra-large .ResumeBody__experience-box--achievements li::before {
     font-size: 2em;
     top: 8px;
+}
+
+.ResumeBody__certificates {
+    font-size: var(--resume-font-size-text);
+}
+
+.ResumeBody__certificates--title {
+    font-weight: bold;
 }

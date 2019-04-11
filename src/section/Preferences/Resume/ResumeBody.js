@@ -3,7 +3,7 @@ import React from 'react';
 // Styles
 import './resumeBody.css';
 
-const ResumeExperience = ({ color }) => {
+const ResumeExperience = () => {
   return (
     <div className="ResumeBody__experience-box">
       <div className="ResumeBody__experience-box--title">
@@ -45,6 +45,16 @@ const ResumeBody = ({ color }) => {
         <ResumeExperience />
         <ResumeExperience />
         <div className="ResumeBody__content--title">CERTIFICATES/LICENSES</div>
+        <div className="ResumeBody__certificates">
+          <div className="ResumeBody__certificates--title">Udacity</div>
+          <div className="ResumeBody__certificates--body">
+            FEND '17, FSND '17, React ND '18
+          </div>
+          <div className="ResumeBody__certificates--title">Coursera</div>
+          <div className="ResumeBody__certificates--body">
+            Google Cloud Platform Specialization '18
+          </div>
+        </div>
       </div>
       <div className="ResumeBody__50">
         <div className="ResumeBody__content--title">SKILLS</div>

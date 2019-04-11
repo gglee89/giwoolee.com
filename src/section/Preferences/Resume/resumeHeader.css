@@ -1,10 +1,15 @@
 .ResumeHeader {
-    background-color: var(--dark-gray);
-    border-bottom: 2px solid var(--gray);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 30px 30px 20px 30px;
+    background-color: var(--dark-gray);
+    border-bottom: 2px solid var(--gray);
+}
+
+.ResumeHeader.dark-theme {
+    background: none;
+    z-index: 0;
 }
 
 .mission-font-size-medium .ResumeHeader {

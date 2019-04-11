@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 
 // Styles
 import './resumeHeader.css';
@@ -6,8 +7,13 @@ import './resumeHeader.css';
 // Assets
 
 const ResumeHeader = ({ color }) => {
+  const headerClasses = classnames({
+    ResumeHeader: true,
+    'dark-theme': color === 'white',
+  });
+
   return (
-    <div className="ResumeHeader">
+    <div className={headerClasses}>
       <div className="ResumeHeader__profile">
         <div className="ResumeHeader__profile--name" style={{ color }}>
           Giwoo Gustavo Lee

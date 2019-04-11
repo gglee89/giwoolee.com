@@ -113,7 +113,7 @@ const Resume = () => {
   };
 
   const setBg = () => {
-    const options = [backgrounds.bg3, backgrounds.bg4];
+    const options = [backgrounds.bg2, backgrounds.bg4];
 
     let number = Math.random().toFixed(0);
 
