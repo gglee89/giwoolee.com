@@ -1,4 +1,5 @@
 .ResumeHeader {
+    border-bottom: 1px solid var(--red);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

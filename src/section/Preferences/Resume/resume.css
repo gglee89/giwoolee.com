@@ -9,8 +9,10 @@
     color: var(--black);
     display: flex;
     flex-direction: column;
+    font-family: roboto;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .resume.mission-font-size-small {
@@ -31,8 +33,4 @@
 .resume.mission-font-size-extra-large {
     height: calc(var(--resume-height) * 1.8);
     width: 100%;
-}
-
-.resume > div {
-    border-bottom: 1px solid var(--red);
 }
