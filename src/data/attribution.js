@@ -15,6 +15,12 @@ export default {
         icon: 'graphQL',
       },
       {
+        name: 'Apollo Client',
+        link: 'https://www.apollographql.com/',
+        level: 'https://www.apollographql.com/',
+        icon: 'apolloClient',
+      },
+      {
         name: 'NodeJS',
         link: 'https://nodejs.org',
         level: 'https://nodejs.org',
