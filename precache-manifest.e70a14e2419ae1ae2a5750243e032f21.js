@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "c613653cd3ad488786ea11bf4979353b",
-    "url": "/static/media/027-contacts.c613653c.svg"
+    "revision": "66d1afe44a922a383130b20a6c642791",
+    "url": "/static/media/044-email.66d1afe4.svg"
   },
   {
-    "revision": "4769c58c46d0481fefbc",
-    "url": "/static/css/main.7a8cd3c7.chunk.css"
+    "revision": "053289e58b4b832d2f3a",
+    "url": "/static/css/main.d9770272.chunk.css"
   },
   {
-    "revision": "239625b58cdfddd1ca6c",
-    "url": "/static/js/1.239625b5.chunk.js"
+    "revision": "373fff0e91d2a13d4afe",
+    "url": "/static/js/1.373fff0e.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -92,8 +92,8 @@ self.__precacheManifest = [
     "url": "/static/media/033-camera.81edbda8.svg"
   },
   {
-    "revision": "4769c58c46d0481fefbc",
-    "url": "/static/js/main.4769c58c.chunk.js"
+    "revision": "c613653cd3ad488786ea11bf4979353b",
+    "url": "/static/media/027-contacts.c613653c.svg"
   },
   {
     "revision": "f48b35510c0b67c4a4c4b79e4b89503f",
@@ -104,8 +104,8 @@ self.__precacheManifest = [
     "url": "/static/media/040-twitter.d59408e0.svg"
   },
   {
-    "revision": "66d1afe44a922a383130b20a6c642791",
-    "url": "/static/media/044-email.66d1afe4.svg"
+    "revision": "053289e58b4b832d2f3a",
+    "url": "/static/js/main.053289e5.chunk.js"
   },
   {
     "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
@@ -122,6 +122,30 @@ self.__precacheManifest = [
   {
     "revision": "9320d8f4ff0d8c010bfd0c2fb4ecb8d7",
     "url": "/static/media/020-phone.9320d8f4.svg"
+  },
+  {
+    "revision": "2985235df31b8742d893d5b7e80145c5",
+    "url": "/static/media/mongodb.2985235d.svg"
+  },
+  {
+    "revision": "5bf8a3ca0bb6bfb41063cdd672be9ad9",
+    "url": "/static/media/GraphQL_Logo.5bf8a3ca.svg"
+  },
+  {
+    "revision": "2b002415248676d3e0d101596dd70bcd",
+    "url": "/static/media/apollo-client.2b002415.svg"
+  },
+  {
+    "revision": "89ccb09060a7adf788ea2340c54d6d78",
+    "url": "/static/media/Node.js_logo.89ccb090.svg"
+  },
+  {
+    "revision": "1a1e8e9707532072e3b314a98c19c31b",
+    "url": "/static/media/freepik.1a1e8e97.svg"
+  },
+  {
+    "revision": "2e013d7501cea345c15e0ed7b6531464",
+    "url": "/static/media/flaticon-logo.2e013d75.svg"
   },
   {
     "revision": "09a3a4dce2329a14004a0e45f39c23f9",
@@ -184,7 +208,7 @@ self.__precacheManifest = [
     "url": "/static/media/marshall-goldsmith-2-min.c7b566fb.jpeg"
   },
   {
-    "revision": "4e5ccbd2d3729a102e4e474dc7765054",
+    "revision": "593eac37cb217b83a560181933eee3ed",
     "url": "/index.html"
   }
 ];
