@@ -23,6 +23,8 @@ import mongoDB from '../assets/img/mongodb.svg';
 import graphQL from '../assets/img/GraphQL_Logo.svg';
 import apolloClient from '../assets/img/apollo-client.svg';
 import nodeJS from '../assets/img/Node.js_logo.svg';
+import freepik from '../assets/img/freepik.svg';
+import flaticon from '../assets/img/flaticon-logo.svg';
 
 // graphic-design
 import view from '../assets/icons/flaticon/043-view.svg';
@@ -54,4 +56,6 @@ export default {
   graphQL,
   apolloClient,
   nodeJS,
+  freepik,
+  flaticon,
 };
