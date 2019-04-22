@@ -33,10 +33,22 @@ export default {
         icon: 'mongoDB',
       },
       {
+        name: 'mLab',
+        link: 'https://mlab.com',
+        level: 'https://mlab.com',
+        icon: 'mlab',
+      },
+      {
         name: 'Github Pages',
         link: 'https://pages.github.com',
         level: 'https://pages.github.com',
         icon: 'github',
+      },
+      {
+        name: 'AWS',
+        link: 'https://aws.amazon.com/elasticbeanstalk/',
+        level: 'https://aws.amazon.com/elasticbeanstalk/',
+        icon: 'aws',
       },
     ],
   },

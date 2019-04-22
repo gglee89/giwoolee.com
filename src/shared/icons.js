@@ -25,6 +25,8 @@ import apolloClient from '../assets/img/apollo-client.svg';
 import nodeJS from '../assets/img/Node.js_logo.svg';
 import freepik from '../assets/img/freepik.svg';
 import flaticon from '../assets/img/flaticon-logo.svg';
+import aws from '../assets/img/Amazon_Web_Services_Logo.svg';
+import mlab from '../assets/img/mlab-vector-logo.svg';
 
 // graphic-design
 import view from '../assets/icons/flaticon/043-view.svg';
@@ -58,4 +60,6 @@ export default {
   nodeJS,
   freepik,
   flaticon,
+  aws,
+  mlab,
 };
