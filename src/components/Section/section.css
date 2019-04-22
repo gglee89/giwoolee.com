@@ -34,7 +34,7 @@
 }
 
 .section-item-container {
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -64,7 +64,8 @@
 }
 
 .section-item-container img {
-    height: 50px;
+    display: flex;
+    height: auto;
     margin-top: 5px;
     padding: 5px;
     width: 50px;

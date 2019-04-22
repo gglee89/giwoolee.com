@@ -19,6 +19,10 @@ import notebook from '../assets/icons/flaticon/034-notebook.svg';
 import share from '../assets/icons/flaticon/041-share.svg';
 import phone from '../assets/icons/flaticon/020-phone.svg';
 import github from '../assets/icons/github/GitHub-Mark-120px-plus.png';
+import mongoDB from '../assets/img/mongodb.svg';
+import graphQL from '../assets/img/GraphQL_Logo.svg';
+import apolloClient from '../assets/img/apollo-client.svg';
+import nodeJS from '../assets/img/Node.js_logo.svg';
 
 // graphic-design
 import view from '../assets/icons/flaticon/043-view.svg';
@@ -46,4 +50,8 @@ export default {
   share,
   phone,
   github,
+  mongoDB,
+  graphQL,
+  apolloClient,
+  nodeJS,
 };

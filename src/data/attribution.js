@@ -1,4 +1,33 @@
 export default {
+  Stack: {
+    topics: [
+      {
+        name: 'ReactJS',
+        link: 'https://reactjs.org',
+        level: 'https://reactjs.org',
+        iconUrl:
+          'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/full/react.png',
+      },
+      {
+        name: 'GraphQL',
+        link: 'https://graphql.org',
+        level: 'https://graphql.org',
+        icon: 'graphQL',
+      },
+      {
+        name: 'NodeJS',
+        link: 'https://nodejs.org',
+        level: 'https://nodejs.org',
+        icon: 'nodeJS',
+      },
+      {
+        name: 'MongoDB',
+        link: 'https://mongo.com',
+        level: 'https://mongo.com',
+        icon: 'mongoDB',
+      },
+    ],
+  },
   Icons: {
     topics: [
       {
@@ -52,17 +81,6 @@ export default {
         link: 'https://www.freepik.com/photoangel',
         level: 'https://www.freepik.com/photoangel',
         icon: 'download',
-      },
-    ],
-  },
-  Stack: {
-    topics: [
-      {
-        name: 'ReactJS',
-        link: 'https://reactjs.org',
-        level: 'https://reactjs.org',
-        iconUrl:
-          'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/full/react.png',
       },
     ],
   },
