@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "66d1afe44a922a383130b20a6c642791",
-    "url": "/static/media/044-email.66d1afe4.svg"
+    "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
+    "url": "/static/media/011-download.b48bc876.svg"
   },
   {
-    "revision": "053289e58b4b832d2f3a",
-    "url": "/static/css/main.d9770272.chunk.css"
+    "revision": "009b946bd7e2f7faab07",
+    "url": "/static/css/main.87354f8c.chunk.css"
   },
   {
-    "revision": "373fff0e91d2a13d4afe",
-    "url": "/static/js/1.373fff0e.chunk.js"
+    "revision": "a055e02a1259beb1242e",
+    "url": "/static/js/1.a055e02a.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -104,12 +104,12 @@ self.__precacheManifest = [
     "url": "/static/media/040-twitter.d59408e0.svg"
   },
   {
-    "revision": "053289e58b4b832d2f3a",
-    "url": "/static/js/main.053289e5.chunk.js"
+    "revision": "66d1afe44a922a383130b20a6c642791",
+    "url": "/static/media/044-email.66d1afe4.svg"
   },
   {
-    "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
-    "url": "/static/media/011-download.b48bc876.svg"
+    "revision": "009b946bd7e2f7faab07",
+    "url": "/static/js/main.009b946b.chunk.js"
   },
   {
     "revision": "adc9663d7e48d5df17963624b5814a42",
@@ -146,6 +146,14 @@ self.__precacheManifest = [
   {
     "revision": "2e013d7501cea345c15e0ed7b6531464",
     "url": "/static/media/flaticon-logo.2e013d75.svg"
+  },
+  {
+    "revision": "259e1339a21cf9a16881f722296cb704",
+    "url": "/static/media/Amazon_Web_Services_Logo.259e1339.svg"
+  },
+  {
+    "revision": "640981b3fb07858c389ca750c3849723",
+    "url": "/static/media/mlab-vector-logo.640981b3.svg"
   },
   {
     "revision": "09a3a4dce2329a14004a0e45f39c23f9",
@@ -208,7 +216,7 @@ self.__precacheManifest = [
     "url": "/static/media/marshall-goldsmith-2-min.c7b566fb.jpeg"
   },
   {
-    "revision": "593eac37cb217b83a560181933eee3ed",
+    "revision": "cc3153c8ac3ab70778963d5d8206e6af",
     "url": "/index.html"
   }
 ];
