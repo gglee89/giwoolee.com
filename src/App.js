@@ -1,28 +1,16 @@
-import React, { PureComponent } from 'react';
-import './App.css';
-import './Theme.css';
+import React, { PureComponent } from "react";
+import "./App.css";
+import "./Theme.css";
 
 // Images
-import backgrounds from './shared/backgrounds';
+import backgrounds from "./shared/backgrounds";
 
 // Pages
-import Home from './pages/Home';
+import Home from "./pages/Home";
 
 class App extends PureComponent {
   state = {
-    bg: 'bg1',
-  };
-
-  componentDidMount() {
-    setInterval(this.setBg, 10000);
-  }
-
-  setBg = () => {
-    let bgNumber = (Math.random() * 6).toFixed(0);
-
-    this.setState(prevState => ({
-      bg: `bg${bgNumber}`,
-    }));
+    bg: "bg0"
   };
 
   render() {
@@ -30,7 +18,7 @@ class App extends PureComponent {
       <div
         className="App"
         style={{
-          backgroundImage: `url(${backgrounds[this.state.bg]})`,
+          backgroundImage: `url(${backgrounds[this.state.bg]})`
         }}
       >
         <Home />

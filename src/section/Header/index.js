@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
-import classNames from 'classnames';
-import moment from 'moment';
+import React, { Component } from "react";
+import { Container } from "react-bootstrap";
+import classNames from "classnames";
+import moment from "moment";
 
 // Assets
-import icons from '../../shared/icons';
+import icons from "../../shared/icons";
 
 // Styles
-import './header.css';
+import "./header.css";
 
 class Header extends Component {
   constructor(props) {
@@ -17,14 +17,14 @@ class Header extends Component {
 
     this.state = {
       isSticky: false,
-      isNavbarShow: false,
+      isNavbarShow: false
     };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', event => {
+    window.addEventListener("scroll", event => {
       let supportPageOffset = window.pageXOffset !== undefined;
-      let isCSS1Compat = (document.compatMode || '') === 'CSS1Compat';
+      let isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
       let scroll = {
         x: supportPageOffset
           ? window.pageXOffset
@@ -35,42 +35,32 @@ class Header extends Component {
           ? window.pageYOffset
           : isCSS1Compat
           ? document.documentElement.scrollTop
-          : document.body.scrollTop,
+          : document.body.scrollTop
       };
-
-      /* if (scroll.y > this.navElem.current.offsetTop) {
-        this.setState({
-          isSticky: true,
-        });
-      } else {
-        this.setState({
-          isSticky: false,
-        });
-      } */
     });
   }
 
   toggleNavbar = () => {
     this.setState({
-      isNavbarShow: this.state.isNavbarShow ? false : true,
+      isNavbarShow: this.state.isNavbarShow ? false : true
     });
   };
 
   render() {
     let navClasses = classNames({
       navbar: true,
-      'navbar-expand-lg': true,
-      sticky: this.state.isSticky,
+      "navbar-expand-lg": true,
+      sticky: this.state.isSticky
     });
 
-    let currentTime = moment().format('ddd LT');
+    let currentTime = moment().format("ddd LT");
 
     return (
       <header ref={this.navElem} className="header">
         <nav className={navClasses}>
           <Container>
             <div className="header-left">
-              <img className="brand-logo" src={icons['apple']} alt="apple" />
+              <img className="brand-logo" src={icons["apple"]} alt="apple" />
               <div>Gustavo Lee</div>
             </div>
             <div className="header-right">
@@ -80,7 +70,7 @@ class Header extends Component {
                 target="_blank"
                 className="header-right-item"
               >
-                <img src={icons['github']} alt="github" />
+                <img src={icons["github"]} alt="github" />
                 <div>GitHub</div>
               </a>
               <div>{currentTime}</div>
