@@ -1,0 +1,9 @@
+.side-menu-container {
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    min-width: 150px;
+}

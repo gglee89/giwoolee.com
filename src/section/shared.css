@@ -1,0 +1,22 @@
+.blink-cursor {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    background-color: var(--main-color);
+    flex: 1;
+    height: 20px;
+    margin-left: 5px;
+    position: absolute;
+    width: 8px;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}

@@ -1,0 +1,455 @@
+.ResumeBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px 10px 30px;
+    text-align: left;
+    transition: color 1s linear;
+}
+
+.mission-font-size-medium .ResumeBody {
+    padding: 15px 20px 15px 35px;
+}
+
+.mission-font-size-large .ResumeBody {
+    padding: 20px 25px 20px 40px;
+}
+
+.mission-font-size-extra-large .ResumeBody {
+    padding: 30px 30px 25px 60px;
+}
+
+.ResumeBody__50 {
+    flex: 1;
+    margin-right: 30px;
+    z-index: 1;
+}
+
+.ResumeBody__50:last-child {
+    margin-right: 0px;
+}
+
+.ResumeBody__content--title {
+    font-weight: bold;
+    font-size: var(--resume-font-size-title);
+    margin-bottom: 5px;
+}
+
+.mission-font-size-medium .ResumeBody__content--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__content--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__content--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-4));
+}
+
+.ResumeBody__experience-box {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.07;
+    margin-bottom: var(--resume-margin);
+    transition: all 300ms ease-in-out;
+}
+
+.ResumeBody__experience-box:hover {
+    background: var(--gray);
+    -webkit-box-shadow: 4px 4px 35px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 35px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 35px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box {
+    line-height: 1.1;
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box {
+    line-height: 1.2;
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box {
+    line-height: 1.5;
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-4));
+}
+
+.ResumeBody__experience-box--title {
+    font-weight: bold;
+    font-size: var(--resume-font-size-subheading);
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--title {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--title {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--title {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-4));
+}
+
+.ResumeBody__experience-box--company {
+    font-size: var(--resume-font-size-subheading);
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--company {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--company {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--company {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-4));
+}
+
+.ResumeBody__experience-box--date {
+    color: var(--red);
+    font-size: var(--resume-font-size-small);
+    font-style: italic;
+    margin: 5px 0px;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-4));
+}
+
+.ResumeBody__experience-box--achievements {
+    font-size: var(--resume-font-size-text);
+    margin-bottom: var(--resume-margin);
+    padding-inline-start: 0px;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--achievements {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-2));
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__experience-box--achievements {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-3));
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--achievements {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-4));
+    margin-bottom: calc(var(--resume-margin) * var(--resume-scale-4));
+}
+
+.ResumeBody__experience-box--achievements li {
+    list-style: none;
+    margin-bottom: 5px;
+    text-indent: 0px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--achievements li {
+    padding-left: 12px;
+}
+
+.mission-font-size-large .ResumeBody__experience-box--achievements li {
+    padding-left: 14px;
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--achievements li {
+    padding-left: 17px;
+}
+
+.ResumeBody__experience-box--achievements li::before {
+    color: var(--red);
+    content: "\2022";
+    font-size: 1em;
+    position: absolute;
+    margin-left: -10px;
+}
+
+.mission-font-size-medium .ResumeBody__experience-box--achievements li::before {
+    font-size: 1.3em;
+    margin-left: -11px;
+}
+
+.mission-font-size-large .ResumeBody__experience-box--achievements li::before {
+    font-size: 1.6em;
+    margin-left: -13px;
+    margin-top: -3px;
+}
+
+.mission-font-size-extra-large .ResumeBody__experience-box--achievements li::before {
+    font-size: 2em;
+    margin-left: -16px;
+    margin-top: -9px;
+}
+
+.ResumeBody__certificates {
+    font-size: var(--resume-font-size-text);
+}
+
+.mission-font-size-medium .ResumeBody__certificates {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__certificates {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__certificates {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-4));
+}
+
+.ResumeBody__certificates--title {
+    font-weight: bold;
+}
+
+.ResumeBody__skills {
+    margin-bottom: var(--resume-margin);
+}
+
+.mission-font-size-medium .ResumeBody__skills {
+    font-size: calc(var(--resume-margin) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__skills {
+    font-size: calc(var(--resume-margin) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__skills {
+    font-size: calc(var(--resume-margin) * var(--resume-scale-4));
+}
+
+.ResumeBody__skills--item {
+    background-color: var(--red);
+    border-radius: 5px;
+    color: var(--white);
+    display: inline-block;
+    font-size: var(--resume-font-size-text);
+    font-weight: 100;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    padding: 2px 5px;
+}
+
+.ResumeBody__skills--item:last-child {
+    margin-bottom: 0px;
+}
+
+.ResumeBody__technical {
+    margin-bottom: 10px;
+    line-height: 1.01;
+}
+
+.mission-font-size-medium .ResumeBody__technical {
+    margin-bottom: 12px;
+    line-height: 1.02;
+}
+
+.mission-font-size-large .ResumeBody__technical {
+    margin-bottom: 14px;
+    line-height: 1.03;
+}
+
+.mission-font-size-extra-large .ResumeBody__technical {
+    margin-bottom: 16px;
+    line-height: 1.04;
+}
+
+.ResumeBody__technical-item {
+    font-size: var(--resume-font-size-text);
+    margin-bottom: 15px;
+}
+
+.mission-font-size-medium .ResumeBody__technical-item {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-2));
+    margin-bottom: 17px;
+}
+
+.mission-font-size-large .ResumeBody__technical-item {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-3));
+    margin-bottom: 19px;
+}
+
+.mission-font-size-extra-large .ResumeBody__technical-item {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-4));
+    margin-bottom: 21px;
+}
+
+.ResumeBody__technical-item--title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.ResumeBody__education {
+    margin-bottom: 10px;
+    line-height: 1.01;
+}
+
+.mission-font-size-medium .ResumeBody__education {
+    margin-bottom: 12px;
+    line-height: 1.02;
+}
+
+.mission-font-size-large .ResumeBody__education {
+    margin-bottom: 14px;
+    line-height: 1.03;
+}
+
+.mission-font-size-extra-large .ResumeBody__education {
+    margin-bottom: 16px;
+    line-height: 1.04;
+}
+
+.ResumeBody__education-item {
+    margin-bottom: 15px;
+}
+
+.ResumeBody__education-item--title {
+    font-size: var(--resume-font-size-title);
+    font-weight: bold;
+}
+
+.mission-font-size-medium .ResumeBody__education-item--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__education-item--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__education-item--title {
+    font-size: calc(var(--resume-font-size-title) * var(--resume-scale-4));
+}
+
+.ResumeBody__education-item--subtitle {
+    font-size: var(--resume-font-size-subheading);
+}
+
+.mission-font-size-medium .ResumeBody__education-item--subtitle {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__education-item--subtitle {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__education-item--subtitle {
+    font-size: calc(var(--resume-font-size-subheading) * var(--resume-scale-4));
+}
+
+.ResumeBody__education-item--date {
+    align-items: center;
+    color: var(--red);
+    display: flex;
+    flex-direction: row;
+    font-size: var(--resume-font-size-small);
+    font-style: italic;
+    justify-content: space-between;
+    margin: 7px 0 5px;
+}
+
+.mission-font-size-medium .ResumeBody__education-item--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__education-item--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__education-item--date {
+    font-size: calc(var(--resume-font-size-small) * var(--resume-scale-4));
+}
+
+.ResumeBody__education-item--list {
+    font-size: var(--resume-font-size-text);
+}
+
+.mission-font-size-medium .ResumeBody__education-item--list {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-2));
+}
+
+.mission-font-size-large .ResumeBody__education-item--list {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-3));
+}
+
+.mission-font-size-extra-large .ResumeBody__education-item--list {
+    font-size: calc(var(--resume-font-size-text) * var(--resume-scale-4));
+}
+
+.ResumeBody__education-item--list-title {
+    color: var(--red);
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+.ResumeBody__education-item--list-wrapper {
+    display: flex;
+}
+
+.ResumeBody__education-item--list-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 0px;
+    padding-inline-start: 0px;
+    flex: 1;
+}
+
+.ResumeBody__education-item--list-wrapper li {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    text-indent: 0px;
+}
+
+.mission-font-size-medium .ResumeBody__education-item--list-wrapper li {
+    padding-left: 11px;
+}
+
+.mission-font-size-large .ResumeBody__education-item--list-wrapper li {
+    padding-left: 13px;
+}
+
+.mission-font-size-extra-large .ResumeBody__education-item--list-wrapper li {
+    padding-left: 16px;
+}
+
+.ResumeBody__education-item--list-wrapper li::before {
+    color: var(--red);
+    content: "\2022";
+    font-size: 1em;
+    position: absolute;
+    margin-left: -10px;
+}
+
+.mission-font-size-medium .ResumeBody__education-item--list-wrapper li::before {
+    font-size: 1.3em;
+    margin-left: -11px;
+}
+
+.mission-font-size-large .ResumeBody__education-item--list-wrapper li::before {
+    font-size: 1.6em;
+    margin-left: -13px;
+    margin-top: -3px;
+}
+
+.mission-font-size-extra-large .ResumeBody__education-item--list-wrapper li::before {
+    font-size: 2em;
+    margin-left: -16px;
+    margin-top: -6px;
+}
