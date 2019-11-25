@@ -46,7 +46,7 @@ const General = () => {
         <code># giwoogustavolee @ Giwoo-MacBook-Pro in ~</code>
         <span>$ [Research ML+NLP]</span> Research in Online Deception and building Conversational-AI application with <a
             className="link"
-            href="https://www.shuyuanmaryho.com"
+            href="http://www.shuyuanmaryho.com"
             target="_blank"
             rel="noopener noreferrer"
           >
