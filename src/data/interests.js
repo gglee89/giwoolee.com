@@ -1,21 +1,16 @@
 export default {
-  'Machine Learning': {
+  'Machine Learning + NLP': {
     topics: [
       {
         name: 'Algorithm',
-        level: 'Academic (Undergraduate)',
-        seniority: 'Beginner',
+        level: 'Academic',
+        seniority: 'Intermediate',
       },
       {
-        name: 'Prediction',
-        level: 'Academic (Undergraduate)',
-        seniority: 'Beginner',
-      },
-      {
-        name: 'Probability',
-        level: 'Academic (Undergraduate)',
-        seniority: 'Beginner',
-      },
+        name: 'Sentence Classification',
+        level: 'Academic (Research)',
+        seniority: 'Intermediate'
+      }
     ],
   },
   AI: {
@@ -35,9 +30,24 @@ export default {
   'Web/Mobile Development': {
     topics: [
       {
-        name: 'Finance',
-        level: 'Professional (Blockchain 1+ year)',
+        name: 'ReactJS + REDUX',
+        level: 'Professional',
         seniority: 'Senior',
+      },
+      {
+        name: 'MySQL/MongoDB/GraphQL',
+        level: 'Professional',
+        seniority: 'Senior'
+      },
+      {
+        name: '[Server] OAuth, JWT, Socket.io, NodeJS',
+        level: 'Professional',
+        seniority: 'Senior'
+      },
+      {
+        name: '[Devops] Gitlab CI, Circle CI, Travis, Docker, Kubernetes',
+        level: 'Professional',
+        seniority: 'Senior'
       },
       {
         name: 'General Purpose App',

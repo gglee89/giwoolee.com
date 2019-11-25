@@ -48,7 +48,6 @@ const menuItems = [
   { icon: "pieceOfCake", title: MENU_ITEMS.MISSION },
   { icon: "sushi", title: MENU_ITEMS.CONTACT },
   { icon: "pizza", title: MENU_ITEMS.ATTRIBUTION },
-  { icon: "illustration", title: MENU_ITEMS.RESUME }
 ];
 
 class Preferences extends PureComponent {

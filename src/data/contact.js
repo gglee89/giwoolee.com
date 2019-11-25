@@ -2,10 +2,10 @@ export default {
   Academic: {
     topics: [
       {
-        name: 'University of Mississippi - Oxford',
-        level: 'gglee@go.olemiss.edu',
-        mail: 'gglee@go.olemiss.edu',
-        seniority: 'Weir Hall',
+        name: '(PhD Computer Science) Florida State University',
+        level: 'gl19f@fsu.edu',
+        mail: 'gl19f@fsu.edu',
+        seniority: '',
         icon: 'home',
       },
     ],
@@ -13,9 +13,9 @@ export default {
   Professional: {
     topics: [
       {
-        name: 'RockyRobots',
-        level: 'gustavo@rockyrobots.com',
-        mail: 'gustavo@rockyrobots.com',
+        name: 'FSU iSchool - Research Assistant',
+        level: 'gl19f@fsu.edu',
+        mail: 'gl19f@fsu.edu',
         icon: 'email',
       },
     ],
