@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "giwoolee.com/precache-manifest.73b27756f7a53c67ccfe899fb8586897.js"
+  "gglee89.github.io/precache-manifest.8753eb3066f5f97014e65dfaa14f2299.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("giwoolee.com/index.html", {
+workbox.routing.registerNavigationRoute("gglee89.github.io/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
