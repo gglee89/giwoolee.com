@@ -51,8 +51,8 @@ const General = () => {
             rel="noopener noreferrer"
           >
             Professor Dr.PhD.Shuyuan Mary Ho
-          </a>
-        in the iSensor department at FSU
+          </a> {' '} in the iSensor department at FSU.
+	<br />
         <span>$ [Web Development]</span> 5+ years advancing in the IT industry. Shaped
         products as a Data Engineer with BI, with Mainframes (batch processing),
         and Web/Mobile development. Experienced in developing internal web
