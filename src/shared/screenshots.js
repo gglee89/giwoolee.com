@@ -1,9 +1,9 @@
 // Images
 // iSensorLabs
-import realspiel_1 from "../assets/img/realspiel/realspiel-chatapp-min.jpeg";
-import realspiel_2 from "../assets/img/realspiel/realspiel-gamecreation-min.jpeg";
-import realspiel_3 from "../assets/img/realspiel/realspiel-groundtruth-min.jpeg";
-import realspiel_4 from "../assets/img/realspiel/realspiel-topicselection-min.jpeg";
+import realspiel_1 from "../assets/img/realspiel/realspiel-chatapp-min.jpg";
+import realspiel_2 from "../assets/img/realspiel/realspiel-gamecreation-min.jpg";
+import realspiel_3 from "../assets/img/realspiel/realspiel-groundtruth-min.jpg";
+import realspiel_4 from "../assets/img/realspiel/realspiel-topicselection-min.jpg";
 
 // Rocky Robots
 import rockyApp_1 from "../assets/img/rocky/home-min.jpeg";
