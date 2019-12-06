@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
-    "url": "/static/media/011-download.b48bc876.svg"
+    "revision": "f1bad1db814c17841be04d2d63e01102",
+    "url": "/static/media/041-share.f1bad1db.svg"
   },
   {
-    "revision": "bf1579400b9de7c0b0a4",
-    "url": "/static/css/main.008a5d09.chunk.css"
+    "revision": "c4092332e5988e638dbc",
+    "url": "/static/css/main.d8752fbf.chunk.css"
   },
   {
-    "revision": "0c7e6fe7bbfb53bb5858",
-    "url": "/static/js/1.0c7e6fe7.chunk.js"
+    "revision": "c0dd4437220d3ac3d726",
+    "url": "/static/js/1.c0dd4437.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -108,16 +108,16 @@ self.__precacheManifest = [
     "url": "/static/media/044-email.66d1afe4.svg"
   },
   {
-    "revision": "bf1579400b9de7c0b0a4",
-    "url": "/static/js/main.bf157940.chunk.js"
+    "revision": "b48bc876ed85918e210b0bc8cf17bbd2",
+    "url": "/static/media/011-download.b48bc876.svg"
   },
   {
     "revision": "adc9663d7e48d5df17963624b5814a42",
     "url": "/static/media/034-notebook.adc9663d.svg"
   },
   {
-    "revision": "f1bad1db814c17841be04d2d63e01102",
-    "url": "/static/media/041-share.f1bad1db.svg"
+    "revision": "c4092332e5988e638dbc",
+    "url": "/static/js/main.c4092332.chunk.js"
   },
   {
     "revision": "9320d8f4ff0d8c010bfd0c2fb4ecb8d7",
@@ -158,6 +158,22 @@ self.__precacheManifest = [
   {
     "revision": "09a3a4dce2329a14004a0e45f39c23f9",
     "url": "/static/media/043-view.09a3a4dc.svg"
+  },
+  {
+    "revision": "2a380b425ce512f943948842ddfc89ba",
+    "url": "/static/media/realspiel-chatapp-min.2a380b42.jpg"
+  },
+  {
+    "revision": "8ed4ee7f165bc2927c8e89ae0655cc5a",
+    "url": "/static/media/realspiel-gamecreation-min.8ed4ee7f.jpg"
+  },
+  {
+    "revision": "56d77ca078fa47d79f6e3087710217dc",
+    "url": "/static/media/realspiel-groundtruth-min.56d77ca0.jpg"
+  },
+  {
+    "revision": "8144575e3dfb858e034b3171305a6e0e",
+    "url": "/static/media/realspiel-topicselection-min.8144575e.jpg"
   },
   {
     "revision": "7906b11db00022ad02c3afe402e13ed2",
@@ -216,7 +232,7 @@ self.__precacheManifest = [
     "url": "/static/media/marshall-goldsmith-2-min.c7b566fb.jpeg"
   },
   {
-    "revision": "7e8943023eded987b19b592a2e77635f",
+    "revision": "a23accfa80842270d6d4d2d2945b991d",
     "url": "/index.html"
   }
 ];
