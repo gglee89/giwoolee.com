@@ -1,9 +1,9 @@
-import PROJECTS from '../data/projects';
-import { PROJECTS_SELECT } from '../actions/projects';
+import PROJECTS from "../data/projects";
+import { PROJECTS_SELECT } from "../actions/projects";
 
 const initialState = {
   ...PROJECTS,
-  projectName: 'Rocky Robots',
+  projectName: "Real Spiel"
 };
 
 const reducer = (state = initialState, action) => {
@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
     case PROJECTS_SELECT:
       return {
         ...state,
-        projectName: action.payload,
+        projectName: action.payload
       };
     default:
       return state;
