@@ -5,13 +5,33 @@ import './general.css';
 const General = () => {
   return (
     <div className="general-container">
-      <p className="lead">Todo 2019</p>
+      <p className="lead">About</p>
       <p className="about-text">
         <code># giwoogustavolee @ Giwoo-MacBook-Pro in ~</code>
-        <span>$ [Coursera]</span>Bayes Statistics [Full Scholarship Award]{' '}
+        <span>$ [What do I do]</span>I'm overseeing full application release
+        cycles involving: TypeScript, React, Redux, Underscore/Lodash, Jest /
+        Mocha / Jasmine / Sinon, Handlebars, Webpack, Node.js, MongoDB,
+        DynamoDB, AWS S3, AWS ECS, AWS EKS, responsive, cross-browser
+        compatibility, and mobile first approaches. I developed apps that works
+        in the financial, management, entertainment, and healthcare industry
+        mainly using the MERN stack and other minor extensions such as Lambda,
+        API Gateway, AngularJS, WordPress, and SAP UI5. I love to create
+        applications that bring real impact to users.
         <br />
-        <span>$ [Research]</span>ML + NLP Research
+        <span>$ [Code + Unit Testing === Good Quality Code]</span>I believe
+        JavaScript unit testing is important and that adding quality controls to
+        workflows (like ESLint & stylelint) helps teams learn/grow as well as
+        helps to ensure that websites/apps work well across a myriad of browser,
+        platforms, and devices.
         <br />
+        <span>$ [DRY w/ Design Patterns]</span>I believe that applying design
+        patterns and practices to the entire development stack and operational
+        processes helps big teams working on large codebases to be able to
+        secure, maintain and extend code.
+        <br />
+        <span>$ [Mentor]</span>I enjoy mentoring others, setting direction for
+        best practices, digging into new tech, and exploring ways to make B2C
+        applications with better UX.
       </p>
       <p className="lead">Currently...</p>
       <p className="about-text">
@@ -28,38 +48,21 @@ const General = () => {
         <code>>>> import activities_doing from general</code>
         <code>>>> print(activities_doing.currently)</code>
         <code>
-          A Machine Learning & Web Development Enthusiast. A PhD student in
-          Computer Science at Florida State University under{' '}
-          <a
-            className="link"
-            href="https://www.cs.fsu.edu/~liux/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Professor Dr.PhD.Xiuwen Liu
-          </a>
+          A Cloud Architect & Web Development Enthusiast. Working as a Full
+          Stack Developer.
         </code>
-        <span>$</span> This is not really a terminal (It's just CSS)
+        <span>$</span> echo "This is not really a terminal (It's just HTML+CSS)"
       </p>
       <p className="lead">So far</p>
       <p className="about-text">
         <code># giwoogustavolee @ Giwoo-MacBook-Pro in ~</code>
-        <span>$ [Research ML+NLP]</span> Research in Online Deception and building Conversational-AI application with <a
-            className="link"
-            href="http://www.shuyuanmaryho.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Professor Dr.PhD.Shuyuan Mary Ho
-          </a> {' '} in the iSensor department at FSU.
-	<br />
-        <span>$ [Web Development]</span> 5+ years advancing in the IT industry. Shaped
-        products as a Data Engineer with BI, with Mainframes (batch processing),
-        and Web/Mobile development. Experienced in developing internal web
-        platforms for the entertainment and financial industries and also with
-        B2C customer facing applications. Actively contributed on UI/UX,
-        software specification, and project management in parallel with web
-        development.
+        <span>$ [Web Development]</span> 8+ years advancing in the IT industry.
+        Shaped products as a Data Engineer with BI, with Mainframes (batch
+        processing), and Web/Mobile development. Experienced in developing
+        internal web platforms for the entertainment and financial industries
+        and also with B2C customer facing applications. Actively contributed on
+        UI/UX, software specification, and project management in parallel with
+        web development.
         <span className="blink-cursor" />
       </p>
     </div>

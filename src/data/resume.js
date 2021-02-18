@@ -4,7 +4,7 @@ export default {
       name: 'Giwoo Gustavo Lee',
       role: 'Full Stack Developer & Machine Learning',
       summary:
-        '5+ years advancing the IT Industry. Shaped products using Data Engineering with BI, Mainframes (batch processing), and Web/Mobile development. Experienced in developing internal web platforms for the entertainment, financial industry, and also with general purpose B2C customer facing applications.',
+        '8+ years advancing the IT Industry. Shaped products using Data Engineering with BI, Mainframes (batch processing), and Web/Mobile development. Experienced in developing internal web platforms for the entertainment, financial industry, and also with general purpose B2C customer facing applications.',
     },
     contact: {
       email: ['gglee89@gmail.com', 'email'],

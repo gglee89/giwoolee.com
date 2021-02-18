@@ -1,63 +1,71 @@
 .topbar-container {
-    background-color: var(--gray);
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    display: flex;
-    flex-direction: row;
-    height: 25px;
-}
-
-.title {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.left-menu {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+  background-color: var(--gray);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  width: 100%;
 }
 
 @media screen and (max-width: 687px) {
-    .left-menu {
-        opacity: 0;
-    }
+  .topbar-container {
+    border-radius: 0px;
+  }
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.left-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 687px) {
+  .left-menu {
+    opacity: 0;
+    width: 50px;
+  }
 }
 
 .left-menu div {
-    border-radius: 58%;
-    font-size: 8px;
-    font-weight: bold;
-    height: 15px;
-    line-height: 15px;
-    margin-left: 10px;
-    padding: 0px;
-    width: 15px;
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 58%;
+  font-size: 8px;
+  font-weight: bold;
+  height: 15px;
+  line-height: 15px;
+  margin-left: 10px;
+  padding: 0px;
+  width: 15px;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
 .left-menu div span {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .left-menu:hover span {
-    visibility: visible;
+  visibility: visible;
 }
 
 .right-menu {
-    width: 50px;
+  width: 50px;
 }
 
 .apple-red {
-    background-color: var(--red);
+  background-color: var(--red);
 }
 
 .apple-gray {
-    background-color: var(--gray);
+  background-color: var(--gray);
 }
 
 .apple-green {
-    background-color: var(--green);
+  background-color: var(--green);
 }
