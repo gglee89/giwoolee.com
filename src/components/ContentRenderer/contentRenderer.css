@@ -1,11 +1,20 @@
 .renderer-container {
-    background-color: var(--light-gray);
-    border: 1px solid var(--gray);
-    height: 100%;
-    font-size: 13px;
-    flex: 3;
-    margin-left: 5px;
+  background-color: var(--light-gray);
+  border: 1px solid var(--gray);
+  height: 100%;
+  font-size: 13px;
+  flex: 3;
+  margin-left: 5px;
+  padding: 15px 10px;
+  position: relative;
+  min-width: 350px;
+}
+
+@media screen and (max-width: 687px) {
+  .renderer-container {
+    margin-left: 0px;
+    margin-top: 20px;
     padding: 15px 10px;
-    position: relative;
-    min-width: 350px;
+    min-width: 100%;
+  }
 }

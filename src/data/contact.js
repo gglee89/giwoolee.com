@@ -13,6 +13,12 @@ export default {
   Professional: {
     topics: [
       {
+        name: 'Genealogy.co.kr - Full Stack Developer/Head of Technology',
+        level: 'giwoo.lee@genealogy.co.kr',
+        mail: 'giwoo.lee@genealogy.co.kr',
+        icon: 'email',
+      },
+      {
         name: 'FSU iSchool - Research Assistant',
         level: 'gl19f@fsu.edu',
         mail: 'gl19f@fsu.edu',
