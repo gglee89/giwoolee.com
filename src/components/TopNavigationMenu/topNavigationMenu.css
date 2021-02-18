@@ -1,17 +1,24 @@
 .top-navigation-container {
-    background-color: var(--gray);
-    padding: 0 10px;
-    border-bottom: solid 1px #CCC;
+  background-color: var(--gray);
+  padding: 0 10px;
+  border-bottom: solid 1px #ccc;
 }
 
 @media screen and (max-width: 687px) {
-    .top-navigation-container {
-        padding: 0;
-    }
+  .top-navigation-container {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .navigation-menu {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 687px) {
+  .top-navigation-container {
+    justify-content: space-between;
+  }
 }

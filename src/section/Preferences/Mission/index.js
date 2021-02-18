@@ -71,12 +71,19 @@ function Mission() {
         </div>
       </div>
       <div className="mission-item">
+        <span style={{ fontWeight: 'bold' }}>Go to the Gemba.</span> Apply
+        Toyota Chairman Fujio Cho's words "Go See, Ask Why, Show Respect". Be
+        involved with the nitty-gritty of field processes with people to achieve
+        a purpose. Optimize processes to enable people to work towards achieving
+        organizational purpose.
+      </div>
+      <div className="mission-item">
         <span style={{ fontWeight: 'bold' }}>Never stop learning.</span> Always
-        try to understand one's view prior to formulating an output. Live by
-        Bayes's Theorem applied to approaching one's understanding of the
-        unknown source event by measuring the outcome of subsequent events.
-        Putting it simply, is to expose one's self to new experiences in order
-        to find why the first one even took place.
+        try to understand one's view prior to formulating an output. The
+        "Culture of Learning". Live by Bayes's Theorem applied to approaching
+        one's understanding of the unknown source event by measuring the outcome
+        of subsequent events. Putting it simply, is to expose one's self to new
+        experiences in order to find why the first one even took place.
       </div>
       <div className="mission-item">
         <a

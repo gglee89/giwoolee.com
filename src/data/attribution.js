@@ -46,8 +46,8 @@ export default {
       },
       {
         name: 'AWS',
-        link: 'https://aws.amazon.com/elasticbeanstalk/',
-        level: 'https://aws.amazon.com/elasticbeanstalk/',
+        link: 'https://aws.amazon.com',
+        level: 'https://aws.amazon.com',
         icon: 'aws',
       },
     ],
