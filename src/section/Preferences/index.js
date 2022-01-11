@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Container } from "react-bootstrap";
-import Fullscreen from "react-full-screen";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import classnames from "classnames";
 
 // Assets
@@ -50,7 +50,14 @@ const menuItems = [
   { icon: "pizza", title: MENU_ITEMS.ATTRIBUTION },
 ];
 
-class Preferences extends PureComponent {
+const FullScreenWrapper = ({ children, props }) => {
+  const handle = useFullScreenHandle();
+  return (
+    <FullScreen handle={handle} {...props}>{children}</FullScreen>
+  )
+}
+
+class Preferences extends Component {
   constructor(props) {
     super(props);
 
@@ -126,7 +133,7 @@ class Preferences extends PureComponent {
     });
 
     return (
-      <Fullscreen
+      <FullScreenWrapper
         enabled={this.state.isFullScreen}
         onChange={isFullScreen => this.setState({ isFullScreen })}
       >
@@ -163,7 +170,7 @@ class Preferences extends PureComponent {
           <img src={icons["notebook"]} alt="notebook" />
           <div>About Me</div>
         </div>
-      </Fullscreen>
+      </FullScreenWrapper>
     );
   }
 }

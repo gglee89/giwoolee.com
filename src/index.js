@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 import * as serviceWorker from './serviceWorker';
 
 // Router
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Store Setup
 import { Provider } from 'react-redux';
@@ -16,10 +16,10 @@ import store from './store';
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/*" component={NotFound} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<App />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

@@ -1,9 +1,11 @@
 .project-body {
   display: flex;
+  height: 100%;
 }
 
 @media screen and (max-width: 687px) {
   .project-body {
     flex-direction: column;
+    height: initial;
   }
 }
