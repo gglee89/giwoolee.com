@@ -16,7 +16,7 @@
 }
 
 .content-renderer-form-item {
-  align-items: baseline;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
 }
@@ -49,6 +49,7 @@
   display: flex;
   flex-direction: row;
   flex: 3;
+  flex-wrap: wrap;
   padding: 2px 0 2px 5px;
 }
 
@@ -60,10 +61,13 @@
 }
 
 .content-renderer-form-item-keyword-item {
+  align-items: center;
   background-color: var(--dark-gray);
   border-radius: 10px;
   cursor: default;
+  display: flex;
   margin-right: 5px;
+  margin-top: 1px;
   padding: 2px 5px;
 }
 

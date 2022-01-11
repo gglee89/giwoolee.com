@@ -2,7 +2,7 @@
 .fullscreen {
   align-items: center;
   display: flex;
-  height: 100%;
+  height: calc(100% - 30px);
 }
 
 .fullscreen-enabled .preferences-container {
@@ -27,8 +27,7 @@
   opacity: 0;
   padding: 0;
   height: 0px;
-  transition: height 300ms ease-in-out, width 300ms ease-in-out,
-    opacity 500ms ease-in-out;
+  transition: height 300ms ease-in-out, width 300ms ease-in-out, opacity 500ms ease-in-out;
 }
 
 @media screen and (max-width: 687px) {
@@ -41,11 +40,28 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .preferences-container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .preferences-container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .preferences-container {
+    max-width: 1140px;
+  }
+}
+
 .is-open {
-  height: 90%;
+  height: 90vh;
   opacity: 1;
   z-index: 10;
-  max-width: 90%;
 }
 
 @media screen and (max-width: 687px) {
@@ -66,6 +82,7 @@
 @media screen and (max-width: 687px) {
   .preferences-body {
     border-radius: 0px;
+    height: calc(100% - 80px);
     width: 100%;
   }
 }
