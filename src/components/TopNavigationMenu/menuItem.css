@@ -16,8 +16,13 @@
   transition: transform 300ms ease-in-out;
 }
 
+.menu-item > div {
+  color: var(--light-gray);
+}
+
 .menu-item.active {
-  background-color: var(--dark-gray);
+  background-color: #b4b1b1;
+  border-radius: 6px;
 }
 
 .menu-item:hover img {

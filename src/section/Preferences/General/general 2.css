@@ -4,10 +4,6 @@
   flex-direction: column;
 }
 
-.general-container > p {
-  color: var(--light-gray);
-}
-
 .about-text {
   color: var(--main-color);
   background-color: var(--black);

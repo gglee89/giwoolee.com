@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { Container } from "react-bootstrap";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -31,7 +31,7 @@ import * as projectSelectors from "../../reducers/projects";
 import * as menuSelectors from "../../reducers/menu";
 
 // Constants
-const MENU_ITEMS = {
+export const MENU_ITEMS = {
   GENERAL: "General",
   PROJECTS: "Projects",
   INTERESTS: "Interests",
@@ -50,129 +50,94 @@ const menuItems = [
   { icon: "pizza", title: MENU_ITEMS.ATTRIBUTION },
 ];
 
-const FullScreenWrapper = ({ children, props }) => {
+const Preferences = ({ selectMenu, selectedMenu, selectProject, projectName }) => {    
+  const iconRef = useRef(null)  
+  const [isFinderOpen, setIsFinderOpen] = useState(true);
+  const [count, setCount] = useState(0);  
+  const [isIconSelected, setIsIconSelected] = useState(false);  
   const handle = useFullScreenHandle();
-  return (
-    <FullScreen handle={handle} {...props}>{children}</FullScreen>
-  )
-}
 
-class Preferences extends Component {
-  constructor(props) {
-    super(props);
+  let preferencesContainerClasses = classnames({
+    "preferences-container": true,
+    "is-open": isFinderOpen
+  });
 
-    this.iconRef = React.createRef();
-    this.count = 0;
+  let desktopIconClasses = classnames({
+    "desktop-icon": true,
+    "is-selected": isIconSelected
+  });
 
-    this.state = {
-      isFullScreen: false,
-      isFinderOpen: true,
-      isIconSelected: false
-    };
-  }
-
-  componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickIcon);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickIcon);
-  }
-
-  toggleFullScreen = () => {
-    this.setState(prevState => ({
-      isFullScreen: prevState.isFullScreen ? false : true
-    }));
-  };
-
-  handleDoubleClick = () => {
-    this.setState({
-      isIconSelected: true
-    });
-
-    this.count++;
+  const handleDoubleClick = () => {
+    setIsIconSelected(true)
+    setCount(count + 1);
 
     setTimeout(() => {
-      this.count = 0;
+      setCount(0)
     }, 1000);
 
     // Only executes if user does double click
-    if (this.count === 2) {
-      this.setState({
-        isFinderOpen: true
-      });
+    if (count === 2) {
+      setIsFinderOpen(true)
     }
   };
 
-  handleClickIcon = event => {
-    if (this.iconRef && !this.iconRef.current.contains(event.target)) {
-      this.setState({
-        ...this.state,
-        isIconSelected: false
-      });
-      this.count = 0;
+  const handleClickIcon = event => {
+    if (iconRef && !iconRef.current.contains(event.target)) {
+      setIsIconSelected(false)      
+      setCount(0)
     }
   };
 
-  handleCloseFinder = () => {
-    this.setState({ isFinderOpen: false, isFullScreen: false });
+  const handleCloseFinder = () => {
+    setIsFinderOpen(false)
   };
 
-  render() {
-    const { selectMenu, selectedMenu, selectProject, projectName } = this.props;
-    const { isFinderOpen, isIconSelected } = this.state;
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickIcon);
+    return () => {
+      document.removeEventListener("mousedown", handleClickIcon);
+    }
+  }, [])      
 
-    let preferencesContainerClasses = classnames({
-      "preferences-container": true,
-      "is-open": isFinderOpen
-    });
-
-    let desktopIconClasses = classnames({
-      "desktop-icon": true,
-      "is-selected": isIconSelected
-    });
-
-    return (
-      <FullScreenWrapper
-        enabled={this.state.isFullScreen}
-        onChange={isFullScreen => this.setState({ isFullScreen })}
-      >
-        <Container className={preferencesContainerClasses}>
-          <TopBar
-            title="About Me"
-            closeFinder={() => this.handleCloseFinder()}
-            requestFullScreen={this.toggleFullScreen}
-          />
-          <TopNavigationMenu
-            menuItems={menuItems}
-            selectMenu={selectMenu}
-            selectedMenu={selectedMenu}
-          />
-          <div className="preferences-body">
-            {selectedMenu === MENU_ITEMS.GENERAL && <General />}
-            {selectedMenu === MENU_ITEMS.PROJECTS && (
-              <Projects
-                selectProject={selectProject}
-                projectName={projectName}
-              />
-            )}
-            {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
-            {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
-            {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
-            {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
-          </div>
-        </Container>
-        <div
-          ref={this.iconRef}
-          onClick={() => this.handleDoubleClick()}
-          className={desktopIconClasses}
-        >
-          <img src={icons["notebook"]} alt="notebook" />
-          <div>About Me</div>
+  return (
+    <FullScreen
+      handle={handle}
+    >
+      <Container className={preferencesContainerClasses}>
+        <TopBar
+          title="About Me"
+          closeFinder={() => handleCloseFinder()}
+          requestFullScreen={handle.active ? handle.exit : handle.enter}
+        />
+        <TopNavigationMenu
+          menuItems={menuItems}
+          selectMenu={selectMenu}
+          selectedMenu={selectedMenu}
+        />
+        <div className="preferences-body">
+          {selectedMenu === MENU_ITEMS.GENERAL && <General />}
+          {selectedMenu === MENU_ITEMS.PROJECTS && (
+            <Projects
+              selectProject={selectProject}
+              projectName={projectName}
+            />
+          )}
+          {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
+          {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
+          {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
+          {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
         </div>
-      </FullScreenWrapper>
-    );
-  }
+      </Container>
+      <div
+        ref={iconRef}
+        onClick={() => handleDoubleClick()}
+        className={desktopIconClasses}
+      >
+        <img src={icons["notebook"]} alt="notebook" />
+        <div>About Me</div>
+      </div>
+    </FullScreen>
+  );
 }
 
 function mapStateToProps(state) {

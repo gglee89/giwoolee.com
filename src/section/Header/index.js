@@ -5,6 +5,8 @@ import moment from 'moment';
 
 // Assets
 import icons from '../../shared/icons';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
+import { blue } from '@mui/material/colors'
 
 // Styles
 import './header.css';
@@ -23,7 +25,7 @@ const Header = () => {
       <nav className={navClasses}>
         <Container>
           <div className="header-left">
-            <img className="brand-logo" src={icons['apple']} alt="apple" />
+            <HomeOutlinedIcon sx={{ color: blue[500], marginRight: 1 }} />
             <div>Gustavo Lee</div>
           </div>
           <div className="header-right">
@@ -36,7 +38,7 @@ const Header = () => {
               <img src={icons['github']} alt="github" />
               <div>GitHub</div>
             </a>
-            <div>{currentTime}</div>
+            <div className="time">{currentTime}</div>
           </div>
         </Container>
       </nav>
