@@ -31,7 +31,7 @@ import mlab from '../assets/img/mlab-vector-logo.svg';
 // graphic-design
 import view from '../assets/icons/flaticon/043-view.svg';
 
-export default {
+const icons = {
   apple,
   computer,
   cookie,
@@ -63,3 +63,6 @@ export default {
   aws,
   mlab,
 };
+
+
+export default icons;

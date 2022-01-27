@@ -29,11 +29,13 @@ import makestar_3 from "../assets/img/makestar/makestar-project-2.jpg";
 import marshallGoldsmith_1 from "../assets/img/sccoaching/marshall-goldsmith-min.jpeg";
 import marshallGoldsmith_2 from "../assets/img/sccoaching/marshall-goldsmith-2-min.jpeg";
 
-export default {
+const screenshots = {
   "Real Spiel": [realspiel_1, realspiel_2, realspiel_3, realspiel_4],
   "Rocky App": [rockyApp_1, rockyApp_2, rockyApp_3, rockyApp_4],
   Avocado: [avocado_1, avocado_2, avocado_3, avocado_4],
   HDBCSI: [hdbcsi_1],
   "Makestar K-POP": [makestar_1, makestar_2, makestar_3],
   "Marshall Goldsmith": [marshallGoldsmith_1, marshallGoldsmith_2]
-};
+}
+
+export default screenshots;

@@ -7,7 +7,7 @@ import bg4 from "../assets/img/freepik/bg4.jpg";
 import bg5 from "../assets/img/freepik/bg5.jpg";
 import bg6 from "../assets/img/freepik/bg6.jpg";
 
-export default {
+const backgrounds = {
   bg0,
   bg1,
   bg2,
@@ -16,3 +16,5 @@ export default {
   bg5,
   bg6
 };
+
+export default backgrounds;
