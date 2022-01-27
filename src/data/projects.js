@@ -1,4 +1,4 @@
-export default {
+const projects = {
   "Real Spiel": {
     basics: {
       company: { content: "iSensorAnalytics.", type: "field" },
@@ -186,3 +186,5 @@ export default {
     }
   }
 };
+
+export default projects;

@@ -1,4 +1,4 @@
-export default {
+const resume = {
   header: {
     profile: {
       name: 'Giwoo Gustavo Lee',
@@ -135,3 +135,5 @@ export default {
     website: 'giwoolee.com',
   },
 };
+
+export default resume;

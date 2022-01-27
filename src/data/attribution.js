@@ -1,4 +1,4 @@
-export default {
+const attributions = {
   Stack: {
     topics: [
       {
@@ -109,3 +109,5 @@ export default {
     ],
   },
 };
+
+export default attributions;

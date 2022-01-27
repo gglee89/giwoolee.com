@@ -1,4 +1,4 @@
-export default {
+const contacts = {
   Academic: {
     topics: [
       {
@@ -65,3 +65,5 @@ export default {
     ],
   },
 };
+
+export default contacts;

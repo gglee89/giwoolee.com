@@ -1,4 +1,4 @@
-export default {
+const interests = {
   'Machine Learning + NLP': {
     topics: [
       {
@@ -57,3 +57,5 @@ export default {
     ],
   },
 }
+
+export default interests;

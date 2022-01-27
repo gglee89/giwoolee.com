@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './menuItem.css';
-import icons from '../../shared/icons';
 
 import { MENU_ITEMS } from '../../section/Preferences'
 
@@ -49,7 +48,6 @@ const MenuItem = ({ icon, title, ...rest }) => {
 
   return (
     <div onClick={() => selectMenu(title)} className={menuItemClasses}>
-      {/* <img src={icons[icon]} alt={title} /> */}
       <RenderedIcon sx={{ color: blue[700] }} />
       <div>{title}</div>
     </div>
