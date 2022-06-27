@@ -1,4 +1,4 @@
-# gglee90.github.io
+# giwoolee.com
 
 Github Pages under my personal domain (https://giwoolee.com)
 
@@ -10,5 +10,4 @@ Github Pages under my personal domain (https://giwoolee.com)
 # Author
 
 **Giwoo Lee**  
-Head of Development @Genealogy
 [Linkedin](https://giwoolee.com)
