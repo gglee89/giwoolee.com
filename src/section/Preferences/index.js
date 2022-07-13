@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { connect } from "react-redux";
 import { Container } from "react-bootstrap";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -14,14 +14,6 @@ import "./preferences.css";
 import TopBar from "../../components/TopBar";
 import TopNavigationMenu from "../../components/TopNavigationMenu";
 
-// Components (Menu Content Items)
-import General from "./General";
-import Projects from "./Projects";
-import Interests from "./Interests";
-import Mission from "./Mission";
-import Contact from "./Contact";
-import Attribution from "./Attribution";
-
 // Actions
 import * as projectsActions from "../../actions/projects";
 import * as menuActions from "../../actions/menu";
@@ -30,6 +22,14 @@ import * as menuActions from "../../actions/menu";
 import * as projectSelectors from "../../reducers/projects";
 import * as menuSelectors from "../../reducers/menu";
 
+// Components (Menu Content Items)
+const General = React.lazy(() => import("./General"));
+const Projects = React.lazy(() => import("./Projects"));
+const Interests = React.lazy(() => import("./Interests"));
+const Mission = React.lazy(() => import("./Mission"));
+const Contact = React.lazy(() => import("./Contact"));
+const Attribution = React.lazy(() => import("./Attribution"));
+
 // Constants
 export const MENU_ITEMS = {
   GENERAL: "General",
@@ -37,7 +37,8 @@ export const MENU_ITEMS = {
   INTERESTS: "Interests",
   MISSION: "Mission",
   CONTACT: "Contact",
-  ATTRIBUTION: "Attribution"
+  ATTRIBUTION: "Attribution",
+  SETTINGS: "Settings",
 };
 
 // Data
@@ -48,61 +49,65 @@ const menuItems = [
   { icon: "pieceOfCake", title: MENU_ITEMS.MISSION },
   { icon: "sushi", title: MENU_ITEMS.CONTACT },
   { icon: "pizza", title: MENU_ITEMS.ATTRIBUTION },
+  { icon: "cog", title: MENU_ITEMS.SETTINGS },
 ];
 
-const Preferences = ({ selectMenu, selectedMenu, selectProject, projectName }) => {    
-  const iconRef = useRef(null)  
+const Preferences = ({
+  selectMenu,
+  selectedMenu,
+  selectProject,
+  projectName,
+}) => {
+  const iconRef = useRef(null);
   const [isFinderOpen, setIsFinderOpen] = useState(true);
-  const [count, setCount] = useState(0);  
-  const [isIconSelected, setIsIconSelected] = useState(false);  
+  const [count, setCount] = useState(0);
+  const [isIconSelected, setIsIconSelected] = useState(false);
   const handle = useFullScreenHandle();
 
   let preferencesContainerClasses = classnames({
     "preferences-container": true,
-    "is-open": isFinderOpen
+    "is-open": isFinderOpen,
   });
 
   let desktopIconClasses = classnames({
     "desktop-icon": true,
-    "is-selected": isIconSelected
+    "is-selected": isIconSelected,
   });
 
   const handleDoubleClick = () => {
-    setIsIconSelected(true)
+    setIsIconSelected(true);
     setCount(count + 1);
 
     setTimeout(() => {
-      setCount(0)
+      setCount(0);
     }, 1000);
 
     // Only executes if user does double click
     if (count === 2) {
-      setIsFinderOpen(true)
+      setIsFinderOpen(true);
     }
   };
 
-  const handleClickIcon = event => {
+  const handleClickIcon = (event) => {
     if (iconRef && !iconRef.current.contains(event.target)) {
-      setIsIconSelected(false)      
-      setCount(0)
+      setIsIconSelected(false);
+      setCount(0);
     }
   };
 
   const handleCloseFinder = () => {
-    setIsFinderOpen(false)
+    setIsFinderOpen(false);
   };
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickIcon);
     return () => {
       document.removeEventListener("mousedown", handleClickIcon);
-    }
-  }, [])      
+    };
+  }, []);
 
   return (
-    <FullScreen
-      handle={handle}
-    >
+    <FullScreen handle={handle}>
       <Container className={preferencesContainerClasses}>
         <TopBar
           title="About Me"
@@ -115,17 +120,20 @@ const Preferences = ({ selectMenu, selectedMenu, selectProject, projectName }) =
           selectedMenu={selectedMenu}
         />
         <div className="preferences-body">
-          {selectedMenu === MENU_ITEMS.GENERAL && <General />}
-          {selectedMenu === MENU_ITEMS.PROJECTS && (
-            <Projects
-              selectProject={selectProject}
-              projectName={projectName}
-            />
-          )}
-          {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
-          {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
-          {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
-          {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
+          <Suspense fallback={<div>Loading...</div>}>
+            {selectedMenu === MENU_ITEMS.GENERAL && <General />}
+            {selectedMenu === MENU_ITEMS.PROJECTS && (
+              <Projects
+                selectProject={selectProject}
+                projectName={projectName}
+              />
+            )}
+            {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
+            {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
+            {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
+            {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
+            {selectedMenu === MENU_ITEMS.SETTINGS && <Attribution />}
+          </Suspense>
         </div>
       </Container>
       <div
@@ -138,18 +146,18 @@ const Preferences = ({ selectMenu, selectedMenu, selectProject, projectName }) =
       </div>
     </FullScreen>
   );
-}
+};
 
 function mapStateToProps(state) {
   return {
     projectName: projectSelectors.getProjectName(state),
-    selectedMenu: menuSelectors.getSelectedMenu(state)
+    selectedMenu: menuSelectors.getSelectedMenu(state),
   };
 }
 
 const actionCreators = {
   selectProject: projectsActions.selectProject,
-  selectMenu: menuActions.selectMenu
+  selectMenu: menuActions.selectMenu,
 };
 
 export default connect(mapStateToProps, actionCreators)(Preferences);

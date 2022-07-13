@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 
 class App extends PureComponent {
   state = {
-    bg: "bg0"
+    bg: "bg1",
   };
 
   render() {
@@ -18,7 +18,7 @@ class App extends PureComponent {
       <div
         className="App"
         style={{
-          backgroundImage: `url(${backgrounds[this.state.bg]})`
+          backgroundImage: `url(${backgrounds[this.state.bg]})`,
         }}
       >
         <Home />

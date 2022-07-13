@@ -1,7 +1,7 @@
-import ATRIBUTION from "../data/attribution";
+import SETTINGS from "../data/settings";
 
 const initialState = {
-  ...ATRIBUTION,
+  ...SETTINGS,
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,10 +12,10 @@ const reducer = (state = initialState, action) => {
 };
 
 function select(state) {
-  return state.attribution;
+  return state.settings;
 }
 
-export function getAttribution(state) {
+export function getSettings(state) {
   return select(state);
 }
 

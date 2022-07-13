@@ -1,49 +1,53 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
-import './menuItem.css';
+import "./menuItem.css";
 
-import { MENU_ITEMS } from '../../section/Preferences'
+import { MENU_ITEMS } from "../../section/Preferences";
 
 // Icons BY HYUNAH KIM
-import HomeIcon from '@mui/icons-material/Home';              // ABOUT ME
-import AssignmentIcon from '@mui/icons-material/Assignment';  // PROJECT
-import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices'; // INTERESTS
-import SignpostIcon from '@mui/icons-material/Signpost'; // MISSION
-import ContactMailIcon from '@mui/icons-material/ContactMail'; // CONTACT
-import TagIcon from '@mui/icons-material/Tag'; // ATTRIBUTE
-import { blue } from '@mui/material/colors';
+import HomeIcon from "@mui/icons-material/Home"; // ABOUT ME
+import AssignmentIcon from "@mui/icons-material/Assignment"; // PROJECT
+import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices"; // INTERESTS
+import SignpostIcon from "@mui/icons-material/Signpost"; // MISSION
+import ContactMailIcon from "@mui/icons-material/ContactMail"; // CONTACT
+import TagIcon from "@mui/icons-material/Tag"; // ATTRIBUTE
+import SettingsIcon from "@mui/icons-material/Settings"; // ATTRIBUTE
+import { blue } from "@mui/material/colors";
 
 const MenuItem = ({ icon, title, ...rest }) => {
   const { selectedMenu, selectMenu } = rest;
   let menuItemClasses = classNames({
-    'menu-item': true,
+    "menu-item": true,
     active: title === selectedMenu,
   });
 
-  let RenderedIcon = HomeIcon
+  let RenderedIcon = HomeIcon;
   switch (title) {
     case MENU_ITEMS.GENERAL:
-      RenderedIcon = HomeIcon
-      break
+      RenderedIcon = HomeIcon;
+      break;
     case MENU_ITEMS.PROJECTS:
-      RenderedIcon = AssignmentIcon
-      break
+      RenderedIcon = AssignmentIcon;
+      break;
     case MENU_ITEMS.INTERESTS:
-      RenderedIcon = ImportantDevicesIcon
-      break
+      RenderedIcon = ImportantDevicesIcon;
+      break;
     case MENU_ITEMS.MISSION:
-      RenderedIcon = SignpostIcon
-      break
+      RenderedIcon = SignpostIcon;
+      break;
     case MENU_ITEMS.CONTACT:
-      RenderedIcon = ContactMailIcon
-      break
+      RenderedIcon = ContactMailIcon;
+      break;
     case MENU_ITEMS.ATTRIBUTION:
-      RenderedIcon = TagIcon
-      break
+      RenderedIcon = TagIcon;
+      break;
+    case MENU_ITEMS.SETTINGS:
+      RenderedIcon = SettingsIcon;
+      break;
     default:
-      RenderedIcon = HomeIcon
-      break
+      RenderedIcon = HomeIcon;
+      break;
   }
 
   return (
