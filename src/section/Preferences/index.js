@@ -7,6 +7,9 @@ import classnames from "classnames";
 // Assets
 import icons from "../../shared/icons";
 
+// @MUI
+import { LinearProgress } from "@mui/material";
+
 // Styles
 import "./preferences.css";
 
@@ -119,8 +122,8 @@ const Preferences = ({
           selectMenu={selectMenu}
           selectedMenu={selectedMenu}
         />
-        <div className="preferences-body">
-          <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LinearProgress color="secondary" />}>
+          <div className="preferences-body">
             {selectedMenu === MENU_ITEMS.GENERAL && <General />}
             {selectedMenu === MENU_ITEMS.PROJECTS && (
               <Projects
@@ -133,8 +136,8 @@ const Preferences = ({
             {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
             {selectedMenu === MENU_ITEMS.ATTRIBUTION && <Attribution />}
             {selectedMenu === MENU_ITEMS.SETTINGS && <Attribution />}
-          </Suspense>
-        </div>
+          </div>
+        </Suspense>
       </Container>
       <div
         ref={iconRef}

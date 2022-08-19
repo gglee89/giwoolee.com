@@ -2,10 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 // Styles
-import "./attribution.css";
-
-// Components
-import Section from "../../../components/Section";
+import "./settings.css";
 
 // Selectors
 import * as settingsSelectors from "../../../reducers/settings";
@@ -13,21 +10,7 @@ import * as settingsSelectors from "../../../reducers/settings";
 const Settings = ({ settings }) => {
   let dataAllIds = Object.keys(settings);
 
-  return (
-    <div className="settings-container">
-      {dataAllIds &&
-        dataAllIds.length > 0 &&
-        dataAllIds.map((dataId) => {
-          return (
-            <Section
-              key={dataId}
-              title={dataId}
-              topics={settings[dataId].topics}
-            />
-          );
-        })}
-    </div>
-  );
+  return <div className="settings-container"></div>;
 };
 
 function mapStateToProps(state) {
