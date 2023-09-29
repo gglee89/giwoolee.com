@@ -1,0 +1,29 @@
+{
+  // These options make up the bulk of TypeScript’s
+  // configuration and it covers how the language should work.
+  "compilerOptions": {
+    // Modern browsers support all ES6 features, so ES6 is a good choice.
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    // A best practice is to use the forceConsistentCasingInFileNames option in your tsconfig.json file.
+    // TypeScript will issue an error if you try to include a file by using a different casing from the casing of the file name on the disk.
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    // You can read more about classic vs node module resolution in the TypeScript docs (https://www.typescriptlang.org/docs/handbook/module-resolution.html#module-resolution-strategies).
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src/",
+    "sourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules/", "build", "src/**/*.spec.ts"]
+}
