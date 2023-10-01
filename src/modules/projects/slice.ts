@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from 'store'
 
-import {
+import projects, {
     ProjectsName,
     ProjectsType,
     type ProjectsNameType,
@@ -16,7 +16,7 @@ interface ProjectsState {
 
 // Define the initial state
 const initialState: ProjectsState = {
-    projects: null,
+    projects,
     projectName: ProjectsName.RealSpiel,
 }
 
@@ -24,13 +24,13 @@ export const projectsSlice = createSlice({
     name: 'projects',
     initialState,
     reducers: {
-        select: (state, action: PayloadAction<ProjectsNameType>) => {
+        selectProjectName: (state, action: PayloadAction<ProjectsNameType>) => {
             state.projectName = action.payload
         },
     },
 })
 
-export const { select } = projectsSlice.actions
+export const { selectProjectName } = projectsSlice.actions
 
 // Selectors
 const rootSelector = (state: RootState) => state.projects

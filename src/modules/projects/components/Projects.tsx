@@ -8,19 +8,19 @@ import SideMenu from './SideMenu'
 import ContentRenderer from './ContentRenderer'
 
 // Data
-import projectsList from 'data/projects'
+import projectsList, { ProjectsNameType } from 'data/projects'
 
 interface ProjectsProps {
-    selectProject: (name: string) => void
     projectName: string
 }
-const Projects: React.FC<ProjectsProps> = ({ selectProject, projectName }) => {
-    const projectsListAllIds = Object.keys(projectsList)
+const Projects: React.FC<ProjectsProps> = ({ projectName }) => {
+    const projectsListAllIds: ProjectsNameType[] = Object.keys(
+        projectsList
+    ) as ProjectsNameType[]
 
     return (
         <div className="project-body">
             <SideMenu
-                onItemSelect={selectProject}
                 currentItem={projectName}
                 menuItems={projectsListAllIds}
             />

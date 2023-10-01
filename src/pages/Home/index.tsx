@@ -1,15 +1,27 @@
 import React from 'react'
 
+import './home.css'
+
 // Sections
 import Header from 'section/Header'
 import Preferences from 'modules/preferences/components/Preferences'
 
+// Images
+import backgrounds from 'shared/backgrounds'
+
+const BACKGROUND_IMAGE_INDEX = 'bg1'
+
 const Home = () => {
     return (
-        <React.Fragment>
+        <div
+            className="Home"
+            style={{
+                backgroundImage: `url(${backgrounds[BACKGROUND_IMAGE_INDEX]})`,
+            }}
+        >
             <Header />
             <Preferences />
-        </React.Fragment>
+        </div>
     )
 }
 

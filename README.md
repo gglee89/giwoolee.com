@@ -2,10 +2,12 @@
 
 Github Pages under my personal domain (https://giwoolee.com)
 
-# How to start
+# Performance metrics
 
-1. Open the `dev` branch
-2. `npm start`
+w/ `create-react-app`
+
+-   Memory footprint 49.5 MB
+-   CPU: 0.1%
 
 # Author
 

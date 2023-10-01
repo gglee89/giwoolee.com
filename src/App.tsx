@@ -1,30 +1,20 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import './App.css'
 import './Theme.css'
 
-// Images
-import backgrounds from 'shared/backgrounds'
+import NotFound from './pages/NotFound'
 
-// Pages
-import Home from './pages/Home'
+// Router
+import { Routes, Route } from 'react-router-dom'
+import Home from 'pages/Home'
 
-class App extends PureComponent {
-    state = {
-        bg: 'bg1',
-    }
-
-    render() {
-        return (
-            <div
-                className="App"
-                style={{
-                    backgroundImage: `url(${backgrounds[this.state.bg]})`,
-                }}
-            >
-                <Home />
-            </div>
-        )
-    }
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    )
 }
 
 export default App

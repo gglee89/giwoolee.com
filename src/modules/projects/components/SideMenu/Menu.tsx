@@ -2,17 +2,13 @@ import React from 'react'
 
 // Components
 import MenuItem from './MenuItem'
+import { ProjectsNameType } from 'data/projects'
 
 interface MenuProps {
-    onItemSelect: (name: string) => void
     currentItem: string
-    menuItems: string[]
+    menuItems: ProjectsNameType[]
 }
-const Menu: React.FC<MenuProps> = ({
-    onItemSelect,
-    currentItem,
-    menuItems,
-}) => {
+const Menu: React.FC<MenuProps> = ({ currentItem, menuItems }) => {
     return (
         <div className="menu">
             {menuItems &&
@@ -23,7 +19,6 @@ const Menu: React.FC<MenuProps> = ({
                             key={menuItem}
                             isActive={menuItem === currentItem}
                             name={menuItem}
-                            onItemSelect={onItemSelect}
                         />
                     )
                 })}

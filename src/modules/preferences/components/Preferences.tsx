@@ -19,13 +19,8 @@ import TopNavigationMenu from './TopNavigationMenu'
 // Selectors
 import { useAppDispatch, useAppSelector } from 'store'
 import { getProjectName } from 'modules/projects/slice'
-import {
-    getSelectedMenu,
-    selectMenu,
-    selectProject,
-} from 'modules/preferences/slice'
-import { MenuType } from '../types'
-import { MENU_ITEMS } from '../constants'
+import { getSelectedMenu, selectMenu } from 'modules/preferences/slice'
+import { MENU_ITEMS, menuOptions } from '../constants'
 
 // Components (Menu Content Items)
 const General = React.lazy(
@@ -44,17 +39,6 @@ const Contact = React.lazy(() => import('modules/contacts/components/Contact'))
 const Attribution = React.lazy(
     () => import('modules/attribution/components/Attribution')
 )
-
-// Data
-const menuItems: MenuType[] = [
-    { icon: 'cookie', title: MENU_ITEMS.GENERAL },
-    { icon: 'iceCream', title: MENU_ITEMS.PROJECTS },
-    { icon: 'melon', title: MENU_ITEMS.INTERESTS },
-    { icon: 'pieceOfCake', title: MENU_ITEMS.MISSION },
-    { icon: 'sushi', title: MENU_ITEMS.CONTACT },
-    { icon: 'pizza', title: MENU_ITEMS.ATTRIBUTION },
-    { icon: 'cog', title: MENU_ITEMS.SETTINGS },
-]
 
 const Preferences = () => {
     const iconRef = useRef<HTMLDivElement>(null)
@@ -123,7 +107,7 @@ const Preferences = () => {
                     }
                 />
                 <TopNavigationMenu
-                    menuItems={menuItems}
+                    menuItems={menuOptions}
                     selectMenu={(menuTitle: string) =>
                         dispatch(selectMenu(menuTitle))
                     }
@@ -139,20 +123,12 @@ const Preferences = () => {
                     <div className="preferences-body">
                         {selectedMenu === MENU_ITEMS.GENERAL && <General />}
                         {selectedMenu === MENU_ITEMS.PROJECTS && (
-                            <Projects
-                                selectProject={(name: string) =>
-                                    dispatch(selectProject(name))
-                                }
-                                projectName={projectName}
-                            />
+                            <Projects projectName={projectName} />
                         )}
                         {selectedMenu === MENU_ITEMS.INTERESTS && <Interests />}
                         {selectedMenu === MENU_ITEMS.MISSION && <Mission />}
                         {selectedMenu === MENU_ITEMS.CONTACT && <Contact />}
                         {selectedMenu === MENU_ITEMS.ATTRIBUTION && (
-                            <Attribution />
-                        )}
-                        {selectedMenu === MENU_ITEMS.SETTINGS && (
                             <Attribution />
                         )}
                     </div>

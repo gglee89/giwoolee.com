@@ -5,25 +5,17 @@ import './sideMenu.css'
 // Components
 import TopMenu from './TopMenu'
 import Menu from './Menu'
+import { ProjectsNameType } from 'data/projects'
 
 interface SideMenuProps {
-    onItemSelect: (name: string) => void
     currentItem: string
-    menuItems: string[]
+    menuItems: ProjectsNameType[]
 }
-const SideMenu: React.FC<SideMenuProps> = ({
-    onItemSelect,
-    currentItem,
-    menuItems,
-}) => {
+const SideMenu: React.FC<SideMenuProps> = ({ currentItem, menuItems }) => {
     return (
         <div className="side-menu-container">
             <TopMenu />
-            <Menu
-                onItemSelect={onItemSelect}
-                currentItem={currentItem}
-                menuItems={menuItems}
-            />
+            <Menu currentItem={currentItem} menuItems={menuItems} />
         </div>
     )
 }

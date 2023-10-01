@@ -1,4 +1,5 @@
 // Images
+import blur from 'assets/img/blur-small.jpg'
 // iSensorLabs
 import realspiel_1 from 'assets/img/realspiel/realspiel-chatapp-min.jpg'
 import realspiel_2 from 'assets/img/realspiel/realspiel-gamecreation-min.jpg'
@@ -28,14 +29,93 @@ import makestar_3 from 'assets/img/makestar/makestar-project-2.jpg'
 // Marshall Goldsmith
 import marshallGoldsmith_1 from 'assets/img/sccoaching/marshall-goldsmith-min.jpeg'
 import marshallGoldsmith_2 from 'assets/img/sccoaching/marshall-goldsmith-2-min.jpeg'
+import { ImageUrl } from 'modules/projects/types'
 
-const screenshots: Record<string, string[]> = {
-    'Real Spiel': [realspiel_1, realspiel_2, realspiel_3, realspiel_4],
-    'Rocky App': [rockyApp_1, rockyApp_2, rockyApp_3, rockyApp_4],
-    Avocado: [avocado_1, avocado_2, avocado_3, avocado_4],
-    HDBCSI: [hdbcsi_1],
-    'Makestar K-POP': [makestar_1, makestar_2, makestar_3],
-    'Marshall Goldsmith': [marshallGoldsmith_1, marshallGoldsmith_2],
+const screenshots: Record<string, ImageUrl[]> = {
+    'Real Spiel': [
+        {
+            original: realspiel_1,
+            blur,
+        },
+        {
+            original: realspiel_2,
+            blur,
+        },
+        {
+            original: realspiel_3,
+            blur,
+        },
+        {
+            original: realspiel_4,
+            blur,
+        },
+    ],
+    'Rocky App': [
+        {
+            original: rockyApp_1,
+            blur,
+        },
+        {
+            original: rockyApp_2,
+            blur,
+        },
+        {
+            original: rockyApp_3,
+            blur,
+        },
+        {
+            original: rockyApp_4,
+            blur,
+        },
+    ],
+    Avocado: [
+        {
+            original: avocado_1,
+            blur,
+        },
+        {
+            original: avocado_2,
+            blur,
+        },
+        {
+            original: avocado_3,
+            blur,
+        },
+        {
+            original: avocado_4,
+            blur,
+        },
+    ],
+    HDBCSI: [
+        {
+            original: hdbcsi_1,
+            blur,
+        },
+    ],
+    'Makestar K-POP': [
+        {
+            original: makestar_1,
+            blur,
+        },
+        {
+            original: makestar_2,
+            blur,
+        },
+        {
+            original: makestar_3,
+            blur,
+        },
+    ],
+    'Marshall Goldsmith': [
+        {
+            original: marshallGoldsmith_1,
+            blur,
+        },
+        {
+            original: marshallGoldsmith_2,
+            blur,
+        },
+    ],
 }
 
 export default screenshots
