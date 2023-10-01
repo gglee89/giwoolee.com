@@ -1,44 +1,46 @@
-import React from 'react';
+import React from 'react'
 
 // Styles
-import './notFound.css';
+import './notFound.css'
 
 // Section
-import Header from '../../section/Header';
+import Header from 'section/Header'
 
 // Icons
-import icons from '../../shared/icons';
+import icons from 'shared/icons'
 
 const NotFound = () => {
-  return (
-    <React.Fragment>
-      <Header />
-      <div className="notfound-container">
-        <img
-          className="notfound-image rotate"
-          src={icons.cookie}
-          alt="page-notfound"
-        />
-        <div className="notfound-text">Oopsss! I couldn't find this page.</div>
-        <div>Make sure you've typed the correct address.</div>
-        <div>
-          If not, please let me know at my e-mail{' '}
-          <a href="mailto: gglee89@gmail.com">
-            <img
-              className="notfound-image-small"
-              src={icons.email}
-              alt="email"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="/" className="notfound-button">
-            Back to giwoolee.com
-          </a>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-};
+    return (
+        <React.Fragment>
+            <Header />
+            <div className="notfound-container">
+                <img
+                    className="notfound-image rotate"
+                    src={icons.cookie}
+                    alt="page-notfound"
+                />
+                <div className="notfound-text">
+                    Oopsss! I couldn&#39;t find this page.
+                </div>
+                <div>Make sure you&#39;ve typed the correct address.</div>
+                <div>
+                    If not, please let me know at my e-mail{' '}
+                    <a href="mailto: gglee89@gmail.com">
+                        <img
+                            className="notfound-image-small"
+                            src={icons.email}
+                            alt="email"
+                        />
+                    </a>
+                </div>
+                <div>
+                    <a href="/" className="notfound-button">
+                        Back to giwoolee.com
+                    </a>
+                </div>
+            </div>
+        </React.Fragment>
+    )
+}
 
-export default NotFound;
+export default NotFound

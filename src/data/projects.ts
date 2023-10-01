@@ -7,9 +7,9 @@ export const ProjectsName = {
     MarshallGoldsmith: 'Marshall Goldsmith',
 } as const
 
-export type ProjectsNameType = typeof ProjectsName[keyof typeof ProjectsName]
+export type ProjectsNameType = (typeof ProjectsName)[keyof typeof ProjectsName]
 
-type ContentType = {
+export type ContentType = {
     content: string | string[]
     type: 'field' | 'array' | 'text'
 }

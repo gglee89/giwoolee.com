@@ -1,18 +1,16 @@
-import React, { PureComponent } from 'react';
+import React from 'react'
 
 // Sections
-import Header from '../../section/Header';
-import Preferences from '../../section/Preferences';
+import Header from 'section/Header'
+import Preferences from 'modules/preferences/components/Preferences'
 
-class Home extends PureComponent {
-  render() {
+const Home = () => {
     return (
-      <React.Fragment>
-        <Header />
-        <Preferences />
-      </React.Fragment>
-    );
-  }
+        <React.Fragment>
+            <Header />
+            <Preferences />
+        </React.Fragment>
+    )
 }
 
-export default Home;
+export default Home

@@ -4,9 +4,6 @@ import type { TypedUseSelectorHook } from 'react-redux'
 // Redux
 import { configureStore } from '@reduxjs/toolkit'
 
-// Services
-import * as services from 'services'
-
 // Reducers
 import reducers from './reducers'
 
