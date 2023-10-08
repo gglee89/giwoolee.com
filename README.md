@@ -1,6 +1,6 @@
 # giwoolee.com
 
-Github Pages under my personal domain (https://giwoolee.com)
+personal domain (https://giwoolee.com)
 
 # Performance metrics
 
