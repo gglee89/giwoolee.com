@@ -1,4 +1,4 @@
-(1) Put the scripts in the right order of execution
+### 1. Put the scripts in the right order of execution
 - a. <script async src="async1.js" />            // Loads in 300ms
 - b. <script defer src="defer1.js" />            // Loads in 200ms
 - c. <script defer src="defer2.js" />            // Loads in 300ms
@@ -49,7 +49,7 @@ When the script tag is discovered be the HTML parser, it
 ![image](https://github.com/gglee89/giwoolee.com/assets/16644017/f42f5b64-5e69-49da-aa94-d9e8ebc98e4d)
 source: frontend masters
 
-(2) Which statements are true? (topic: Rendering pipeline)
+### 2. Which statements are true? (topic: Rendering pipeline)
 - a. The render tree contains all elements from the DOM and CSSOM combined.
 - b. Compositing is the process of separating layers based on z-index, which are then combined to form the final image displayed on the screen.
 - c. The layout process assigns colors and images to the visual elements in the render tree.
@@ -72,3 +72,18 @@ Correct answers:
 - d. true ✔️
 - e. false ❌
   e. false ❌
+
+### 3. Fill in the correct terms
+![image](https://github.com/gglee89/giwoolee.com/assets/16644017/ff92a45b-8ce2-4353-b6c4-0faf642209ea)
+
+My answer:
+
+![image](https://github.com/gglee89/giwoolee.com/assets/16644017/ebfed4a3-ab0c-4603-876f-7193c594a569)
+
+Correct answer:
+
+![image](https://github.com/gglee89/giwoolee.com/assets/16644017/f3fcbae2-da44-44d0-9a25-72e8fbff7b7a)
+
+Explanation:
+
+![image](https://github.com/gglee89/giwoolee.com/assets/16644017/d58ae5ca-67a0-4fe9-b314-e94a81ea25ce)
