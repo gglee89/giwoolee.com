@@ -1,4 +1,5 @@
 export const ProjectsName = {
+    LifebitAI: 'Lifebit AI',
     RealSpiel: 'Real Spiel',
     RockyRobots: 'Rocky Robots',
     Avocado: 'Avocado',
@@ -33,6 +34,34 @@ type ProjectsContent = {
 export type ProjectsType = { [key in ProjectsNameType]: ProjectsContent }
 
 const projects: ProjectsType = {
+    [ProjectsName.LifebitAI]: {
+        basics: {
+            company: { content: 'Lifebit AI', type: 'field' },
+            name: { content: 'CloudOS', type: 'field' },
+            alias: { content: 'CloudOS', type: 'field' },
+            keywords: {
+                content: ['Bioinformatics', 'Batch analysis', 'Cloud'],
+                type: 'array',
+            },
+            role: { content: 'Frontend engineer', type: 'field' },
+            year: { content: '2022 - Today', type: 'field' },
+        },
+        description: {
+            'What was done': {
+                content: 'Development of CloudOS web application',
+                type: 'text',
+            },
+        },
+        aboutCompany: {
+            country: { content: 'UK', type: 'field' },
+            city: { content: 'London', type: 'field' },
+            statement: {
+                content:
+                    'Lifebit is a precision medicine software company that builds enterprise data platforms for use by organisations with sensitive genomic and biomedical datasets, empowering therapeutic leaders to access and analyse siloed biomedical data.',
+                type: 'field',
+            },
+        },
+    },
     [ProjectsName.RealSpiel]: {
         basics: {
             company: { content: 'iSensorAnalytics.', type: 'field' },

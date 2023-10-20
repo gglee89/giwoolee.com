@@ -17,7 +17,7 @@ interface ProjectsState {
 // Define the initial state
 const initialState: ProjectsState = {
     projects,
-    projectName: ProjectsName.RealSpiel,
+    projectName: ProjectsName.LifebitAI,
 }
 
 export const projectsSlice = createSlice({

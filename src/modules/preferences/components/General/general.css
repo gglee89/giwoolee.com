@@ -1,31 +1,32 @@
 .general-container {
-  display: flex;
-  font-size: 14px;
-  flex-direction: column;
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    padding: 20px 25px;
 }
 
 .general-container > p {
-  color: var(--light-gray);
+    color: var(--light-gray);
 }
 
 .about-text {
-  color: var(--main-color);
-  background-color: var(--black);
-  height: 100%;
-  padding: 5px;
+    color: var(--main-color);
+    background-color: var(--black);
+    height: 100%;
+    padding: 5px;
 }
 
 .about-text .link {
-  color: var(--main-color);
-  text-decoration: underline;
+    color: var(--main-color);
+    text-decoration: underline;
 }
 
 .about-text code {
-  color: #fff;
-  display: block;
+    color: #fff;
+    display: block;
 }
 
 .about-text span {
-  color: var(--palevioletred);
-  margin-right: 5px;
+    color: var(--palevioletred);
+    margin-right: 5px;
 }

@@ -27,6 +27,8 @@ import freepik from 'assets/img/freepik.svg'
 import flaticon from 'assets/img/flaticon-logo.svg'
 import aws from 'assets/img/Amazon_Web_Services_Logo.svg'
 import mlab from 'assets/img/mlab-vector-logo.svg'
+import vite from 'assets/img/vite-svg.svg'
+import movie from 'assets/img/movie-clapperboard-svgrepo-com.svg'
 
 // graphic-design
 import view from 'assets/icons/flaticon/043-view.svg'
@@ -62,6 +64,8 @@ const icons: Record<string, string> = {
     flaticon,
     aws,
     mlab,
+    vite,
+    movie,
 }
 
 export default icons

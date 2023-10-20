@@ -4,7 +4,7 @@ const contacts: Record<string, { topics: Topic[] }> = {
     Academic: {
         topics: [
             {
-                name: '(PhD Computer Science) Florida State University',
+                name: 'Florida State University',
                 level: 'gl19f@fsu.edu',
                 mail: 'gl19f@fsu.edu',
                 seniority: '',
@@ -15,9 +15,9 @@ const contacts: Record<string, { topics: Topic[] }> = {
     Professional: {
         topics: [
             {
-                name: 'Genealogy.co.kr - Full Stack Developer/Head of Technology',
-                level: 'giwoo.lee@genealogy.co.kr',
-                mail: 'giwoo.lee@genealogy.co.kr',
+                name: 'Frontend Engineer',
+                level: 'giwoo@lifebit.ai',
+                mail: 'giwoo@lifebit.ai',
                 icon: 'email',
             },
             {

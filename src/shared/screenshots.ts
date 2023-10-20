@@ -1,6 +1,9 @@
 // Images
 import blur from 'assets/img/blur-small.jpg'
 // iSensorLabs
+import cloudOS_1 from 'assets/img/cloudos/cloudos.gif'
+
+// iSensorLabs
 import realspiel_1 from 'assets/img/realspiel/realspiel-chatapp-min.jpg'
 import realspiel_2 from 'assets/img/realspiel/realspiel-gamecreation-min.jpg'
 import realspiel_3 from 'assets/img/realspiel/realspiel-groundtruth-min.jpg'
@@ -32,6 +35,12 @@ import marshallGoldsmith_2 from 'assets/img/sccoaching/marshall-goldsmith-2-min.
 import { ImageUrl } from 'modules/projects/types'
 
 const screenshots: Record<string, ImageUrl[]> = {
+    CloudOS: [
+        {
+            original: cloudOS_1,
+            blur,
+        },
+    ],
     'Real Spiel': [
         {
             original: realspiel_1,

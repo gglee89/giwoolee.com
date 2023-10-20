@@ -1,7 +1,18 @@
-import React, { useState, useEffect, useRef, Suspense } from 'react'
+import React, {
+    useState,
+    useEffect,
+    useRef,
+    Suspense,
+    MouseEventHandler,
+} from 'react'
 import { Container } from 'react-bootstrap'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import classnames from 'classnames'
+import {
+    DesktopIcons,
+    MOVIE_PLATFORM_LINK,
+    VITE_WEBSITE_LINK,
+} from './constants'
 
 // Assets
 import icons from 'shared/icons'
@@ -42,9 +53,10 @@ const Attribution = React.lazy(
 
 const Preferences = () => {
     const iconRef = useRef<HTMLDivElement>(null)
+    const viteIconRef = useRef<HTMLDivElement>(null)
+    const moviePlatformIconRef = useRef<HTMLDivElement>(null)
     const [isFinderOpen, setIsFinderOpen] = useState(true)
-    const [count, setCount] = useState(0)
-    const [isIconSelected, setIsIconSelected] = useState(false)
+    const [selectedIcons, setSelectedIcons] = useState<string[]>([])
     const handle = useFullScreenHandle()
 
     const dispatch = useAppDispatch()
@@ -56,22 +68,39 @@ const Preferences = () => {
         'is-open': isFinderOpen,
     })
 
-    const desktopIconClasses = classnames({
-        'desktop-icon': true,
-        'is-selected': isIconSelected,
-    })
-
-    const handleDoubleClick = () => {
-        setIsIconSelected(true)
-        setCount(count + 1)
-
-        setTimeout(() => {
-            setCount(0)
-        }, 1000)
-
-        // Only executes if user does double click
-        if (count === 2) {
+    const clickAboutMe: MouseEventHandler<HTMLDivElement> = (e) => {
+        e.preventDefault()
+        if (e.detail === 1) {
+            setSelectedIcons((prevSelection) => [
+                ...prevSelection,
+                DesktopIcons.AboutMe,
+            ])
+        } else if (e.detail === 2) {
             setIsFinderOpen(true)
+        }
+    }
+
+    const clickViteWebsite: MouseEventHandler<HTMLDivElement> = (e) => {
+        e.preventDefault()
+        if (e.detail === 1) {
+            setSelectedIcons((prevSelection) => [
+                ...prevSelection,
+                DesktopIcons.ViteWebsite,
+            ])
+        } else if (e.detail === 2) {
+            window.open(VITE_WEBSITE_LINK, '_blank')?.focus()
+        }
+    }
+
+    const clickMoviePlatform: MouseEventHandler<HTMLDivElement> = (e) => {
+        e.preventDefault()
+        if (e.detail === 1) {
+            setSelectedIcons((prevSelection) => [
+                ...prevSelection,
+                DesktopIcons.MoviePlatform,
+            ])
+        } else if (e.detail === 2) {
+            window.open(MOVIE_PLATFORM_LINK, '_blank')?.focus()
         }
     }
 
@@ -80,8 +109,33 @@ const Preferences = () => {
             iconRef.current &&
             !iconRef.current.contains(event.target as Node)
         ) {
-            setIsIconSelected(false)
-            setCount(0)
+            setSelectedIcons((prevSelection) =>
+                prevSelection.filter(
+                    (selection) => selection !== DesktopIcons.AboutMe
+                )
+            )
+        }
+
+        if (
+            viteIconRef.current &&
+            !viteIconRef.current.contains(event.target as Node)
+        ) {
+            setSelectedIcons((prevSelection) =>
+                prevSelection.filter(
+                    (selection) => selection !== DesktopIcons.ViteWebsite
+                )
+            )
+        }
+
+        if (
+            moviePlatformIconRef.current &&
+            !moviePlatformIconRef.current.contains(event.target as Node)
+        ) {
+            setSelectedIcons((prevSelection) =>
+                prevSelection.filter(
+                    (selection) => selection !== DesktopIcons.MoviePlatform
+                )
+            )
         }
     }
 
@@ -113,14 +167,8 @@ const Preferences = () => {
                     }
                     selectedMenu={selectedMenu}
                 />
-                <Suspense
-                    fallback={
-                        <div className="preferences-body">
-                            <LinearProgress color="secondary" />
-                        </div>
-                    }
-                >
-                    <div className="preferences-body">
+                <div className="preferences-menu">
+                    <Suspense fallback={<LinearProgress color="primary" />}>
                         {selectedMenu === MENU_ITEMS.GENERAL && <General />}
                         {selectedMenu === MENU_ITEMS.PROJECTS && (
                             <Projects projectName={projectName} />
@@ -131,16 +179,54 @@ const Preferences = () => {
                         {selectedMenu === MENU_ITEMS.ATTRIBUTION && (
                             <Attribution />
                         )}
-                    </div>
-                </Suspense>
+                    </Suspense>
+                </div>
             </Container>
-            <div
-                ref={iconRef}
-                onClick={() => handleDoubleClick()}
-                className={desktopIconClasses}
-            >
-                <img src={icons['notebook']} alt="notebook" />
-                <div>About Me</div>
+            <div className="desktop-icon-containers">
+                <div className="topbar-container">
+                    <div className="title">Home directory</div>
+                </div>
+                <div className="desktop-icon-menu">
+                    <div
+                        ref={iconRef}
+                        onClick={clickAboutMe}
+                        className={classnames({
+                            'desktop-icon': true,
+                            'is-selected':
+                                isFinderOpen ||
+                                selectedIcons.includes(DesktopIcons.AboutMe),
+                        })}
+                    >
+                        <img src={icons['notebook']} alt="notebook" />
+                        <div>About Me</div>
+                    </div>
+                    <div
+                        ref={viteIconRef}
+                        onClick={clickViteWebsite}
+                        className={classnames({
+                            'desktop-icon': true,
+                            'is-selected': selectedIcons.includes(
+                                DesktopIcons.ViteWebsite
+                            ),
+                        })}
+                    >
+                        <img src={icons['vite']} alt="vite" />
+                        <div>Vite</div>
+                    </div>
+                    <div
+                        ref={moviePlatformIconRef}
+                        onClick={clickMoviePlatform}
+                        className={classnames({
+                            'desktop-icon': true,
+                            'is-selected': selectedIcons.includes(
+                                DesktopIcons.MoviePlatform
+                            ),
+                        })}
+                    >
+                        <img src={icons['movie']} alt="movie" />
+                        <div>Movie DB</div>
+                    </div>
+                </div>
             </div>
         </FullScreen>
     )

@@ -15,7 +15,7 @@ const Interests = () => {
     const dataAllIds = Object.keys(interests)
 
     return (
-        <div>
+        <div className="interests-container">
             {dataAllIds.length > 0 &&
                 dataAllIds.map((dataId) => {
                     return (
