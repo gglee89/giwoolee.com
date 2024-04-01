@@ -4,5 +4,5 @@ export const DesktopIcons = {
     MoviePlatform: 'movie-platform',
 } as const
 
-export const VITE_WEBSITE_LINK = 'https://vite.giwoolee.com'
-export const MOVIE_PLATFORM_LINK = 'https://platform.giwoolee.com'
+export const VITE_WEBSITE_LINK = 'https://vite.ggldev.com'
+export const MOVIE_PLATFORM_LINK = 'https://platform.ggldev.com'
