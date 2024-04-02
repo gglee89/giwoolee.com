@@ -1,6 +1,6 @@
-# giwoolee.com
+# ggldev.com
 
-personal domain (https://giwoolee.com)
+personal domain (https://ggldev.com)
 
 # Performance metrics
 
@@ -12,4 +12,4 @@ w/ `create-react-app`
 # Author
 
 **Giwoo Lee**  
-[Linkedin](https://giwoolee.com)
+[Linkedin](https://linkedin.com/in/leegiwoo)

@@ -35,7 +35,7 @@ const NotFound = () => {
                 </div>
                 <div>
                     <a href="/" className="notfound-button">
-                        Back to giwoolee.com
+                        Back to home
                     </a>
                 </div>
             </div>
