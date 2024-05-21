@@ -1,7 +1,12 @@
 // Images
 import blur from 'assets/img/blur-small.jpg'
-// iSensorLabs
+
+// LifebitAI
 import cloudOS_1 from 'assets/img/cloudos/cloudos.gif'
+import lifebitai_1 from 'assets/img/lifebit/lifebitai-website-1.png'
+import lifebitai_2 from 'assets/img/lifebit/lifebitai-website-2.png'
+import lifebitai_3 from 'assets/img/lifebit/lifebitai-website-3.png'
+import lifebitai_4 from 'assets/img/lifebit/lifebitai-website-4.png'
 
 // iSensorLabs
 import realspiel_1 from 'assets/img/realspiel/realspiel-chatapp-min.jpg'
@@ -38,6 +43,22 @@ const screenshots: Record<string, ImageUrl[]> = {
     CloudOS: [
         {
             original: cloudOS_1,
+            blur,
+        },
+        {
+            original: lifebitai_1,
+            blur,
+        },
+        {
+            original: lifebitai_2,
+            blur,
+        },
+        {
+            original: lifebitai_3,
+            blur,
+        },
+        {
+            original: lifebitai_4,
             blur,
         },
     ],
