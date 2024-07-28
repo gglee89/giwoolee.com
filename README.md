@@ -1,6 +1,12 @@
 # ggldev.com
 
-personal domain (https://ggldev.com)
+personal (https://ggldev.com)
+platform (https://platform.ggldev.com)
+weather (https://weather.ggldev.com)
+rest (https://api.ggldev.com)
+graphql (https://graphql.ggldev.com)
+rpc (https://rpc.ggldev.com)
+rust (https://rust.ggldev.com)
 
 # Performance metrics
 
