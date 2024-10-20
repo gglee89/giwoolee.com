@@ -24,7 +24,7 @@ const ContentRenderer = () => {
     const { introduction, body, conclusion } = post
 
     return (
-        <div className="renderer-container">
+        <div className="post-renderer-container">
             <>
                 <ContentSection title="Introduction" content={introduction} />
                 {body && <ContentSection title="Description" content={body} />}

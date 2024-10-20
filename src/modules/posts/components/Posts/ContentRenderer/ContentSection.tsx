@@ -11,9 +11,11 @@ const ContentRendererFormTextArea: React.FC<
     ContentRendererFormTextAreaProps
 > = ({ field }) => {
     return (
-        <div className="content-renderer-form-item">
-            <div className="content-renderer-form-item-label" />
-            <div className="content-renderer-form-item-textarea">{field}</div>
+        <div className="post-content-renderer-form-item">
+            <div className="post-content-renderer-form-item-label" />
+            <div className="post-content-renderer-form-item-textarea">
+                {field}
+            </div>
         </div>
     )
 }
