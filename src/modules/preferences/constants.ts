@@ -7,6 +7,7 @@ export const MENU_ITEMS = {
     MISSION: 'Mission',
     CONTACT: 'Contact',
     ATTRIBUTION: 'Attribution',
+    POSTS: 'Posts',
 } as const
 
 export const menuOptions: MenuType[] = [
@@ -16,4 +17,5 @@ export const menuOptions: MenuType[] = [
     { icon: 'pieceOfCake', title: MENU_ITEMS.MISSION },
     { icon: 'sushi', title: MENU_ITEMS.CONTACT },
     { icon: 'pizza', title: MENU_ITEMS.ATTRIBUTION },
+    { icon: 'pizza', title: MENU_ITEMS.POSTS },
 ]

@@ -6,6 +6,7 @@ import preferences from 'modules/preferences/slice'
 import contacts from 'modules/contacts/slice'
 import settings from 'modules/settings/slice'
 import attribution from 'modules/attribution/slice'
+import posts from 'modules/posts/slice'
 
 export default combineReducers({
     interests,
@@ -14,4 +15,5 @@ export default combineReducers({
     contacts,
     settings,
     attribution,
+    posts,
 })

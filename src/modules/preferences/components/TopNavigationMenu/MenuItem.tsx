@@ -9,6 +9,7 @@ import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices' // INTER
 import SignpostIcon from '@mui/icons-material/Signpost' // MISSION
 import ContactMailIcon from '@mui/icons-material/ContactMail' // CONTACT
 import TagIcon from '@mui/icons-material/Tag' // ATTRIBUTE
+import NewspaperIcon from '@mui/icons-material/Newspaper' // POSTS
 import { blue } from '@mui/material/colors'
 import { MENU_ITEMS } from 'modules/preferences/constants'
 
@@ -43,6 +44,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, ...rest }) => {
             break
         case MENU_ITEMS.ATTRIBUTION:
             RenderedIcon = TagIcon
+            break
+        case MENU_ITEMS.POSTS:
+            RenderedIcon = NewspaperIcon
             break
         default:
             RenderedIcon = HomeIcon

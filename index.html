@@ -2,47 +2,34 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="theme-color" content="#000000" />
-        <!-- Google tag (gtag.js) -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-5V6MG3MJD8"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || []
-            function gtag() {
-                dataLayer.push(arguments)
-            }
-            gtag('js', new Date())
-
-            gtag('config', 'G-5V6MG3MJD8')
-        </script>
-
-        <!-- SEO Meta Tags -->
+        <!--
+      SEO Meta Tags
+    -->
         <meta
             name="description"
-            content="Gustavo Lee's website. Cute and Fun. Inspired by MacOS + iTerm2 design."
+            content="Giwoo Lee's website. Inspired by MacOS + iTerm2 design."
         />
         <meta
             name="description"
-            content="Gustavo Lee's website. Cute and Fun. Inspired by MacOS + iTerm2 design."
+            content="Giwoo Lee's website. Inspired by MacOS + iTerm2 design."
         />
 
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="https://ggldev.com" />
-        <meta name="twitter:title" content="Gustavo Lee" />
+        <meta name="twitter:site" content="https://giwoolee.com" />
+        <meta name="twitter:title" content="Giwoo Lee" />
         <meta name="twitter:creator" content="@giwoolee" />
 
         <!-- Open Graph data -->
-        <meta property="og:title" content="Gustavo Lee" />
+        <meta property="og:title" content="Giwoo Lee" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://ggldev.com/" />
+        <meta property="og:url" content="https://giwoolee.com/" />
         <meta
             property="og:image"
             content="https://user-images.githubusercontent.com/16644017/52909422-c6c23e00-324d-11e9-9b2b-cca5d2394269.png"
@@ -52,17 +39,8 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-        <title>Gustavo Lee</title>
+        <link rel="manifest" href="/manifest.json" />
+        <title>Giwoo Lee</title>
 
         <link
             rel="stylesheet"
@@ -95,5 +73,7 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    --></body>
+    -->
+        <script type="module" src="/src/index.tsx"></script>
+    </body>
 </html>

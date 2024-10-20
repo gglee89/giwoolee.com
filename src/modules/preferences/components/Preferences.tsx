@@ -8,11 +8,7 @@ import React, {
 import { Container } from 'react-bootstrap'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import classnames from 'classnames'
-import {
-    DesktopIcons,
-    MOVIE_PLATFORM_LINK,
-    VITE_WEBSITE_LINK,
-} from './constants'
+import { DesktopIcons, MOVIE_PLATFORM_LINK } from './constants'
 
 // Assets
 import icons from 'shared/icons'
@@ -50,6 +46,7 @@ const Contact = React.lazy(() => import('modules/contacts/components/Contact'))
 const Attribution = React.lazy(
     () => import('modules/attribution/components/Attribution')
 )
+const Posts = React.lazy(() => import('modules/posts/components/Posts'))
 
 const Preferences = () => {
     const iconRef = useRef<HTMLDivElement>(null)
@@ -77,18 +74,6 @@ const Preferences = () => {
             ])
         } else if (e.detail === 2) {
             setIsFinderOpen(true)
-        }
-    }
-
-    const clickViteWebsite: MouseEventHandler<HTMLDivElement> = (e) => {
-        e.preventDefault()
-        if (e.detail === 1) {
-            setSelectedIcons((prevSelection) => [
-                ...prevSelection,
-                DesktopIcons.ViteWebsite,
-            ])
-        } else if (e.detail === 2) {
-            window.open(VITE_WEBSITE_LINK, '_blank')?.focus()
         }
     }
 
@@ -179,9 +164,11 @@ const Preferences = () => {
                         {selectedMenu === MENU_ITEMS.ATTRIBUTION && (
                             <Attribution />
                         )}
+                        {selectedMenu === MENU_ITEMS.POSTS && <Posts />}
                     </Suspense>
                 </div>
             </Container>
+
             <div className="desktop-icon-containers">
                 <div className="topbar-container">
                     <div className="title">Home directory</div>
@@ -199,19 +186,6 @@ const Preferences = () => {
                     >
                         <img src={icons['notebook']} alt="notebook" />
                         <div>About Me</div>
-                    </div>
-                    <div
-                        ref={viteIconRef}
-                        onClick={clickViteWebsite}
-                        className={classnames({
-                            'desktop-icon': true,
-                            'is-selected': selectedIcons.includes(
-                                DesktopIcons.ViteWebsite
-                            ),
-                        })}
-                    >
-                        <img src={icons['vite']} alt="vite" />
-                        <div>Vite</div>
                     </div>
                     <div
                         ref={moviePlatformIconRef}

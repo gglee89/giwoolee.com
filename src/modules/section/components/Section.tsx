@@ -37,11 +37,14 @@ const SectionItem: React.FC<Topic> = ({
             className="section-item-container"
         >
             {(icon !== undefined || iconUrl !== undefined) && (
-                <img
-                    src={getImageSrc()}
-                    alt={name}
-                    className="section-item-icon"
-                />
+                <div className="section-topic__image">
+                    <img
+                        src={getImageSrc()}
+                        alt={name}
+                        loading="lazy"
+                        className="section-item-icon"
+                    />
+                </div>
             )}
             <div className="section-topic">
                 <div>{name}</div>
@@ -51,11 +54,13 @@ const SectionItem: React.FC<Topic> = ({
     ) : (
         <div className="section-item-container">
             {(icon !== undefined || iconUrl !== undefined) && (
-                <img
-                    src={getImageSrc()}
-                    alt={name}
-                    className="section-item-icon"
-                />
+                <div className="section-topic__image">
+                    <img
+                        src={getImageSrc()}
+                        alt={name}
+                        className="section-item-icon"
+                    />
+                </div>
             )}
             <div className="section-topic">
                 <div>{name}</div>

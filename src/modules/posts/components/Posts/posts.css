@@ -1,0 +1,12 @@
+.posts-container {
+    display: flex;
+    height: 100%;
+    padding: 20px 25px;
+}
+
+@media screen and (max-width: 687px) {
+    .posts-container {
+        flex-direction: column;
+        height: initial;
+    }
+}
