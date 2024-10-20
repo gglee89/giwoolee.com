@@ -13,7 +13,7 @@ interface PostsState {
 // Define the initial state
 const initialState: PostsState = {
     posts,
-    postName: PostsName.ReactRef,
+    postName: PostsName.Post1,
 }
 
 export const postsSlice = createSlice({
