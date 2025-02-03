@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 import classNames from 'classnames'
 import moment from 'moment'
 
@@ -23,7 +22,7 @@ const Header = () => {
     return (
         <header className="header">
             <nav className={navClasses}>
-                <Container>
+                <div className="container">
                     <div className="header-left">
                         <HomeOutlinedIcon
                             sx={{ color: blue[500], marginRight: 1 }}
@@ -42,7 +41,7 @@ const Header = () => {
                         </a>
                         <div className="time">{currentTime}</div>
                     </div>
-                </Container>
+                </div>
             </nav>
         </header>
     )

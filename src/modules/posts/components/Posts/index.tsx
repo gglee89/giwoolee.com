@@ -5,18 +5,33 @@ import SideMenu from './SideMenu'
 import ContentRenderer from './ContentRenderer'
 import { useAppSelector } from 'store'
 import * as postsSlice from 'modules/posts/slice'
-import { PostsNameType } from 'data/posts'
+
+import useGetTopStories from 'services/hackernews/hooks/useGetTopStories'
+import useGetItems from 'services/hackernews/hooks/useGetItems'
+import { create } from 'zustand'
+import type { HackerNewsItem } from 'services/hackernews/types'
+import SideMenuGeneric from './SideMenuGeneric'
+
+interface NewsStore {
+    selectedNews: HackerNewsItem | null
+    setSelectedNews: (newSelectedNews: HackerNewsItem) => void
+}
+
+export const useNewsStore = create<NewsStore>((set) => ({
+    selectedNews: null,
+    setSelectedNews: (newSelectedNews: HackerNewsItem) =>
+        set({ selectedNews: newSelectedNews }),
+}))
 
 const Posts: React.FC = () => {
-    const postName = useAppSelector(postsSlice.getPostName)
-    const posts = useAppSelector(postsSlice.getPosts)
+    const { data: topStoriesIds } = useGetTopStories()
+    const top10stories = (topStoriesIds ?? []).slice(0, 10)
+    const { data: items } = useGetItems(top10stories.map((id) => String(id)))
+    const sortedItems = items.sort((a, b) => a.time - b.time)
 
     return (
         <div className="posts-container">
-            <SideMenu
-                currentItem={postName}
-                menuItems={posts ? (Object.keys(posts) as PostsNameType[]) : []}
-            />
+            <SideMenuGeneric<HackerNewsItem> menuItems={sortedItems} />
             <ContentRenderer />
         </div>
     )

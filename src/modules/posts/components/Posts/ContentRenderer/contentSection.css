@@ -6,13 +6,22 @@
 
 .content-renderer-section-title {
     font-weight: bold;
+    font-size: 18px;
     text-align: left;
     padding: 5px 0 10px 15px;
 }
 
 .content-renderer-form {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    padding: 5px 0 10px 15px;
+    text-align: left;
+
+    a {
+        color: var(--blue);
+    }
 }
 
 .post-content-renderer-form-item {

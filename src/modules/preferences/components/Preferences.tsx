@@ -5,7 +5,6 @@ import React, {
     Suspense,
     MouseEventHandler,
 } from 'react'
-import { Container } from 'react-bootstrap'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import classnames from 'classnames'
 import { DesktopIcons, MOVIE_PLATFORM_LINK } from './constants'
@@ -59,11 +58,6 @@ const Preferences = () => {
     const dispatch = useAppDispatch()
     const projectName = useAppSelector(getProjectName)
     const selectedMenu = useAppSelector(getSelectedMenu)
-
-    const preferencesContainerClasses = classnames({
-        'preferences-container': true,
-        'is-open': isFinderOpen,
-    })
 
     const clickAboutMe: MouseEventHandler<HTMLDivElement> = (e) => {
         e.preventDefault()
@@ -135,9 +129,15 @@ const Preferences = () => {
         }
     }, [])
 
+    const preferencesContainerClasses = classnames({
+        container: true,
+        'preferences-container': true,
+        'is-open': isFinderOpen,
+    })
+
     return (
         <FullScreen handle={handle}>
-            <Container className={preferencesContainerClasses}>
+            <div className={preferencesContainerClasses}>
                 <TopBar
                     title="About Me"
                     closeFinder={() => handleCloseFinder()}
@@ -167,7 +167,7 @@ const Preferences = () => {
                         {selectedMenu === MENU_ITEMS.POSTS && <Posts />}
                     </Suspense>
                 </div>
-            </Container>
+            </div>
 
             <div className="desktop-icon-containers">
                 <div className="topbar-container">

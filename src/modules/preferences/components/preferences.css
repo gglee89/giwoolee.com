@@ -1,3 +1,22 @@
+.container {
+    justify-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1140px;
+    }
+}
+
 /* NEW Stylesheet */
 .fullscreen {
     align-items: center;

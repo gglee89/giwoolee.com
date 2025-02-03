@@ -8,16 +8,26 @@ import { BrowserRouter } from 'react-router-dom'
 // Store Setup
 import { Provider } from 'react-redux'
 import store from './store'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const container = document.getElementById('root')
 const root = createRoot(container!)
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            retry: false,
+        },
+    },
+})
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </Provider>
+        <QueryClientProvider client={queryClient}>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </Provider>
+        </QueryClientProvider>
     </React.StrictMode>
 )
 

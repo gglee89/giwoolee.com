@@ -5,7 +5,7 @@ import './sideMenu.css'
 // Components
 import TopMenu from './TopMenu'
 import Menu from './Menu'
-import { PostsNameType } from 'data/posts'
+import type { PostsNameType } from 'data/posts'
 
 interface SideMenuProps {
     currentItem: string
