@@ -20,14 +20,14 @@ const MenuItemGeneric: React.FC<MenuItemGenericProps> = ({
     onClick,
 }) => {
     const menuItemClasses = classNames({
-        'side-menu-item': true,
+        'posts-side-menu-item': true,
         active: isActive,
     })
 
     return (
         <div className={menuItemClasses} onClick={onClick}>
-            <div className="side-menu-item-left">{score}</div>
-            <div className="side-menu-item-post">
+            <div className="posts-side-menu-item-left">{score}</div>
+            <div className="posts-side-menu-item-post">
                 <div>{title}</div>
                 <div className="date">
                     {moment.unix(time).format('MM/DD/YYYY h:mm:ss A')}

@@ -1,10 +1,7 @@
 import React from 'react'
 
 import './posts.css'
-import SideMenu from './SideMenu'
 import ContentRenderer from './ContentRenderer'
-import { useAppSelector } from 'store'
-import * as postsSlice from 'modules/posts/slice'
 
 import useGetTopStories from 'services/hackernews/hooks/useGetTopStories'
 import useGetItems from 'services/hackernews/hooks/useGetItems'

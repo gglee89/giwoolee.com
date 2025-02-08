@@ -1,28 +1,27 @@
-.side-menu-item {
+.posts-side-menu-item {
     display: flex;
     color: var(--dark-gray);
     font-size: 14px;
-    transition: all 300ms ease-in-out;
 }
 
-.side-menu-item:hover {
+.posts-side-menu-item:hover {
     background-color: var(--gray);
 }
 
-.side-menu-item.active {
+.posts-side-menu-item.active {
     background-color: var(--gray);
 }
 
-.side-menu-item {
+.posts-side-menu-item {
     padding: 10px 5px;
 }
 
-.side-menu-item-post {
+.posts-side-menu-item-post {
     display: flex;
     flex-direction: column;
 }
 
-.side-menu-item-post div {
+.posts-side-menu-item-post div {
     text-align: left;
 }
 
@@ -31,6 +30,6 @@
     font-size: 12px;
 }
 
-.side-menu-item div:nth-child(1) {
+.posts-side-menu-item div:nth-child(1) {
     min-width: 45px;
 }

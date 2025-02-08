@@ -19,6 +19,7 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .content-renderer-form-item-label {
@@ -64,6 +65,7 @@
     align-items: center;
     background-color: var(--dark-gray);
     border-radius: 10px;
+    color: var(--light-gray);
     cursor: default;
     display: flex;
     margin-right: 5px;
