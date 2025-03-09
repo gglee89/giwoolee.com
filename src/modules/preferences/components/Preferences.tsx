@@ -53,6 +53,7 @@ const Preferences = () => {
     const moviePlatformIconRef = useRef<HTMLDivElement>(null)
     const [isFinderOpen, setIsFinderOpen] = useState(true)
     const [selectedIcons, setSelectedIcons] = useState<string[]>([])
+    const [showMovieIframe, setShowMovieIframe] = useState(false)
     const handle = useFullScreenHandle()
 
     const dispatch = useAppDispatch()
@@ -79,7 +80,7 @@ const Preferences = () => {
                 DesktopIcons.MoviePlatform,
             ])
         } else if (e.detail === 2) {
-            window.open(MOVIE_PLATFORM_LINK, '_blank')?.focus()
+            setShowMovieIframe(true)
         }
     }
 
@@ -168,6 +169,53 @@ const Preferences = () => {
                     </Suspense>
                 </div>
             </div>
+
+            {showMovieIframe && (
+                <div
+                    className={classnames({
+                        container: true,
+                        'preferences-container': true,
+                        'is-open': showMovieIframe,
+                    })}
+                    style={{
+                        position: 'fixed',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 1000,
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <TopBar
+                        title="Movie Platform"
+                        closeFinder={() => setShowMovieIframe(false)}
+                        requestFullScreen={
+                            handle.active ? handle.exit : handle.enter
+                        }
+                    />
+                    <div
+                        className="preferences-menu"
+                        style={{
+                            flex: 1,
+                            minHeight: 0,
+                            display: 'flex',
+                            flexDirection: 'column',
+                        }}
+                    >
+                        <iframe
+                            src={MOVIE_PLATFORM_LINK}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                border: 'none',
+                                flex: 1,
+                            }}
+                            title="Movie Platform"
+                        />
+                    </div>
+                </div>
+            )}
 
             <div className="desktop-icon-containers">
                 <div className="topbar-container">
