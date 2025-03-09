@@ -4,6 +4,7 @@ import React, {
     useRef,
     Suspense,
     MouseEventHandler,
+    useCallback,
 } from 'react'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import classnames from 'classnames'
@@ -28,6 +29,19 @@ import { getProjectName } from 'modules/projects/slice'
 import { getSelectedMenu, selectMenu } from 'modules/preferences/slice'
 import { MENU_ITEMS, menuOptions } from '../constants'
 
+interface Position {
+    x: number
+    y: number
+}
+
+interface PreferencesProps {
+    onMovieClick: () => void
+    zIndex: number
+    onFocus: () => void
+    isOpen: boolean
+    onClose: () => void
+}
+
 // Components (Menu Content Items)
 const General = React.lazy(
     () => import('modules/preferences/components/General')
@@ -47,13 +61,24 @@ const Attribution = React.lazy(
 )
 const Posts = React.lazy(() => import('modules/posts/components/Posts'))
 
-const Preferences = () => {
+const Preferences: React.FC<PreferencesProps> = ({
+    onMovieClick,
+    zIndex,
+    onFocus,
+    isOpen,
+    onClose,
+}) => {
     const iconRef = useRef<HTMLDivElement>(null)
     const viteIconRef = useRef<HTMLDivElement>(null)
     const moviePlatformIconRef = useRef<HTMLDivElement>(null)
     const [isFinderOpen, setIsFinderOpen] = useState(true)
     const [selectedIcons, setSelectedIcons] = useState<string[]>([])
-    const [showMovieIframe, setShowMovieIframe] = useState(false)
+    const [isDragging, setIsDragging] = useState(false)
+    const [position, setPosition] = useState<Position>({
+        x: window.innerWidth / 2 - 570,
+        y: window.innerHeight / 2 - 300,
+    })
+    const [dragStart, setDragStart] = useState<Position>({ x: 0, y: 0 })
     const handle = useFullScreenHandle()
 
     const dispatch = useAppDispatch()
@@ -80,7 +105,7 @@ const Preferences = () => {
                 DesktopIcons.MoviePlatform,
             ])
         } else if (e.detail === 2) {
-            setShowMovieIframe(true)
+            onMovieClick()
         }
     }
 
@@ -123,6 +148,45 @@ const Preferences = () => {
         setIsFinderOpen(false)
     }
 
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (
+            e.target instanceof HTMLElement &&
+            e.target.closest('.topbar-container') &&
+            !e.target.closest('.window-control')
+        ) {
+            setIsDragging(true)
+            setDragStart({
+                x: e.clientX - position.x,
+                y: e.clientY - position.y,
+            })
+            onFocus()
+            e.preventDefault()
+        }
+    }
+
+    const handleMouseMove = useCallback(
+        (e: globalThis.MouseEvent) => {
+            if (isDragging && !handle.active) {
+                const newX = e.clientX - dragStart.x
+                const newY = e.clientY - dragStart.y
+
+                // Keep the window within viewport bounds
+                const maxX = window.innerWidth - 570
+                const maxY = window.innerHeight - 100
+
+                setPosition({
+                    x: Math.max(0, Math.min(newX, maxX)),
+                    y: Math.max(0, Math.min(newY, maxY)),
+                })
+            }
+        },
+        [isDragging, dragStart, handle.active]
+    )
+
+    const handleMouseUp = useCallback(() => {
+        setIsDragging(false)
+    }, [])
+
     useEffect(() => {
         document.addEventListener('mousedown', handleClickIcon)
         return () => {
@@ -130,18 +194,52 @@ const Preferences = () => {
         }
     }, [])
 
+    useEffect(() => {
+        if (isDragging) {
+            document.addEventListener(
+                'mousemove',
+                handleMouseMove as EventListener
+            )
+            document.addEventListener('mouseup', handleMouseUp as EventListener)
+            document.body.style.cursor = 'grabbing'
+
+            return () => {
+                document.removeEventListener(
+                    'mousemove',
+                    handleMouseMove as EventListener
+                )
+                document.removeEventListener(
+                    'mouseup',
+                    handleMouseUp as EventListener
+                )
+                document.body.style.cursor = ''
+            }
+        }
+    }, [isDragging, handleMouseMove, handleMouseUp])
+
     const preferencesContainerClasses = classnames({
         container: true,
         'preferences-container': true,
-        'is-open': isFinderOpen,
+        'is-open': isOpen,
     })
 
     return (
         <FullScreen handle={handle}>
-            <div className={preferencesContainerClasses}>
+            <div
+                className={preferencesContainerClasses}
+                style={{
+                    position: 'fixed',
+                    left: handle.active ? '0' : `${position.x}px`,
+                    top: handle.active ? '0' : `${position.y}px`,
+                    cursor: isDragging ? 'grabbing' : 'default',
+                    transition: isDragging ? 'none' : 'all 0.3s ease',
+                    zIndex,
+                }}
+                onMouseDown={handleMouseDown}
+            >
                 <TopBar
                     title="About Me"
-                    closeFinder={() => handleCloseFinder()}
+                    closeFinder={onClose}
                     requestFullScreen={
                         handle.active ? handle.exit : handle.enter
                     }
@@ -167,87 +265,6 @@ const Preferences = () => {
                         )}
                         {selectedMenu === MENU_ITEMS.POSTS && <Posts />}
                     </Suspense>
-                </div>
-            </div>
-
-            {showMovieIframe && (
-                <div
-                    className={classnames({
-                        container: true,
-                        'preferences-container': true,
-                        'is-open': showMovieIframe,
-                    })}
-                    style={{
-                        position: 'fixed',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        zIndex: 1000,
-                        display: 'flex',
-                        flexDirection: 'column',
-                    }}
-                >
-                    <TopBar
-                        title="Movie Platform"
-                        closeFinder={() => setShowMovieIframe(false)}
-                        requestFullScreen={
-                            handle.active ? handle.exit : handle.enter
-                        }
-                    />
-                    <div
-                        className="preferences-menu"
-                        style={{
-                            flex: 1,
-                            minHeight: 0,
-                            display: 'flex',
-                            flexDirection: 'column',
-                        }}
-                    >
-                        <iframe
-                            src={MOVIE_PLATFORM_LINK}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                border: 'none',
-                                flex: 1,
-                            }}
-                            title="Movie Platform"
-                        />
-                    </div>
-                </div>
-            )}
-
-            <div className="desktop-icon-containers">
-                <div className="topbar-container">
-                    <div className="title">Home directory</div>
-                </div>
-                <div className="desktop-icon-menu">
-                    <div
-                        ref={iconRef}
-                        onClick={clickAboutMe}
-                        className={classnames({
-                            'desktop-icon': true,
-                            'is-selected':
-                                isFinderOpen ||
-                                selectedIcons.includes(DesktopIcons.AboutMe),
-                        })}
-                    >
-                        <img src={icons['notebook']} alt="notebook" />
-                        <div>About Me</div>
-                    </div>
-                    <div
-                        ref={moviePlatformIconRef}
-                        onClick={clickMoviePlatform}
-                        className={classnames({
-                            'desktop-icon': true,
-                            'is-selected': selectedIcons.includes(
-                                DesktopIcons.MoviePlatform
-                            ),
-                        })}
-                    >
-                        <img src={icons['movie']} alt="movie" />
-                        <div>Movie DB</div>
-                    </div>
                 </div>
             </div>
         </FullScreen>

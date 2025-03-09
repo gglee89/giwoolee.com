@@ -7,6 +7,7 @@
     flex-direction: row;
     height: 25px;
     width: 100%;
+    -webkit-app-region: drag;
 }
 
 @media screen and (max-width: 687px) {
@@ -18,12 +19,79 @@
 .title {
     margin: 0 auto;
     text-align: center;
+    font-size: 13px;
+    line-height: 25px;
+    color: var(--dark-gray);
 }
 
 .left-menu {
     align-items: center;
     display: flex;
     flex-direction: row;
+    padding-left: 8px;
+    -webkit-app-region: no-drag;
+}
+
+.left-menu:hover .window-control {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.left-menu:hover .window-control svg {
+    opacity: 0.7;
+}
+
+.left-menu:hover .close-icon {
+    background-color: #ff5147 !important;
+    border-color: #cc2116;
+}
+
+.left-menu:hover .minimize {
+    background-color: #dddddd !important;
+    opacity: 0.5;
+    border-color: #b3b3b3;
+}
+
+.left-menu:hover .maximize {
+    background-color: rgba(40, 205, 65, 0.7);
+    border-color: #1a9a2f;
+}
+
+.left-menu:hover .close-icon svg path {
+    stroke: #4c0102;
+}
+
+.left-menu:hover .minimize svg path {
+    stroke: #985700;
+}
+
+.left-menu:hover .maximize svg path {
+    stroke: #006500;
+}
+
+/* Individual hover states for brighter colors */
+.window-control:hover {
+    filter: none !important;
+}
+
+.left-menu:hover .close-icon:hover {
+    cursor: pointer;
+}
+
+.left-menu:hover .maximize:hover {
+    background-color: #28cd41 !important;
+    border-color: #1a9a2f;
+    cursor: pointer;
+}
+
+.left-menu:hover .minimize:hover {
+    background-color: #dddddd !important;
+    cursor: not-allowed;
+    border-color: #b3b3b3;
+}
+
+.left-menu:hover .window-control:hover svg {
+    opacity: 0.7;
 }
 
 @media screen and (max-width: 687px) {
@@ -33,26 +101,49 @@
     }
 }
 
-.left-menu div {
-    border-radius: 58%;
-    font-size: 8px;
-    font-weight: bold;
-    height: 15px;
-    line-height: 15px;
-    margin-left: 10px;
-    padding: 0px;
-    width: 15px;
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+.window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.1s ease;
+    background-color: #dddddd;
+    border: 1px solid #d0d0d0;
 }
 
-.left-menu div span {
-    visibility: hidden;
+.window-control:active {
+    filter: brightness(85%);
 }
 
-.left-menu:hover span {
-    visibility: visible;
+.window-control svg {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.1s ease;
+}
+
+.window-control svg path {
+    transition: stroke 0.1s ease;
+}
+
+/* Base states */
+.close-icon {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.minimize {
+    background-color: #dddddd;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.maximize {
+    background-color: #dddddd;
+    cursor: pointer;
 }
 
 .right-menu {
@@ -69,4 +160,25 @@
 
 .apple-green {
     background-color: var(--green);
+}
+
+/* Override hover states for disabled minimize button */
+.left-menu:hover .minimize {
+    background-color: #dddddd !important;
+    opacity: 0.5;
+}
+
+.left-menu:hover .minimize:hover {
+    background-color: #dddddd !important;
+    cursor: not-allowed;
+}
+
+.left-menu:hover .minimize svg path {
+    stroke: #666666;
+}
+
+/* Keep other buttons interactive */
+.close-icon,
+.maximize {
+    cursor: pointer;
 }

@@ -29,6 +29,8 @@ const SectionItem: React.FC<Topic> = ({
         return ''
     }
 
+    const [imageLoaded, setImageLoaded] = React.useState(false)
+
     return link !== undefined || mail !== undefined ? (
         <a
             href={getHref()}
@@ -38,11 +40,28 @@ const SectionItem: React.FC<Topic> = ({
         >
             {(icon !== undefined || iconUrl !== undefined) && (
                 <div className="section-topic__image">
+                    <div
+                        className="section-item-skeleton"
+                        style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: '#525050',
+                            animation: 'pulse 1.5s ease-in-out infinite',
+                            borderRadius: 'inherit',
+                            opacity: imageLoaded ? 0 : 1,
+                            transition: 'opacity 0.2s ease',
+                        }}
+                    />
                     <img
                         src={getImageSrc()}
                         alt={name}
-                        loading="lazy"
                         className="section-item-icon"
+                        style={{
+                            opacity: imageLoaded ? 1 : 0,
+                            transition: 'opacity 0.2s ease',
+                        }}
+                        onLoad={() => setImageLoaded(true)}
                     />
                 </div>
             )}
@@ -55,10 +74,28 @@ const SectionItem: React.FC<Topic> = ({
         <div className="section-item-container">
             {(icon !== undefined || iconUrl !== undefined) && (
                 <div className="section-topic__image">
+                    <div
+                        className="section-item-skeleton"
+                        style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: '#2a2a2a',
+                            animation: 'pulse 1.5s ease-in-out infinite',
+                            borderRadius: 'inherit',
+                            opacity: imageLoaded ? 0 : 1,
+                            transition: 'opacity 0.2s ease',
+                        }}
+                    />
                     <img
                         src={getImageSrc()}
                         alt={name}
                         className="section-item-icon"
+                        style={{
+                            opacity: imageLoaded ? 1 : 0,
+                            transition: 'opacity 0.2s ease',
+                        }}
+                        onLoad={() => setImageLoaded(true)}
                     />
                 </div>
             )}

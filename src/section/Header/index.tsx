@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <header className="header">
             <nav className={navClasses}>
-                <div className="container">
+                <div className="container-fluid">
                     <div className="header-left">
                         <HomeOutlinedIcon
                             sx={{ color: blue[500], marginRight: 1 }}

@@ -32,6 +32,7 @@
 
 .section-topic__image {
     height: 50px;
+    position: relative;
     width: 50px;
 }
 
