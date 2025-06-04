@@ -28,6 +28,7 @@ import { useAppDispatch, useAppSelector } from 'store'
 import { getProjectName } from 'modules/projects/slice'
 import { getSelectedMenu, selectMenu } from 'modules/preferences/slice'
 import { MENU_ITEMS, menuOptions } from '../constants'
+import DesignPatterns from 'modules/design-patterns'
 
 interface Position {
     x: number
@@ -264,6 +265,9 @@ const Preferences: React.FC<PreferencesProps> = ({
                             <Attribution />
                         )}
                         {selectedMenu === MENU_ITEMS.POSTS && <Posts />}
+                        {selectedMenu === MENU_ITEMS.DESIGN_PATTERNS && (
+                            <DesignPatterns />
+                        )}
                     </Suspense>
                 </div>
             </div>

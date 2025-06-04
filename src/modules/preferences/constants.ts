@@ -8,6 +8,7 @@ export const MENU_ITEMS = {
     CONTACT: 'Contact',
     ATTRIBUTION: 'Attribution',
     POSTS: 'Posts',
+    DESIGN_PATTERNS: 'Design Patterns',
 } as const
 
 export const menuOptions: MenuType[] = [
@@ -18,4 +19,5 @@ export const menuOptions: MenuType[] = [
     { icon: 'sushi', title: MENU_ITEMS.CONTACT },
     { icon: 'pizza', title: MENU_ITEMS.ATTRIBUTION },
     { icon: 'pizza', title: MENU_ITEMS.POSTS },
+    { icon: 'pizza', title: MENU_ITEMS.DESIGN_PATTERNS },
 ]
