@@ -15,7 +15,9 @@ export const getItem = async (
     itemId: string,
     signal?: AbortSignal
 ): Promise<HackerNewsItem> => {
-    const { data } = await api.get<HackerNewsItem>(`/v0/item/${itemId}.json`)
+    const { data } = await api.get<HackerNewsItem>(`/v0/item/${itemId}.json`, {
+        signal,
+    })
 
     return data
 }
