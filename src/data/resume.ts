@@ -92,7 +92,7 @@ const resume = {
         educations: [
             {
                 title: 'Ph.D. in Computer Science',
-                university: 'University of Missississpi',
+                university: 'University of Mississippi',
                 dates_attended: '08/2008 - 09/2010',
                 location: 'Oxford, MS',
                 courses: [
@@ -115,7 +115,7 @@ const resume = {
             },
             {
                 title: 'Visiting Student in Computer Science',
-                university: 'University of Missississpi',
+                university: 'University of Mississippi',
                 dates_attended: '08/2012 - 05/2013',
                 location: 'Oxford, MS',
                 courses: [
