@@ -1,23 +1,9 @@
-import React, {
-    useState,
-    useEffect,
-    useRef,
-    Suspense,
-    MouseEventHandler,
-    useCallback,
-} from 'react'
+import React, { useState, useEffect, Suspense, useCallback } from 'react'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import classnames from 'classnames'
-import { DesktopIcons, MOVIE_PLATFORM_LINK } from './constants'
-
-// Assets
-import icons from 'shared/icons'
 
 // @MUI
 import { LinearProgress } from '@mui/material'
-
-// Styles
-import './preferences.css'
 
 // Components
 import TopBar from './TopBar'
@@ -36,7 +22,6 @@ interface Position {
 }
 
 interface PreferencesProps {
-    onMovieClick: () => void
     zIndex: number
     onFocus: () => void
     isOpen: boolean
@@ -63,17 +48,11 @@ const Attribution = React.lazy(
 const Posts = React.lazy(() => import('modules/posts/components/Posts'))
 
 const Preferences: React.FC<PreferencesProps> = ({
-    onMovieClick,
     zIndex,
     onFocus,
     isOpen,
     onClose,
 }) => {
-    const iconRef = useRef<HTMLDivElement>(null)
-    const viteIconRef = useRef<HTMLDivElement>(null)
-    const moviePlatformIconRef = useRef<HTMLDivElement>(null)
-    const [isFinderOpen, setIsFinderOpen] = useState(true)
-    const [selectedIcons, setSelectedIcons] = useState<string[]>([])
     const [isDragging, setIsDragging] = useState(false)
     const [position, setPosition] = useState<Position>({
         x: window.innerWidth / 2 - 570,
@@ -86,73 +65,10 @@ const Preferences: React.FC<PreferencesProps> = ({
     const projectName = useAppSelector(getProjectName)
     const selectedMenu = useAppSelector(getSelectedMenu)
 
-    const clickAboutMe: MouseEventHandler<HTMLDivElement> = (e) => {
-        e.preventDefault()
-        if (e.detail === 1) {
-            setSelectedIcons((prevSelection) => [
-                ...prevSelection,
-                DesktopIcons.AboutMe,
-            ])
-        } else if (e.detail === 2) {
-            setIsFinderOpen(true)
-        }
-    }
-
-    const clickMoviePlatform: MouseEventHandler<HTMLDivElement> = (e) => {
-        e.preventDefault()
-        if (e.detail === 1) {
-            setSelectedIcons((prevSelection) => [
-                ...prevSelection,
-                DesktopIcons.MoviePlatform,
-            ])
-        } else if (e.detail === 2) {
-            onMovieClick()
-        }
-    }
-
-    const handleClickIcon = (event: MouseEvent) => {
-        if (
-            iconRef.current &&
-            !iconRef.current.contains(event.target as Node)
-        ) {
-            setSelectedIcons((prevSelection) =>
-                prevSelection.filter(
-                    (selection) => selection !== DesktopIcons.AboutMe
-                )
-            )
-        }
-
-        if (
-            viteIconRef.current &&
-            !viteIconRef.current.contains(event.target as Node)
-        ) {
-            setSelectedIcons((prevSelection) =>
-                prevSelection.filter(
-                    (selection) => selection !== DesktopIcons.ViteWebsite
-                )
-            )
-        }
-
-        if (
-            moviePlatformIconRef.current &&
-            !moviePlatformIconRef.current.contains(event.target as Node)
-        ) {
-            setSelectedIcons((prevSelection) =>
-                prevSelection.filter(
-                    (selection) => selection !== DesktopIcons.MoviePlatform
-                )
-            )
-        }
-    }
-
-    const handleCloseFinder = () => {
-        setIsFinderOpen(false)
-    }
-
     const handleMouseDown = (e: React.MouseEvent) => {
         if (
             e.target instanceof HTMLElement &&
-            e.target.closest('.topbar-container') &&
+            e.target.closest('#topbar') &&
             !e.target.closest('.window-control')
         ) {
             setIsDragging(true)
@@ -186,13 +102,6 @@ const Preferences: React.FC<PreferencesProps> = ({
 
     const handleMouseUp = useCallback(() => {
         setIsDragging(false)
-    }, [])
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickIcon)
-        return () => {
-            document.removeEventListener('mousedown', handleClickIcon)
-        }
     }, [])
 
     useEffect(() => {
@@ -252,7 +161,7 @@ const Preferences: React.FC<PreferencesProps> = ({
                     }
                     selectedMenu={selectedMenu}
                 />
-                <div className="preferences-menu">
+                <div className="bg-stone-700 rounded-b-lg h-full overflow-y-auto ">
                     <Suspense fallback={<LinearProgress color="primary" />}>
                         {selectedMenu === MENU_ITEMS.GENERAL && <General />}
                         {selectedMenu === MENU_ITEMS.PROJECTS && (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import './home.css'
 
@@ -54,7 +54,6 @@ const Home = () => {
                 isFinderOpen={isFinderOpen}
             />
             <Preferences
-                onMovieClick={() => setShowMovieIframe(true)}
                 zIndex={getZIndex(WINDOW_TYPES.PREFERENCES)}
                 onFocus={() => handleWindowFocus(WINDOW_TYPES.PREFERENCES)}
                 isOpen={isFinderOpen}

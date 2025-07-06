@@ -1,5 +1,4 @@
 import React, { useRef, useState, MouseEventHandler, useCallback } from 'react'
-import classnames from 'classnames'
 import { DesktopIcons as DesktopIconTypes } from './constants'
 import icons from 'shared/icons'
 
@@ -32,7 +31,7 @@ const DesktopIcons: React.FC<DesktopIconsProps> = ({
     const handleMouseDown = (e: React.MouseEvent) => {
         if (
             e.target instanceof HTMLElement &&
-            e.target.closest('.topbar-container') &&
+            e.target.closest('#topbar') &&
             !e.target.closest('.title')
         ) {
             setIsDragging(true)
@@ -145,9 +144,12 @@ const DesktopIcons: React.FC<DesktopIconsProps> = ({
         }
     }
 
+    console.log('isFinderOpen', isFinderOpen)
+    console.log('selectedIcons', selectedIcons)
+
     return (
         <div
-            className="desktop-icon-containers"
+            className="bg-stone-800 rounded-lg border-top-left-radius-7 border-top-right-radius-7 cursor-default flex flex-col absolute top-10 left-5 w-[540px]"
             style={{
                 position: 'fixed',
                 left: `${position.x}px`,
@@ -158,39 +160,44 @@ const DesktopIcons: React.FC<DesktopIconsProps> = ({
             onMouseDown={handleMouseDown}
         >
             <div
-                className="topbar-container"
+                className="bg-stone-700 rounded-t-lg h-6 w-full flex"
                 style={{
                     cursor: isDragging ? 'grabbing' : 'grab',
                 }}
             >
-                <div className="title">Home directory</div>
+                <div className="mx-auto text-center text-sm text-stone-300">
+                    Home directory
+                </div>
             </div>
-            <div className="desktop-icon-menu">
+            <div className="flex flex-row p-5 gap-1">
                 <div
                     ref={iconRef}
                     onClick={clickAboutMe}
-                    className={classnames({
-                        'desktop-icon': true,
-                        'is-selected':
-                            isFinderOpen ||
-                            selectedIcons.includes(DesktopIconTypes.AboutMe),
-                    })}
+                    className={`rounded-lg pt-2 w-[100px] flex flex-col justify-around box-shadow-md ${
+                        isFinderOpen ||
+                        selectedIcons.includes(DesktopIconTypes.AboutMe)
+                            ? 'bg-stone-700'
+                            : 'bg-transparent'
+                    }`}
                 >
-                    <img src={icons['notebook']} alt="notebook" />
-                    <div>About Me</div>
+                    <img
+                        className="h-[70px]"
+                        src={icons['notebook']}
+                        alt="notebook"
+                    />
+                    <div className="font-bold text-white text-sm">About Me</div>
                 </div>
                 <div
                     ref={moviePlatformIconRef}
                     onClick={clickMoviePlatform}
-                    className={classnames({
-                        'desktop-icon': true,
-                        'is-selected': selectedIcons.includes(
-                            DesktopIconTypes.MoviePlatform
-                        ),
-                    })}
+                    className={`rounded-lg pt-2 w-[100px] flex flex-col justify-around box-shadow-md ${
+                        selectedIcons.includes(DesktopIconTypes.MoviePlatform)
+                            ? 'bg-stone-700'
+                            : 'bg-transparent'
+                    }`}
                 >
-                    <img src={icons['movie']} alt="movie" />
-                    <div>Movie DB</div>
+                    <img className="h-16" src={icons['movie']} alt="movie" />
+                    <div className="font-bold text-white text-sm">Movie DB</div>
                 </div>
             </div>
         </div>

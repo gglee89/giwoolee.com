@@ -31,7 +31,7 @@ const MovieIframe: React.FC<MovieIframeProps> = ({
     const handleMouseDown = (e: React.MouseEvent) => {
         if (
             e.target instanceof HTMLElement &&
-            e.target.closest('.topbar-container') &&
+            e.target.closest('#topbar') &&
             !e.target.closest('.window-control')
         ) {
             setIsDragging(true)

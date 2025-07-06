@@ -1,6 +1,6 @@
 class Button {
     render() {
-        return <button>Click me</button>
+        return <button>Vue button</button>
     }
 }
 

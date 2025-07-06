@@ -1,49 +1,41 @@
-import React from 'react'
-import classNames from 'classnames'
 import moment from 'moment'
 
 // Assets
 import icons from 'shared/icons'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
-import { blue } from '@mui/material/colors'
-
-// Styles
-import './header.css'
 
 const Header = () => {
-    const navClasses = classNames({
-        navbar: true,
-        'navbar-expand-lg': true,
-        sticky: false,
-    })
-
     const currentTime = moment().format('ddd LT')
 
     return (
-        <header className="header">
-            <nav className={navClasses}>
-                <div className="container-fluid">
-                    <div className="header-left">
-                        <HomeOutlinedIcon
-                            sx={{ color: blue[500], marginRight: 1 }}
-                        />
-                        <div>Gustavo Lee</div>
-                    </div>
-                    <div className="header-right">
-                        <a
-                            href="https://github.com/gglee89/gglee89.github.io"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className="header-right-item"
-                        >
-                            <img src={icons['github']} alt="github" />
-                            <div>GitHub</div>
-                        </a>
-                        <div className="time">{currentTime}</div>
+        <nav className="bg-neutral-300 sticky-false">
+            <div className="container mx-auto flex justify-between items-center">
+                <div className="flex items-center gap-1">
+                    <HomeOutlinedIcon />
+                    <div className="font-bold text-sm text-decoration-none">
+                        Giwoo Lee
                     </div>
                 </div>
-            </nav>
-        </header>
+                <div className="flex flex-row items-center">
+                    <a
+                        href="https://github.com/gglee89/gglee89.github.io"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="flex flex-row items-center border-r border-black cursor-pointer"
+                    >
+                        <img
+                            className="h-4"
+                            src={icons['github']}
+                            alt="github"
+                        />
+                        <div className="font-bold text-black text-sm text-decoration-none">
+                            GitHub
+                        </div>
+                    </a>
+                    <div className="text-gray-500">{currentTime}</div>
+                </div>
+            </div>
+        </nav>
     )
 }
 

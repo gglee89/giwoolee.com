@@ -24,15 +24,7 @@
         "baseUrl": "src",
         "sourceMap": true,
         "paths": {
-            "assets": ["src/assets/*"],
-            "modules": ["src/modules/*"],
-            "shared": ["src/shared/*"],
-            "components": ["src/components/*"],
-            "reducers": ["src/reducers/*"],
-            "pages": ["src/pages/*"],
-            "actions": ["src/actions/*"],
-            "services": ["src/services/*"],
-            "data": ["src/data/*"]
+            "@/*": ["src/*"]
         }
     },
     "include": ["src"],
