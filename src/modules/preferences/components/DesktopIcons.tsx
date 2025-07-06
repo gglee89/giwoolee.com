@@ -144,9 +144,6 @@ const DesktopIcons: React.FC<DesktopIconsProps> = ({
         }
     }
 
-    console.log('isFinderOpen', isFinderOpen)
-    console.log('selectedIcons', selectedIcons)
-
     return (
         <div
             className="bg-stone-800 rounded-lg border-top-left-radius-7 border-top-right-radius-7 cursor-default flex flex-col absolute top-10 left-5 w-[540px]"

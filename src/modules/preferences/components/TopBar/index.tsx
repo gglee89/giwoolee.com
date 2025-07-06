@@ -65,7 +65,7 @@ const TopBar: React.FC<TopBarProps> = ({
     }
 
     return (
-        <div id="topbar" className="bg-stone-400 rounded-t-lg h-6 w-full flex">
+        <div id="topbar" className="bg-stone-400 h-6 w-full flex">
             <div className="left-menu">
                 <div
                     className="window-control close-icon"

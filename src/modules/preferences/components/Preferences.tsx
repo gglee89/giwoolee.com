@@ -127,16 +127,12 @@ const Preferences: React.FC<PreferencesProps> = ({
         }
     }, [isDragging, handleMouseMove, handleMouseUp])
 
-    const preferencesContainerClasses = classnames({
-        container: true,
-        'preferences-container': true,
-        'is-open': isOpen,
-    })
-
     return (
         <FullScreen handle={handle}>
             <div
-                className={preferencesContainerClasses}
+                className={`flex flex-col h-0 max-sm:h-full justify-between p-0 w-full md:w-3xl lg:w-4xl xl:w-4xl box-shadow-md bg-stone-700 rounded-lg max-sm:rounded-none overflow-hidden max-sm:mt-0 ${
+                    isOpen ? 'h-full max-h-[70vh] opacity-[1] z-10' : 'h-0'
+                }`}
                 style={{
                     position: 'fixed',
                     left: handle.active ? '0' : `${position.x}px`,
