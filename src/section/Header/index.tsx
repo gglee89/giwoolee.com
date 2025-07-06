@@ -8,31 +8,31 @@ const Header = () => {
     const currentTime = moment().format('ddd LT')
 
     return (
-        <nav className="bg-neutral-300 sticky-false">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="flex items-center gap-1">
-                    <HomeOutlinedIcon />
-                    <div className="font-bold text-sm text-decoration-none">
+        <nav className="bg-neutral-400 sticky-false text-sm">
+            <div className="container mx-auto flex h-8 justify-between gap-3 items-center">
+                <div className="flex items-center gap-1 hover:bg-neutral-500 px-2 transition-all duration-300">
+                    <HomeOutlinedIcon className="max-h-4 h-full" />
+                    <div className="font-bold text-black text-sm no-underline hover:no-underline cursor-pointer">
                         Giwoo Lee
                     </div>
                 </div>
-                <div className="flex flex-row items-center">
+                <div className="flex flex-row items-center gap-2">
                     <a
                         href="https://github.com/gglee89/gglee89.github.io"
                         rel="noopener noreferrer"
                         target="_blank"
-                        className="flex flex-row items-center border-r border-black cursor-pointer"
+                        className="flex flex-row gap-1 items-center no-underline hover:no-underline hover:bg-neutral-500 px-2 cursor-pointer transition-all duration-300"
                     >
                         <img
-                            className="h-4"
+                            className="max-h-4 h-full"
                             src={icons['github']}
                             alt="github"
                         />
-                        <div className="font-bold text-black text-sm text-decoration-none">
+                        <div className="font-bold text-black text-sm cursor-pointer">
                             GitHub
                         </div>
                     </a>
-                    <div className="text-gray-500">{currentTime}</div>
+                    <div className="text-sm text-gray-500">{currentTime}</div>
                 </div>
             </div>
         </nav>

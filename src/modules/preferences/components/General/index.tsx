@@ -2,18 +2,18 @@ import Terminal from './Terminal'
 
 const General = () => {
     return (
-        <div className="flex flex-col gap-6 text-sm p-7 text-stone-300">
+        <div className="flex flex-col gap-6 text-sm p-7 text-left">
             <Terminal
                 title="About"
                 text={
                     <>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             # giwoogustavolee @ Giwoo-MacBook-Pro in ~
                         </code>
                         <span className="inline-block text-violet-300 mr-1">
                             $ [What do I do]
                         </span>
-                        I&#39;m overseeing full application release cycles
+                        I'm overseeing full application release cycles
                         involving: TypeScript, React, Redux, Underscore/Lodash,
                         Jest / Mocha / Jasmine / Sinon, Handlebars, Webpack,
                         Node.js, MongoDB, DynamoDB, AWS S3, AWS ECS, AWS EKS,
@@ -55,42 +55,45 @@ const General = () => {
                 title="Currently..."
                 text={
                     <>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             # giwoogustavolee @ Giwoo-MacBook-Pro in ~
                         </code>
                         <span className="inline-block text-violet-300 mr-1">
-                            $ python
+                            $
                         </span>
-                        <code className="block text-stone-200">
+                        <span>python</span>
+                        <code className="block text-green-200">
                             Python 2.7.10 (default, Oct 6 2017, 22:29:07)
                         </code>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             [GCC 4.2.1 Compatible Apple LLVM 9.0.0
                             (clang-900.0.31)] on darwin
                         </code>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             Type &#34;help&#34;, &#34;copyright&#34;,
                             &#34;credits&#34; or &#34;license&#34; for more
                             information.
                         </code>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             &gt;&gt;&gt;{' '}
                         </code>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             &gt;&gt;&gt; import activities_doing from general
                         </code>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             &gt;&gt;&gt; print(activities_doing.currently)
                         </code>
-                        <code className="block text-stone-200">
+                        <code className="block text-green-200">
                             A Cloud Architect & Web Development Enthusiast.
                             Working as a Full Stack Developer.
                         </code>
                         <span className="inline-block text-violet-300 mr-1">
                             $
-                        </span>{' '}
-                        echo &#34;This is not really a terminal (It&#39;s just
-                        HTML+CSS)&#34;
+                        </span>
+                        <span>
+                            echo This is not really a terminal (It's just
+                            HTML+CSS)
+                        </span>
                     </>
                 }
             />
