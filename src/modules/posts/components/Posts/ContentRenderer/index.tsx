@@ -4,8 +4,8 @@ import './contentRenderer.css'
 
 // Components
 import ContentSection from './ContentSection'
-import { RendererContext } from 'modules/posts/constants'
-import { useNewsStore } from '..'
+import { RendererContext } from '@/modules/posts/constants'
+import { useNewsStore } from '@/modules/posts/components/Posts'
 
 type RendererContextKeys = keyof typeof RendererContext
 export type RendererContextType = (typeof RendererContext)[RendererContextKeys]

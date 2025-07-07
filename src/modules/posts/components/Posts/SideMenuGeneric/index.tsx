@@ -1,7 +1,6 @@
-import React from 'react'
 import TopMenu from './TopMenu'
 import MenuGeneric from './MenuGeneric'
-import type { HackerNewsItem } from 'services/hackernews/types'
+import type { HackerNewsItem } from '@/services/hackernews/types'
 
 import './sideMenu.css'
 

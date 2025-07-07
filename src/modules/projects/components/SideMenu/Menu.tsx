@@ -2,7 +2,7 @@ import React from 'react'
 
 // Components
 import MenuItem from './MenuItem'
-import { ProjectsNameType } from 'data/projects'
+import { ProjectsNameType } from '@/data/projects'
 
 interface MenuProps {
     currentItem: string

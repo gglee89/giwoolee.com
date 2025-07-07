@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './contentSection.css'
-import { ContentType } from 'data/projects'
+import { ContentType } from '@/data/projects'
 
 interface ContentRendererFormFieldProps {
     label: string

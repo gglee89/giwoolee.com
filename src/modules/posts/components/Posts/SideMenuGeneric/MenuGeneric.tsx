@@ -1,7 +1,6 @@
-import React from 'react'
 import MenuItemGeneric from './MenuItemGeneric'
-import type { HackerNewsItem } from 'services/hackernews/types'
-import { useNewsStore } from '..'
+import type { HackerNewsItem } from '@/services/hackernews/types'
+import { useNewsStore } from '@/modules/posts/components/Posts'
 
 interface MenuGeneric<T> {
     menuItems: T[]

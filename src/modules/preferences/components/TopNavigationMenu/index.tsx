@@ -4,7 +4,7 @@ import './topNavigationMenu.css'
 
 // Components
 import MenuItem from './MenuItem'
-import { MenuType } from 'modules/preferences/types'
+import { MenuType } from '@/modules/preferences/types'
 
 interface TopNavigationMenuProps {
     menuItems: MenuType[]

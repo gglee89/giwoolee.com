@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react'
 import { useFullScreenHandle } from 'react-full-screen'
 import { MOVIE_PLATFORM_LINK } from './constants'
 import TopBar from './TopBar'
+import classNames from 'classnames'
 
 interface Position {
     x: number
@@ -91,7 +92,7 @@ const MovieIframe: React.FC<MovieIframeProps> = ({
 
     return (
         <div
-            className={classnames({
+            className={classNames({
                 container: true,
                 'preferences-container': true,
                 'is-open': true,

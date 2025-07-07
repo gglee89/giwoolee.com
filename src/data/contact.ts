@@ -1,4 +1,4 @@
-import type { Topic } from 'modules/types'
+import type { Topic } from '@/modules/types'
 
 const contacts: Record<string, { topics: Topic[] }> = {
     Academic: {
