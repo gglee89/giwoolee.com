@@ -5,8 +5,8 @@ import classnames from 'classnames'
 import './section.css'
 
 // Icons
-import icons from 'shared/icons'
-import type { Topic } from 'modules/types'
+import icons from '@/shared/icons'
+import type { Topic } from '@/modules/types'
 
 const SectionItem: React.FC<Topic> = ({
     name,

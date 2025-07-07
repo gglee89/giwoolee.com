@@ -11,7 +11,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail' // CONTACT
 import TagIcon from '@mui/icons-material/Tag' // ATTRIBUTE
 import NewspaperIcon from '@mui/icons-material/Newspaper' // POSTS
 import { blue } from '@mui/material/colors'
-import { MENU_ITEMS } from 'modules/preferences/constants'
+import { MENU_ITEMS } from '@/modules/preferences/constants'
 
 interface MenuItemProps {
     title: string

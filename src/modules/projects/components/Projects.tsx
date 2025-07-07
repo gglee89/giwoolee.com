@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Styles
 import './projects.css'
 
@@ -7,8 +5,7 @@ import './projects.css'
 import SideMenu from './SideMenu'
 import ContentRenderer from './ContentRenderer'
 
-// Data
-import projectsList, { ProjectsNameType } from 'data/projects'
+import projectsList, { ProjectsNameType } from '@/data/projects'
 
 interface ProjectsProps {
     projectName: string

@@ -1,13 +1,6 @@
-import { useQueries, useQuery } from '@tanstack/react-query'
+import { useQueries } from '@tanstack/react-query'
 import { HackerNewsQueryKeys } from '../queryKeys'
-import { getItem } from 'services/hackernews'
-import { HackerNewsItem } from '../types'
-
-interface QueryResult {
-    data: HackerNewsItem[]
-    isLoading: boolean
-    isError: boolean
-}
+import { getItem } from '@/services/hackernews'
 
 const useGetItems = (itemIds: string[]) => {
     return useQueries({

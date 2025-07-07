@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from 'store'
+import type { RootState } from '@/store'
 
-import posts, { PostsName, PostsType, type PostsNameType } from 'data/posts'
+import posts, { PostsName, PostsType, type PostsNameType } from '@/data/posts'
 
 // Define a type for the slice state
 interface PostsState {

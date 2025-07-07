@@ -1,5 +1,5 @@
-import { RootState } from 'store'
-import INTERESTS from 'data/interests'
+import { RootState } from '@/store'
+import INTERESTS from '@/data/interests'
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {

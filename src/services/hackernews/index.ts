@@ -1,11 +1,12 @@
-import api from 'services/api'
+import api from '@/services/api'
 import type { HackerNewsItem } from './types'
+import { AxiosRequestConfig } from 'axios'
 
 export const getTopStories = async (
-    signal?: AbortSignal
+    options?: AxiosRequestConfig
 ): Promise<number[]> => {
     const { data } = await api.get<number[]>('/v0/topstories.json', {
-        signal,
+        ...options,
     })
 
     return data
@@ -13,9 +14,11 @@ export const getTopStories = async (
 
 export const getItem = async (
     itemId: string,
-    signal?: AbortSignal
+    options?: AxiosRequestConfig
 ): Promise<HackerNewsItem> => {
-    const { data } = await api.get<HackerNewsItem>(`/v0/item/${itemId}.json`)
+    const { data } = await api.get<HackerNewsItem>(`/v0/item/${itemId}.json`, {
+        ...options,
+    })
 
     return data
 }

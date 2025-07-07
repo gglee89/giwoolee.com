@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Suspense, useCallback } from 'react'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
-import classnames from 'classnames'
 
 // @MUI
 import { LinearProgress } from '@mui/material'
@@ -10,11 +9,11 @@ import TopBar from './TopBar'
 import TopNavigationMenu from './TopNavigationMenu'
 
 // Selectors
-import { useAppDispatch, useAppSelector } from 'store'
-import { getProjectName } from 'modules/projects/slice'
-import { getSelectedMenu, selectMenu } from 'modules/preferences/slice'
+import { useAppDispatch, useAppSelector } from '@/store'
+import { getProjectName } from '@/modules/projects/slice'
+import { getSelectedMenu, selectMenu } from '@/modules/preferences/slice'
 import { MENU_ITEMS, menuOptions } from '../constants'
-import DesignPatterns from 'modules/design-patterns'
+import DesignPatterns from '@/modules/design-patterns'
 
 interface Position {
     x: number
@@ -30,22 +29,24 @@ interface PreferencesProps {
 
 // Components (Menu Content Items)
 const General = React.lazy(
-    () => import('modules/preferences/components/General')
+    () => import('@/modules/preferences/components/General')
 )
 const Projects = React.lazy(
-    () => import('modules/projects/components/Projects')
+    () => import('@/modules/projects/components/Projects')
 )
 const Interests = React.lazy(
-    () => import('modules/interests/components/Interests')
+    () => import('@/modules/interests/components/Interests')
 )
 const Mission = React.lazy(
-    () => import('modules/preferences/components/Mission')
+    () => import('@/modules/preferences/components/Mission')
 )
-const Contact = React.lazy(() => import('modules/contacts/components/Contact'))
+const Contact = React.lazy(
+    () => import('@/modules/contacts/components/Contact')
+)
 const Attribution = React.lazy(
-    () => import('modules/attribution/components/Attribution')
+    () => import('@/modules/attribution/components/Attribution')
 )
-const Posts = React.lazy(() => import('modules/posts/components/Posts'))
+const Posts = React.lazy(() => import('@/modules/posts/components/Posts'))
 
 const Preferences: React.FC<PreferencesProps> = ({
     zIndex,
@@ -157,7 +158,7 @@ const Preferences: React.FC<PreferencesProps> = ({
                     }
                     selectedMenu={selectedMenu}
                 />
-                <div className="bg-stone-700 rounded-b-lg h-full overflow-y-auto ">
+                <div className="bg-primary-foreground rounded-b-lg h-full overflow-y-auto ">
                     <Suspense fallback={<LinearProgress color="primary" />}>
                         {selectedMenu === MENU_ITEMS.GENERAL && <General />}
                         {selectedMenu === MENU_ITEMS.PROJECTS && (

@@ -3,10 +3,10 @@ import React from 'react'
 import './posts.css'
 import ContentRenderer from './ContentRenderer'
 
-import useGetTopStories from 'services/hackernews/hooks/useGetTopStories'
-import useGetItems from 'services/hackernews/hooks/useGetItems'
+import useGetTopStories from '@/services/hackernews/hooks/useGetTopStories'
+import useGetItems from '@/services/hackernews/hooks/useGetItems'
 import { create } from 'zustand'
-import type { HackerNewsItem } from 'services/hackernews/types'
+import type { HackerNewsItem } from '@/services/hackernews/types'
 import SideMenuGeneric from './SideMenuGeneric'
 
 interface NewsStore {

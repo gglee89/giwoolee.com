@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import classnames from 'classnames'
 
 // Styles
 import './mission.css'
 
 // Icons
-import icons from 'shared/icons'
+import icons from '@/shared/icons'
 
 const FONT_SIZES = {
     SMALL: 'small',
@@ -18,7 +18,10 @@ function Mission() {
     const [font, setFont] = useState({ size: FONT_SIZES.SMALL })
 
     const missionContainerClass = classnames({
-        'mission-container': true,
+        'bg-background': true,
+        'text-primary-background': true,
+        'text-sm': true,
+        'p-5': true,
         'mission-font-size-small': font.size === FONT_SIZES.SMALL,
         'mission-font-size-medium': font.size === FONT_SIZES.MEDIUM,
         'mission-font-size-large': font.size === FONT_SIZES.LARGE,
@@ -27,19 +30,31 @@ function Mission() {
 
     const missionSmall = classnames({
         'mission-font-size-small': true,
-        active: font.size === FONT_SIZES.SMALL,
+        'bg-secondary': font.size !== FONT_SIZES.SMALL,
+        'text-background': font.size !== FONT_SIZES.SMALL,
+        'bg-card': font.size === FONT_SIZES.SMALL,
+        'text-foreground': font.size === FONT_SIZES.SMALL,
     })
     const missionMedium = classnames({
         'mission-font-size-medium': true,
-        active: font.size === FONT_SIZES.MEDIUM,
+        'bg-secondary': font.size !== FONT_SIZES.MEDIUM,
+        'text-background': font.size !== FONT_SIZES.MEDIUM,
+        'bg-card': font.size === FONT_SIZES.MEDIUM,
+        'text-foreground': font.size === FONT_SIZES.MEDIUM,
     })
     const missionLarge = classnames({
         'mission-font-size-large': true,
-        active: font.size === FONT_SIZES.LARGE,
+        'bg-secondary': font.size !== FONT_SIZES.LARGE,
+        'text-background': font.size !== FONT_SIZES.LARGE,
+        'bg-card': font.size === FONT_SIZES.LARGE,
+        'text-foreground': font.size === FONT_SIZES.LARGE,
     })
     const missionExtraLarge = classnames({
         'mission-font-size-extra-large': true,
-        active: font.size === FONT_SIZES.EXTRA_LARGE,
+        'bg-secondary': font.size !== FONT_SIZES.EXTRA_LARGE,
+        'text-background': font.size !== FONT_SIZES.EXTRA_LARGE,
+        'bg-card': font.size === FONT_SIZES.EXTRA_LARGE,
+        'text-foreground': font.size === FONT_SIZES.EXTRA_LARGE,
     })
 
     return (
@@ -49,28 +64,40 @@ function Mission() {
                     onClick={() => setFont({ size: FONT_SIZES.SMALL })}
                     className={missionSmall}
                 >
-                    A
+                    <span>A</span>
+                    {font.size === FONT_SIZES.SMALL && (
+                        <img src={icons.view} alt="eyes" />
+                    )}
                 </div>
                 <div
                     onClick={() => setFont({ size: FONT_SIZES.MEDIUM })}
                     className={missionMedium}
                 >
-                    A
+                    <span>A</span>
+                    {font.size === FONT_SIZES.MEDIUM && (
+                        <img src={icons.view} alt="eyes" />
+                    )}
                 </div>
                 <div
                     onClick={() => setFont({ size: FONT_SIZES.LARGE })}
                     className={missionLarge}
                 >
-                    A
+                    <span>A</span>
+                    {font.size === FONT_SIZES.LARGE && (
+                        <img src={icons.view} alt="eyes" />
+                    )}
                 </div>
                 <div
                     onClick={() => setFont({ size: FONT_SIZES.EXTRA_LARGE })}
                     className={missionExtraLarge}
                 >
-                    A <img src={icons.view} alt="eyes" />
+                    <span>A</span>
+                    {font.size === FONT_SIZES.EXTRA_LARGE && (
+                        <img src={icons.view} alt="eyes" />
+                    )}
                 </div>
             </div>
-            <div className="mission-item">
+            <div className="text-secondary-foreground">
                 <span style={{ fontWeight: 'bold' }}>Go to the Gemba.</span>{' '}
                 Apply Toyota Chairman Fujio Cho&#39;s words &#34;Go See, Ask
                 Why, Show Respect&#34;. Be involved with the nitty-gritty of
@@ -78,7 +105,7 @@ function Mission() {
                 processes to enable people to work towards achieving
                 organizational purpose.
             </div>
-            <div className="mission-item">
+            <div className="text-secondary-foreground">
                 <span style={{ fontWeight: 'bold' }}>Never stop learning.</span>{' '}
                 Always try to understand one&#39;s view prior to formulating an
                 output. The &#34;Culture of Learning&#34;. Live by Bayes&#39;s
@@ -87,7 +114,7 @@ function Mission() {
                 events. Putting it simply, is to expose one&#39;s self to new
                 experiences in order to find why the first one even took place.
             </div>
-            <div className="mission-item">
+            <div className="text-secondary-foreground">
                 <a
                     href="http://rmurphey.com/blog/2015/03/23/a-baseline-for-front-end-developers-2015"
                     style={{
@@ -106,7 +133,7 @@ function Mission() {
                     work that will need to get done tomorrow.&#34;
                 </span>
             </div>
-            <div className="mission-item">
+            <div className="text-secondary-foreground">
                 To incessantly respect others regardless of the prior. And from
                 my favorite book:{' '}
                 <a
@@ -123,7 +150,7 @@ function Mission() {
                 And thus, one&#39;s prime goal (as referring to my own) is to
                 speak up as to be listened and to be acknowledged.
             </div>
-            <div className="mission-item">
+            <div className="text-secondary-foreground">
                 Lastly, in a more technical note, is to be part of the Machine
                 Learning movement. Helping others with state-of-the-art tools
                 that can bring intelligent solutions to unforseen circumstances.

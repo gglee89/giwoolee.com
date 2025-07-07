@@ -3,14 +3,14 @@ import React, { useState } from 'react'
 import './contentRenderer.css'
 
 // Selectors
-import { getProject } from 'modules/projects/slice'
+import { getProject } from '@/modules/projects/slice'
 
 // Components
 import TopNavigationMenu from './TopNavigationMenu'
 import ContentSection from './ContentSection'
 import Screenshots from './Screenshots'
 import { useSelector } from 'react-redux'
-import { RendererContext } from 'modules/projects/constants'
+import { RendererContext } from '@/modules/projects/constants'
 
 type RendererContextKeys = keyof typeof RendererContext
 export type RendererContextType = (typeof RendererContext)[RendererContextKeys]

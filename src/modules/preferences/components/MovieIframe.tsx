@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react'
-import classnames from 'classnames'
 import { useFullScreenHandle } from 'react-full-screen'
 import { MOVIE_PLATFORM_LINK } from './constants'
 import TopBar from './TopBar'

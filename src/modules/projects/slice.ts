@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from 'store'
+import type { RootState } from '@/store'
 
 import projects, {
     ProjectsName,
     ProjectsType,
     type ProjectsNameType,
-} from 'data/projects'
+} from '@/data/projects'
 
 // Define a type for the slice state
 interface ProjectsState {

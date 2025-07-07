@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import CONTACT from 'data/contact'
-import { RootState } from 'store'
+import CONTACT from '@/data/contact'
+import { RootState } from '@/store'
 
 const initialState = {
     contacts: CONTACT,

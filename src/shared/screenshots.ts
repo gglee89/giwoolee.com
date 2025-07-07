@@ -1,43 +1,43 @@
 // Images
-import blur from 'assets/img/blur-small.jpg'
+import blur from '@/assets/img/blur-small.jpg'
 
 // LifebitAI
-import cloudOS_1 from 'assets/img/cloudos/cloudos.gif'
-import lifebitai_1 from 'assets/img/lifebit/lifebitai-website-1.png'
-import lifebitai_2 from 'assets/img/lifebit/lifebitai-website-2.png'
-import lifebitai_3 from 'assets/img/lifebit/lifebitai-website-3.png'
-import lifebitai_4 from 'assets/img/lifebit/lifebitai-website-4.png'
+import cloudOS_1 from '@/assets/img/cloudos/cloudos.gif'
+import lifebitai_1 from '@/assets/img/lifebit/lifebitai-website-1.png'
+import lifebitai_2 from '@/assets/img/lifebit/lifebitai-website-2.png'
+import lifebitai_3 from '@/assets/img/lifebit/lifebitai-website-3.png'
+import lifebitai_4 from '@/assets/img/lifebit/lifebitai-website-4.png'
 
 // iSensorLabs
-import realspiel_1 from 'assets/img/realspiel/realspiel-chatapp-min.jpg'
-import realspiel_2 from 'assets/img/realspiel/realspiel-gamecreation-min.jpg'
-import realspiel_3 from 'assets/img/realspiel/realspiel-groundtruth-min.jpg'
-import realspiel_4 from 'assets/img/realspiel/realspiel-topicselection-min.jpg'
+import realspiel_1 from '@/assets/img/realspiel/realspiel-chatapp-min.jpg'
+import realspiel_2 from '@/assets/img/realspiel/realspiel-gamecreation-min.jpg'
+import realspiel_3 from '@/assets/img/realspiel/realspiel-groundtruth-min.jpg'
+import realspiel_4 from '@/assets/img/realspiel/realspiel-topicselection-min.jpg'
 
 // Rocky Robots
-import rockyApp_1 from 'assets/img/rocky/home-min.jpeg'
-import rockyApp_2 from 'assets/img/rocky/habits-select-min.jpeg'
-import rockyApp_3 from 'assets/img/rocky/dashboard-min.jpeg'
-import rockyApp_4 from 'assets/img/rocky/category-select-min.jpeg'
+import rockyApp_1 from '@/assets/img/rocky/home-min.jpeg'
+import rockyApp_2 from '@/assets/img/rocky/habits-select-min.jpeg'
+import rockyApp_3 from '@/assets/img/rocky/dashboard-min.jpeg'
+import rockyApp_4 from '@/assets/img/rocky/category-select-min.jpeg'
 
 // Avocado
-import avocado_1 from 'assets/img/avocado/proof-main-screen.png'
-import avocado_2 from 'assets/img/avocado/proof-institutions-screen.png'
-import avocado_3 from 'assets/img/avocado/proof-main-screen-2.jpg'
-import avocado_4 from 'assets/img/avocado/proof-multiple-charts.png'
+import avocado_1 from '@/assets/img/avocado/proof-main-screen.png'
+import avocado_2 from '@/assets/img/avocado/proof-institutions-screen.png'
+import avocado_3 from '@/assets/img/avocado/proof-main-screen-2.jpg'
+import avocado_4 from '@/assets/img/avocado/proof-multiple-charts.png'
 
 // HDBCSI
-import hdbcsi_1 from 'assets/img/hdbcsi/sap-labs-hdbcsi.jpeg'
+import hdbcsi_1 from '@/assets/img/hdbcsi/sap-labs-hdbcsi.jpeg'
 
 // Makestar
-import makestar_1 from 'assets/img/makestar/makestar-main.png'
-import makestar_2 from 'assets/img/makestar/makestar-project.jpg'
-import makestar_3 from 'assets/img/makestar/makestar-project-2.jpg'
+import makestar_1 from '@/assets/img/makestar/makestar-main.png'
+import makestar_2 from '@/assets/img/makestar/makestar-project.jpg'
+import makestar_3 from '@/assets/img/makestar/makestar-project-2.jpg'
 
 // Marshall Goldsmith
-import marshallGoldsmith_1 from 'assets/img/sccoaching/marshall-goldsmith-min.jpeg'
-import marshallGoldsmith_2 from 'assets/img/sccoaching/marshall-goldsmith-2-min.jpeg'
-import { ImageUrl } from 'modules/projects/types'
+import marshallGoldsmith_1 from '@/assets/img/sccoaching/marshall-goldsmith-min.jpeg'
+import marshallGoldsmith_2 from '@/assets/img/sccoaching/marshall-goldsmith-2-min.jpeg'
+import { ImageUrl } from '@/modules/projects/types'
 
 const screenshots: Record<string, ImageUrl[]> = {
     CloudOS: [

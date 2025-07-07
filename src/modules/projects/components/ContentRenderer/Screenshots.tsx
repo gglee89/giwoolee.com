@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import classnames from 'classnames'
 
 import './screenshots.css'
-import screenshotImages from 'shared/screenshots'
+import screenshotImages from '@/shared/screenshots'
 import { Renderer } from '.'
-import { ImageUrl } from 'modules/projects/types'
+import { ImageUrl } from '@/modules/projects/types'
 
 interface ScreenshotsProps {
     projectName: string

@@ -1,6 +1,6 @@
 import React, { useRef, useState, MouseEventHandler, useCallback } from 'react'
 import { DesktopIcons as DesktopIconTypes } from './constants'
-import icons from 'shared/icons'
+import icons from '@/shared/icons'
 
 interface Position {
     x: number
@@ -146,7 +146,7 @@ const DesktopIcons: React.FC<DesktopIconsProps> = ({
 
     return (
         <div
-            className="bg-stone-800 rounded-lg border-top-left-radius-7 border-top-right-radius-7 cursor-default flex flex-col absolute top-10 left-5 w-[540px]"
+            className="bg-stone-800 rounded-lg border-top-left-radius-7 border-top-right-radius-7 cursor-default flex flex-col absolute top-10 left-5 max-w-[540px]"
             style={{
                 position: 'fixed',
                 left: `${position.x}px`,

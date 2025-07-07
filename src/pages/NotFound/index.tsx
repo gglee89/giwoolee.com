@@ -4,10 +4,10 @@ import React from 'react'
 import './notFound.css'
 
 // Section
-import Header from 'section/Header'
+import Header from '@/section/Header'
 
 // Icons
-import icons from 'shared/icons'
+import icons from '@/shared/icons'
 
 const NotFound = () => {
     return (

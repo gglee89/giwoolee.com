@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import SETTINGS from 'data/settings'
-import { RootState } from 'store'
+import SETTINGS from '@/data/settings'
+import { RootState } from '@/store'
 
 const initialState = {
     settings: SETTINGS,

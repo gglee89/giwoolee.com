@@ -1,12 +1,10 @@
-import React from 'react'
-
 // Styles
 import './contact.css'
 
 // Components
-import Section from 'modules/section/components/Section'
-import { useAppSelector } from 'store'
-import { getContacts } from 'modules/contacts/slice'
+import Section from '@/modules/section/components/Section'
+import { useAppSelector } from '@/store'
+import { getContacts } from '@/modules/contacts/slice'
 
 const Contact = () => {
     const contacts = useAppSelector(getContacts)

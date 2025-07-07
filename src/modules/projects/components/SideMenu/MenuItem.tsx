@@ -2,9 +2,9 @@ import React from 'react'
 import classnames from 'classnames'
 
 import './menuItem.css'
-import { useAppDispatch } from 'store'
-import { selectProjectName } from 'modules/projects/slice'
-import { ProjectsNameType } from 'data/projects'
+import { useAppDispatch } from '@/store'
+import { selectProjectName } from '@/modules/projects/slice'
+import { ProjectsNameType } from '@/data/projects'
 
 interface MenuItemProps {
     name: ProjectsNameType

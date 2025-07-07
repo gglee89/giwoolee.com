@@ -3,14 +3,14 @@ import { useState } from 'react'
 import './home.css'
 
 // Sections
-import Header from 'section/Header'
-import Preferences from 'modules/preferences/components/Preferences'
-import WebVitalsReport from 'modules/preferences/components/WebVitalsReport'
-import MovieIframe from 'modules/preferences/components/MovieIframe'
-import DesktopIcons from 'modules/preferences/components/DesktopIcons'
+import Header from '@/section/Header'
+import Preferences from '@/modules/preferences/components/Preferences'
+import WebVitalsReport from '@/modules/preferences/components/WebVitalsReport'
+import MovieIframe from '@/modules/preferences/components/MovieIframe'
+import DesktopIcons from '@/modules/preferences/components/DesktopIcons'
 
 // Images
-import backgrounds from 'shared/backgrounds'
+import backgrounds from '@/shared/backgrounds'
 
 const BACKGROUND_IMAGE_INDEX = 'bg1'
 

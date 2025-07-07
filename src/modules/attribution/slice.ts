@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import ATTRIBUTION from 'data/attribution'
-import { RootState } from 'store'
+import ATTRIBUTION from '@/data/attribution'
+import { RootState } from '@/store'
 
 const initialState = {
     attribution: ATTRIBUTION,

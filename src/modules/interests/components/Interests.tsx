@@ -1,14 +1,12 @@
-import React from 'react'
-
 // Styles
 import './interests.css'
 
 // Components
-import Section from 'modules/section/components/Section'
+import Section from '@/modules/section/components/Section'
 
 // Selectors
-import { getInterests } from 'modules/interests/slice'
-import { useAppSelector } from 'store'
+import { getInterests } from '@/modules/interests/slice'
+import { useAppSelector } from '@/store'
 
 const Interests = () => {
     const interests = useAppSelector(getInterests)

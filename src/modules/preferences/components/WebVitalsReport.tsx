@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, MouseEvent } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { onCLS, onFID, onLCP, onFCP, onTTFB } from 'web-vitals'
 import { useFullScreenHandle } from 'react-full-screen'
 

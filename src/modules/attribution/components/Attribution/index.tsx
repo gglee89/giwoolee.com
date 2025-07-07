@@ -1,12 +1,10 @@
-import React from 'react'
-
 // Styles
 import './attribution.css'
 
 // Components
-import Section from 'modules/section/components/Section'
-import { getAttribution } from 'modules/attribution/slice'
-import { useAppSelector } from 'store'
+import Section from '@/modules/section/components/Section'
+import { getAttribution } from '@/modules/attribution/slice'
+import { useAppSelector } from '@/store'
 
 // Selectors
 
